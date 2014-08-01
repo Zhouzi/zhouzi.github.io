@@ -1,0 +1,24 @@
+.b-footer {
+  background-color: $body-font-color;
+  color: #fff;
+  padding: $_small-spacing 0;
+  text-align: center;
+
+  .columns:first-child {
+    margin-bottom: $_element-spacing;
+  }
+  
+  @media #{$large-up} {
+    text-align: left;
+    
+    .columns {
+      &:first-child {
+        margin-bottom: 0;
+      }
+      
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

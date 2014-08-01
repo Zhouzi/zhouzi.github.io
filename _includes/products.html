@@ -1,0 +1,16 @@
+<section class="b-products clearfix">
+  <!--<div class="b-section-title">
+    <div class="row">
+      <h2 class="e-title">My Products</h2>
+      <div class="e-subtitle">Lorem ipsum dolor sit amet.</div>
+    </div>
+  </div>-->
+  {% for product in site.data.products %}
+    <h2 id="{{ product.id }}" class="b-product-item">
+      <a href="{{ product.link }}" class="b-section-title columns large-6">
+        <span class="e-title">{{ product.name }}</span>
+        <span class="e-subtitle">{{ product.tagline }}</span>
+      </a>
+    </h2>
+  {% endfor %}
+</section>

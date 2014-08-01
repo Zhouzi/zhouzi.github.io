@@ -1,0 +1,51 @@
+@import 'normalize', 
+        'foundation/settings',
+        'foundation',
+        'partials/variables',
+        'partials/socials',
+        'partials/mixins',
+        'partials/hero',
+        'partials/footer',
+        'partials/sections';
+
+@media #{$small-only} {
+  html {
+    font-size: 80%;
+  }
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  vertical-align: middle;
+  
+  &:before {
+    vertical-align: middle;
+  }
+}
+
+// g- stands for "global" (b- for block, e- for element, __ for modifiers)
+.g-text-align-right {
+  text-align: right;
+}
+
+.g-link {
+  position: relative;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    border-bottom: 2px solid;
+    opacity: 0;
+    transition: all 300ms ease;
+  }
+  
+  &:hover {
+    &:before {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+}

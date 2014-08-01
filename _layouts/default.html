@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
 
-    <body>
+  <body>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrap">
-      {{ content }}
-      </div>
-    </div>
+    {% include hero.html %}
+    
+    {% include products.html %}
+    
+    {% include newsletter.html %}
+    
+    <!--
+    {{ content }}
+    -->
+    
+    {% include socials.html %}
 
     {% include footer.html %}
-
-    </body>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ "/js/scripts.js" | prepend: site.baseurl }}"></script>
+  </body>
 </html>

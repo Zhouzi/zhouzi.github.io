@@ -1,0 +1,101 @@
+.b-section-title {
+  display: block;
+  padding: $_medium-spacing 0;
+  text-align: center;
+  font-size: rem-calc(20);
+  overflow: hidden;
+  
+  .e-title, 
+  .e-subtitle {
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .e-title {
+    font-size: 220%;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+  }
+  
+  .e-subtitle {
+    font-size: 120%;
+    font-weight: 300;
+    color: lighten($body-font-color, 10%);
+    color: rgba($body-font-color, .8);
+  }
+}
+
+#zoobuttons { @include _product-item(#0071bc); }
+#gamerulesgenerator { @include _product-item(#f5ab35); }
+#typejs { @include _product-item(#24e0ba); }
+#namer { @include _product-item(#f04698); }
+
+.b-product-item {
+  margin: 0;
+  
+  a {
+    transition: background-color 300ms ease;
+  }
+  
+  .e-title {
+    color: #fff;
+  }
+  
+  .e-subtitle {
+    color: darken(#fff, 10%);
+    color: rgba(#fff, .8);
+  }
+}
+
+.b-newsletter {
+  text-align: center;
+  padding: $_medium-spacing $_element-spacing;
+  
+  p {
+    margin: 0;
+    font-size: rem-calc(30);
+    
+    &:first-child {
+      margin-bottom: $_element-spacing;
+    }
+  }
+}
+
+.b-human-form {
+  .e-content-editable {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px dotted;
+    
+    &:after {
+      display: none;
+      content: attr(data-placeholder);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: .5;
+    }
+    
+    &.js-show-placeholder {
+      &:after {
+        display: block;
+      }
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &.js-pristine {
+      font-style: italic;
+      color: lighten( $body-font-color, 40% );
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.b-hero {
+  text-align: center;
+  padding: $_large-spacing $_element-spacing;
+  @include _parallax-background( $src: '../images/hero-background.svg' );
+  
+  .e-greeting, 
+  .e-introduction {
+    margin-bottom: $_element-spacing * 2;
+  }
+  
+  .e-greeting {
+    font-size: 600%;
+    font-weight: $font-weight-bold;
+  }
+  
+  .e-introduction,
+  .e-roller {
+    color: lighten($body-font-color, 10%);
+    color: rgba($body-font-color, .8);
+  }
+  
+  .e-introduction {
+    font-size: 220%;
+    
+    strong {
+      //border-bottom: 2px dotted;
+    }
+  }
+}

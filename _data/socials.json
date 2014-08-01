@@ -1,0 +1,25 @@
+[
+  {
+    name: 'twitter', 
+    username: '@zh0uzi', 
+    link: 'http://twitter.com/zh0uzi'
+  },
+  
+  {
+    name: 'github', 
+    username: 'zhouzi', 
+    link: 'http://github.com/zhouzi'
+  },
+  
+  {
+    name: 'behance', 
+    username: 'zhouzi', 
+    link: 'http://behance.net/zhouzi'
+  },
+  
+  {
+    name: 'linkedin', 
+    username: 'Gabin Aureche', 
+    link: 'http://www.linkedin.com/in/gabinzhouzi'
+  }
+]
