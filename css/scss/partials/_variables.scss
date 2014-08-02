@@ -3,3 +3,8 @@ $_element-spacing: $column-gutter / 2; // used to space elements between them
 $_small-spacing: $_element-spacing * 2;
 $_medium-spacing: $_small-spacing * 2;
 $_large-spacing: $_medium-spacing * 2;
+
+$font-weight-extra-bold: 800;
+
+$_xsmall-range: (0em, 30em);
+$_xsmall-only: "#{$screen} and (max-width: #{upper-bound($_xsmall-range)})" !default;

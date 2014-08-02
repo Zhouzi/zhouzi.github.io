@@ -8,6 +8,12 @@
         'partials/footer',
         'partials/sections';
 
+@media #{$_xsmall-only} {
+  html {
+    font-size: 65%;
+  }
+}
+
 @media #{$small-only} {
   html {
     font-size: 80%;
@@ -29,6 +35,7 @@
 }
 
 .g-link {
+  /*
   position: relative;
   
   &:before {
@@ -48,4 +55,5 @@
       bottom: 0;
     }
   }
+  */
 }

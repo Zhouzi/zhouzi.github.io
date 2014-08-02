@@ -1,6 +1,46 @@
 (function ( w, d, $, undef ) {
   'use strict';
   
+  function isEmail ( email ) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test( email );
+  }
+  
+  $( '#newsletter-button' ).on( 'click', function () {
+    var email = $( '#newsletter-email' ).html(),
+        firstname = $( '#newsletter-firstname' ).html(),
+        lastname = $( '#newsletter-lastname' ).html();
+    
+    if( !isEmail( email ) ) {
+      // shit happens (not an email)
+      return false;
+    }
+    
+    $.ajax({
+        type: 'GET',
+        url: 'http://api.gabinaureche.com/newsletter/subscribe.php',
+        data: { email: email, firstname: firstname, lastname: lastname },
+        crossDomain: true
+      })
+      .success( function ( data ) {
+        if( data === 'nope' )
+          // shit happens
+          
+        data = $.parseJSON( data );
+        if( data.error_count > 0 ) {
+          // shit happens
+        } else {
+          // yay!
+          alert( 'it\s okay!' );
+        }
+      } )
+      .fail( function () {
+        // shit happens
+      } );
+    
+    return false;
+  } );
+  
   /*function selectContent ( element ) {
     var range;
     
@@ -15,6 +55,13 @@
     return range;
   }*/
   
+  // ChattyBar
+  ChattyBar.say( [ 'Bonjour!', 'My name is Gabin.', '(a.k.a Zhouzi)', 'I\'m a young french', 'Front-End Developer', 'Focussed on UX', 'So to make it short...', 'Gabin Aureche, UX Front-End Developer' ] );
+  
+  // TypeJS
+  var tjs = typejs( d.getElementById( 'typejs' ) );
+  tjs.toggle();
+  
   function stripSpaces ( str ) {
     return str.replace( /\s|&nbsp;|<br>/gi, '' );
   }
@@ -23,7 +70,9 @@
     if( stripSpaces( $element.html() ).length > 0 ) {
       $element
         .removeClass( 'js-show-placeholder' )
-        .removeClass( 'js-pristine' );
+        .removeClass( 'js-pristine' )
+        .addClass( 'js-animate' )
+        .css( { minWidth: '' } );
     }
     
     return $element;
@@ -58,6 +107,7 @@
         
         $this
           .removeClass( 'js-show-placeholder' )
+          .removeClass( 'js-animate' )
           .addClass( 'js-pristine' )
           .html( placeholder )
           .css( { minWidth: '' } );

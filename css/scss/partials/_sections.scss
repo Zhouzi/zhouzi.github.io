@@ -85,6 +85,10 @@
       }
     }
     
+    &.js-animate {
+      transition: min-width 300ms ease;
+    }
+    
     &:hover {
       cursor: pointer;
     }

@@ -3,6 +3,10 @@
   padding: $_large-spacing $_element-spacing;
   @include _parallax-background( $src: '../images/hero-background.svg' );
   
+  small {
+    font-size: 100%;
+  }
+  
   .e-greeting, 
   .e-introduction {
     margin-bottom: $_element-spacing * 2;
@@ -10,7 +14,7 @@
   
   .e-greeting {
     font-size: 600%;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-extra-bold;
   }
   
   .e-introduction,
@@ -21,9 +25,6 @@
   
   .e-introduction {
     font-size: 220%;
-    
-    strong {
-      //border-bottom: 2px dotted;
-    }
+    line-height: 1.2;
   }
 }

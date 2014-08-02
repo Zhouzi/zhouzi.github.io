@@ -21,6 +21,8 @@ gulp.task( 'styles', function () {
 // Scripts
 gulp.task( 'scripts', function () {
   return gulp.src( [ 
+      jsBasePath + 'type.js',
+      jsBasePath + 'chattybar.js',
       jsBasePath + 'main.js'
     ] )
     .pipe( concat( 'scripts.js' ) )

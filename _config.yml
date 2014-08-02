@@ -10,4 +10,4 @@ github_username:  zhouzi
 # Build settings
 markdown: kramdown
 permalink: pretty
-exclude: [ "gulpfile.js", "node_modules", "css/scss", "scripts/partials" ]
+exclude: [ "gulpfile.js", "node_modules", "css/scss", "scripts/partials", "js/partials" ]
