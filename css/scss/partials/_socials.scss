@@ -35,7 +35,8 @@ $linkedin: #0976b4;
     font-size: 300%;
   }
   
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fff;
     
     &:after {
