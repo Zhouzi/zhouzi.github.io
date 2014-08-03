@@ -8,6 +8,14 @@
         'partials/footer',
         'partials/sections';
 
+/*
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+}
+*/
+
 @media #{$small-only} {
   html {
     font-size: 80%;
