@@ -47,6 +47,45 @@
   }
 }
 
+#alert-box-parent {
+  position: relative;
+}
+
+.b-newsletter {
+  padding: $_medium-spacing 0;
+  
+  h3, p {
+    color: inherit;
+    text-align: center;
+  }
+  
+  .alert-box {
+    position: absolute;
+    left: $column-gutter / 2;
+    right: $column-gutter / 2;
+    text-align: center;
+    top: -5px;
+    opacity: 0;
+    transition: all 300ms ease;
+    
+    &.show {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.b-newsletter-form {
+  list-style: none;
+  padding: 0;
+  
+  .button.postfix {
+    font-size: inherit;
+    border-radius: $global-radius;
+  }
+}
+
+/*
 .b-newsletter {
   text-align: center;
   padding: $_medium-spacing $_element-spacing;
@@ -103,3 +142,4 @@
     }
   }
 }
+*/

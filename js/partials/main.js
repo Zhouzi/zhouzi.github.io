@@ -6,14 +6,81 @@
     return re.test( email );
   }
   
-  $( '#newsletter-button' ).on( 'click', function () {
-    var email = $( '#newsletter-email' ).html(),
-        firstname = $( '#newsletter-firstname' ).html(),
-        lastname = $( '#newsletter-lastname' ).html();
+  var $nEmail     = $( '#newsletter-email' ),
+      $nFirstname = $( '#newsletter-firstname' ),
+      $nLastname  = $( '#newsletter-lastname' ),
+      $nButton    = $( '#newsletter-button' );
+  
+  function checkValidity ( elements, $button ) {
+    var isValid = true,
+        $elements = $( elements );
     
-    if( !isEmail( email ) ) {
-      // shit happens (not an email)
+    $elements.each( function () {
+      var $this = $( this );
+      
+      if( $this.hasClass( 'input__error' ) || $this.val().length === 0 ) {
+        isValid = false;
+        return false;
+      }
+    } );
+    
+    if( isValid )
+      $button.attr( 'disabled', false );
+    else
+      $button.attr( 'disabled', true );
+    
+    return isValid;
+  }
+  
+  $nEmail.on( 'keypress', function () {
+    var $this = $( this );
+    
+    if( !isEmail( $this.val() ) ) {
+      $this
+        .removeClass( 'input__valid' )
+        .addClass( 'input__error' );
+    } else {
+      $this
+        .removeClass( 'input__error' )
+        .addClass( 'input__valid' );
+    }
+    
+    checkValidity( [ $nEmail, $nFirstname, $nLastname ], $nButton );
+  } );
+  
+  $( [ $nFirstname, $nLastname ] ).each( function () {
+    var $this = $( this );
+    
+    $this.on( 'keypress', function () {
+      if( $this.val().length < 2 ) {
+        $this
+          .removeClass( 'input__valid' )
+          .addClass( 'input__error' );
+      } else {
+        $this
+          .removeClass( 'input__error' )
+          .addClass( 'input__valid' );
+      }
+
+      checkValidity( [ $nEmail, $nFirstname, $nLastname ], $nButton );
+    } );
+  } );
+  
+  $( '#newsletter-button' ).on( 'click', function () {
+    if( $( this ).attr( 'disable' ) === 'true' ) {
       return false;
+    }
+    
+    var email = $( '#newsletter-email' ).val(),
+        firstname = $( '#newsletter-firstname' ).val(),
+        lastname = $( '#newsletter-lastname' ).val();
+    
+    function showMsg ( $element ) {
+      $element.addClass( 'show' );
+      
+      setTimeout( function () {
+        $element.removeClass( 'show' );
+      }, 3000 );
     }
     
     $.ajax({
@@ -23,19 +90,19 @@
         crossDomain: true
       })
       .success( function ( data ) {
-        if( data === 'nope' )
-          // shit happens
-          
-        data = $.parseJSON( data );
+        if( data === 'nope' ) {
+          showMsg( $( '#newsletter-error' ) );
+        }
+        
+        data = JSON.parse( data );
         if( data.error_count > 0 ) {
-          // shit happens
+          showMsg( $( '#newsletter-error' ) );
         } else {
-          // yay!
-          alert( 'it\s okay!' );
+          showMsg( $( '#newsletter-success' ) );
         }
       } )
       .fail( function () {
-        // shit happens
+        showMsg( $( '#newsletter-error' ) );
       } );
     
     return false;
@@ -56,12 +123,60 @@
   }*/
   
   // ChattyBar
-  ChattyBar.say( [ 'Bonjour!', 'My name is Gabin.', '(a.k.a Zhouzi)', 'I\'m a young french', 'Front-End Developer', 'Focussed on UX', 'So to make it short...', 'Gabin Aureche, UX Front-End Developer' ] );
+  /*
+  function rand ( min, max ) {
+    return Math.floor( Math.random() * ( max - min + 1 ) ) + min; 
+  };
+  
+  function rollChattyBar ( wordList ) {
+    if( rand( 0, 4 ) === 0 ) {
+      var word = wordList[ rand( 0, wordList.length - 1 ) ];
+      
+      while( word === document.title )
+        word = wordList[ rand( 0, wordList.length - 1 ) ];
+      
+      ChattyBar.say( word, 200, function () {
+        setTimeout( function () {
+          rollChattyBar( wordList );
+        }, 1000 );
+      } );
+    } else {
+      setTimeout( function () {
+        rollChattyBar( wordList );
+      }, 1000 );
+    }
+  }
+  
+  var chattybarWords = [ 'Bonjour!', 'How are you?', 'Wassup?', 'Glad to see u there', 'hello@gabinaureche.com', 'Gabin Aureche, UX Front-End Developer' ];
+  rollChattyBar( chattybarWords );*/
+  /*
+  ChattyBar.say( [ 
+    'Bonjour!', 
+    'Glad to see u there :)', 
+    'Gabin Aureche, UX Front-End Developer' 
+  ], 200 );
+  */
   
   // TypeJS
-  var tjs = typejs( d.getElementById( 'typejs' ) );
-  tjs.toggle();
+  function launchTypeJS ( tjs, speed ) {
+    tjs.toggle( function () {
+      
+      setTimeout( function () {
+        launchTypeJS( tjs, speed );
+      }, speed );
+      
+    } );
+  }
   
+  var tjs = typejs( d.getElementById( 'typejs' ) ).config( {
+    typeIn : { random: true }
+  } );
+  
+  setTimeout( function () {
+    launchTypeJS( tjs, 1000 );
+  }, 2000 );
+  
+  /*
   function stripSpaces ( str ) {
     return str.replace( /\s|&nbsp;|<br>/gi, '' );
   }
@@ -119,4 +234,5 @@
     .on( 'keyup', function ( evt ) {
       checkElementValue( $( this ) );
     } );
+  */
 }( window, document, $ ))

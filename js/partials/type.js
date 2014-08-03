@@ -96,6 +96,11 @@ var typejs;
       
       if( this.options.typeIn.random ) {
         newText = textList[ rand( 0, textList.length - 1 ) ];
+        
+        // TODO: not so DRY there
+        while( newText === oldText ) {
+          newText = textList[ rand( 0, textList.length - 1 ) ];
+        }
       } else {
         var oldTextIndex  = textList.indexOf( oldText );
         newText       = textList[ oldTextIndex + 1 ] === undef ? textList[ 0 ] : textList[ oldTextIndex + 1 ];
