@@ -1,0 +1,38 @@
+@mixin grid-base ($grid-gutter: $grid-gutter) {
+  .row {
+    @extend .clearfix;
+    margin-left: -$grid-gutter;
+    margin-right: -$grid-gutter;
+  }
+
+  .col {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+}
+
+
+
+@mixin grid ($nb-columns: 12, $colname: "col-xs-") {
+  @for $i from 1 through $nb-columns {
+    .#{$colname + $i} {
+      float: left;
+      width: 100% * ($i / $nb-columns);
+    }
+  }
+}
+
+
+
+@mixin btn ($color, $bg, $border, $darken-factor: 10%) {
+  color: $color;
+  background-color: $bg;
+  border: $border;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: darken($bg, $darken-factor);
+    border: $border;
+  }
+}

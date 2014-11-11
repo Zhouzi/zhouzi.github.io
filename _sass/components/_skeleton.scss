@@ -1,0 +1,241 @@
+header,
+footer {
+  @extend .clearfix;
+  background-color: $color-secondary;
+  padding: $grid-gutter * 2;
+
+  ul {
+    @extend .list-unstyled, .list-inline;
+  }
+}
+
+
+
+footer {
+  p {
+    margin-bottom: $relation-close;
+  }
+
+  p, ul {
+    @extend .text-center;
+    display: block;
+  }
+
+  @media #{$sm-up} {
+    p {
+      float: left;
+      margin: 0;
+    }
+
+    ul {
+      float: right;
+    }
+  }
+}
+
+
+
+header {
+  h1 {
+    float: left;
+    margin: 0;
+    font-size: 140%;
+
+    a {
+      @extend .link-text;
+    }
+  }
+
+  ul {
+    @extend .list-unstyled, .list-inline;
+    float: right;
+    padding-top: 5px;
+  }
+}
+
+
+
+.hero {
+  padding: 60px ($grid-gutter * 2);
+
+  @media #{$md-up} {
+    margin: 0 -20px;
+  }
+
+  @media #{$lg-up} {
+    margin: 0 -130px;
+  }
+
+  @media #{$xl-up} {
+    margin: 0 -230px;
+  }
+}
+
+.hero__heading {
+  @extend .text-center;
+  margin: 0;
+  font-size: 300%;
+  font-weight: $font-weight-normal;
+  font-style: italic;
+  line-height: 1.2;
+
+  strong {
+    color: $color-primary;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.hero__meta {
+  @extend .text-center, .text-muted;
+  margin: 0;
+}
+
+
+
+.post {
+  text-align: center;
+
+  @media #{$md-up} {
+    text-align: left;
+  }
+}
+
+.post__title,
+.post__meta {
+  margin: 0;
+}
+
+.post__meta {
+  @media #{$md-up} {
+    text-align: right;
+    float: left;
+    margin-top: 12px;
+    margin-right: $relation-close;
+    width: 100px;
+  }
+
+  small {
+    @extend .label, .label--secondary;
+    font-size: 90%;
+  }
+}
+
+.post__details {
+  overflow: hidden;
+}
+
+.post__title,
+.post__categories {
+  display: inline-block;
+}
+
+.post__categories {
+  @extend .text-muted;
+}
+
+.post__title {
+  font-size: 180%;
+  line-height: 1.4;
+
+  a {
+    @extend .link-text;
+  }
+}
+
+.subscribe {
+  @extend .text-muted, .text-center;
+  margin: $relation-close 0 0 0;
+
+  @media #{$md-up} {
+    text-align: right;
+  }
+}
+
+.experiments {
+  @extend .clearfix;
+
+  .experiments__item {
+    @extend .col-md-6;
+
+    @media #{$md-up} {
+      .experiment {
+        margin: 0 3px 6px 0;
+      }
+
+      &:nth-child(2n) .experiment {
+        margin: 0 0 6px 3px;
+      }
+    }
+  }
+}
+
+.experiment {
+  @extend .text-center;
+  padding: $relation-none;
+  background-color: #fff;
+  margin: 0 0 6px 0;
+  border-bottom: 2px solid $gray;
+
+  @media #{$md-up} {
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    .btn {
+      @extend .btn--primary;
+    }
+  }
+
+  .experiment__title,
+  .experiment__description {
+    @extend .ellipsis;
+  }
+
+  .experiment__title {
+    margin: 0;
+
+    a {
+      @extend .link-text;
+    }
+  }
+
+  .experiment__description {
+    @extend .text-muted;
+  }
+
+  .btn {
+    @extend .btn--default;
+  }
+}
+
+
+
+
+
+.article {
+  @extend .block;
+
+  a {
+    @extend .link-classic;
+  }
+}
+
+
+
+
+
+.table {
+  th {
+    text-align: left;
+  }
+
+  td, th {
+    padding: 10px;
+    border: 2px solid $gray-light;
+  }
+
+  tr:nth-child(2n) {
+    background-color: $gray-lighter;
+  }
+}

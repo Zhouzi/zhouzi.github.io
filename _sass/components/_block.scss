@@ -1,0 +1,14 @@
+.block {
+  background-color: #fff;
+  padding: $grid-gutter * 2;
+  margin: 0 0 6px 0;
+
+  .block__heading {
+    @extend .text-center;
+    font-size: 140%;
+    text-transform: uppercase;
+    padding-bottom: $relation-close;
+    margin: 0 0 $grid-gutter 0;
+    border-bottom: 2px solid $gray-lighter;
+  }
+}

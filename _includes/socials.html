@@ -1,7 +1,5 @@
-<section class="b-socials clearfix">
-  {% for social in site.data.socials %}
-  <a href="{{ social.link }}" class="columns small-6 large-3 b-social-item g-{{ social.name }}" data-username="{{ social.username }}">
-    <span class="icon-{{ social.name }}"></span>
-  </a>
-  {% endfor %}
-</section>
+<ul class="socials">
+    {% for social in site.data.socials %}
+    <li><a href="{{ social.url }}"><span class="icon-{{ social.network }}"></span>@{{ social.username }}</a></li>
+    {% endfor %}
+</ul>

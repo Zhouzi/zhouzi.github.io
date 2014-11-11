@@ -1,0 +1,12 @@
+@include grid-base();
+@include grid();
+
+@media #{$sm-up} { @include grid($colname: "col-sm-"); }
+@media #{$md-up} { @include grid($colname: "col-md-"); }
+@media #{$lg-up} { @include grid($colname: "col-lg-"); }
+@media #{$xl-up} { @include grid($colname: "col-xl-"); }
+
+.container {
+  max-width: $container-width;
+  margin: auto;
+}

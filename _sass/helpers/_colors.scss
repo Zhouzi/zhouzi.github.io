@@ -1,0 +1,27 @@
+$color-primary: #f63958;
+$color-secondary: #f7d32a;
+
+$color-info: #56bae8;
+
+$text-color: #444;
+
+$link-color: $color-primary;
+$link-hover-color: darken($color-primary, 10%);
+
+$gray-lighter: #eee;
+$gray-light: #dadada;
+$gray: #9b9b9b;
+
+$btn-radius: 4px;
+
+$btn-default-color: $gray;
+$btn-default-bg: $gray-lighter;
+$btn-default-border: 2px solid darken($btn-default-bg, 20%);
+
+$btn-primary-color: #fff;
+$btn-primary-bg: $color-primary;
+$btn-primary-border: 2px solid darken($btn-primary-bg, 20%);
+
+$btn-secondary-color: $text-color;
+$btn-secondary-bg: $color-secondary;
+$btn-secondary-border: 2px solid darken($btn-secondary-bg, 20%);

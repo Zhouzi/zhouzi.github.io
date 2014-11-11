@@ -1,0 +1,134 @@
+/*--------------------*\
+  #LINKS
+\*--------------------*/
+
+.link-text {
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    border-color: $link-hover-color;
+  }
+}
+
+.link-classic {
+  color: $link-color;
+  text-decoration: none;
+  display: inline;
+  padding: 0;
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+/*--------------------*\
+  #POSITIONING
+\*--------------------*/
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+
+
+
+
+/*--------------------*\
+  #SOCIALS
+\*--------------------*/
+
+.socials {
+  [class*="icon-"] {
+    margin-right: .2em;
+    vertical-align: middle;
+    font-size: 120%;
+  }
+}
+
+
+
+
+
+.label {
+  display: inline-block;
+  background-color: $gray-light;
+  padding: .2em;
+}
+
+.label--primary {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.label--secondary {
+  background-color: $color-secondary;
+}
+
+.label-sm {
+  font-size: 90%;
+  border-radius: $base-radius;
+  padding: .2em;
+  display: inline-block;
+}
+
+.label-sm__primary {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.label-sm__secondary {
+  background-color: $color-secondary;
+}
+
+
+
+
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+
+.notice {
+  padding: $relation-close;
+  border-radius: $base-radius;
+  border: 2px solid transparent;
+  margin-bottom: $relation-none;
+}
+
+.notice__default {
+  background-color: $gray-lighter;
+  border-color: $gray-light;
+}
+
+.notice__info {
+  background-color: lighten($color-info, 30%);
+  border-color: $color-info;
+}

@@ -1,0 +1,396 @@
+---
+layout: experiment
+title: TypeJS
+excerpt: Human-like typing effect.
+comments: true
+---
+
+<section class="block">
+    <p>
+        I built TypeJS so you feel like there's someone typing just in front of you.
+        How? By making mystakes, adjusting speed depending on whether <em>you're</em> typing or just hitting
+        the same key several times.
+    </p>
+
+    <h1>- <span class="typejs" data-typejs="Hello!, How are you doing?"></span></h1>
+
+{% highlight html %}
+<h1>
+    -
+    <span
+        class="typejs"
+        data-typejs="Hello!, How are you doing?"></span>
+</h1>
+{% endhighlight %}
+
+{% highlight javascript %}
+var tjs = new TypeJS(".typejs");
+tjs.loop();
+{% endhighlight %}
+
+    <div class="notice notice__info">
+        Note: TypeJS applies the "typing" class while processing so you can style that state.
+    </div>
+
+    <h1>Options</h1>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Default</th>
+        </tr>
+
+        <tr>
+            <td>typeSpeed</td>
+            <td><span class="label-sm label-sm__secondary">integer</span></td>
+            <td>How fast do you type?</td>
+            <td>200</td>
+        </tr>
+
+        <tr>
+            <td>eraseSpeed</td>
+            <td><span class="label-sm label-sm__secondary">integer</span></td>
+            <td>How fast do you hit backspace?</td>
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>pause</td>
+            <td><span class="label-sm label-sm__secondary">integer</span></td>
+            <td>Break's time between two cycle (a cycle being erase/type). Used by the method <strong>loop</strong>.</td>
+            <td>1000</td>
+        </tr>
+
+        <tr>
+            <td>mystaking</td>
+            <td><span class="label-sm label-sm__primary">function</span></td>
+            <td>Return a boolean, determining if it's time to make a mystake or not.</td>
+            <td><em>see code</em></td>
+        </tr>
+
+        <tr>
+            <td>randomChar</td>
+            <td><span class="label-sm label-sm__primary">function</span></td>
+            <td>Return a random character.</td>
+            <td><em>see code</em></td>
+        </tr>
+    </table>
+
+    <h2>Example</h2>
+
+{% highlight javascript %}
+var tjs = new TypeJS(".typejs", {
+    typeSpeed:  200,
+    eraseSpeed: 100,
+    pause:      1000,
+    mystaking:  function () { ... },
+    randomChar: function () { ... }
+});
+{% endhighlight %}
+
+    <h1>Methods</h1>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Arguments</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>loop</td>
+            <td><em>no arguments</em></td>
+            <td>Loop through the list of strings by typing/erasing each of them alternatively.</td>
+        </tr>
+
+        <tr>
+            <td>next</td>
+            <td>callback <em>(optional)</em></td>
+            <td>Call erase, then type by passing the next string in the list. Callback is called on complete.</td>
+        </tr>
+
+        <tr>
+            <td>type</td>
+            <td>string, callback</td>
+            <td>Type a string, then call callback.</td>
+        </tr>
+
+        <tr>
+            <td>erase</td>
+            <td>callback, norecursive</td>
+            <td>Erase element's current text content, then call callback.</td>
+        </tr>
+
+        <tr>
+            <td>stop</td>
+            <td><em>no arguments</em></td>
+            <td>Clear timeout.</td>
+        </tr>
+    </table>
+
+    <h2>Examples</h2>
+
+{% highlight javascript %}
+// Basic example
+var tjs = new TypeJS(".typejs");
+tjs.loop();
+{% endhighlight %}
+
+<p class="notice notice__info">
+    Make sure to setup the element's typejs attribute properly (it has to be a list of strings separated by a comma).<br>
+    e.g: <code>typejs="Hello!, How are you doing?"</code>
+</p>
+
+{% highlight javascript %}
+// Type "Hello!"
+// alert "I'm done typing!" on complete
+var tjs = new TypeJS(".typejs");
+tjs.type("Hello!", function () {
+    alert("I'm done typing!");
+});
+{% endhighlight %}
+
+{% highlight javascript %}
+// Erase element's current text content
+// Type "Hello!" on complete
+var tjs = new TypeJS(".typejs");
+tjs.erase(function () {
+    tjs.type("Hello!");
+});
+{% endhighlight %}
+</section>
+
+<script>
+    var TypeJS;
+
+    (function(d){
+        "use strict";
+
+        // Return a random integer from min to max
+        function rand (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function addClass (element, className) {
+            if(element.classList) {
+                element.classList.add(className);
+            } else {
+                element.className += ' ' + className;
+            }
+        }
+
+        function removeClass (element, className) {
+            if(element.classList) {
+                element.classList.remove(className);
+            } else {
+                element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
+        }
+
+        TypeJS = function (selector, options) {
+            var self = this;
+
+
+            // Merge options
+            if(typeof options === "object") {
+                for( var key in options ) {
+                    self.options[key] = options[key];
+                }
+            }
+
+
+            self.element = d.querySelector(selector);
+
+            var list = self.element.getAttribute("data-typejs");
+            if(typeof list === "string") {
+                self.list = list.split(",");
+            }
+
+            // Trim strings
+            for(var i = 0, len = self.list.length; i < len; i++) {
+                self.list[i] = self.list[i].trim();
+            }
+        };
+
+        TypeJS.prototype = {
+            _timeout:   null, // Stores timeouts' id
+            element:    null,
+            current:    null, // The word being typed
+            list:       [], // The list of "words"
+            mystaked:   false,
+
+            options: {
+                typeSpeed:  200, // How fast do you type?
+                eraseSpeed: 100, // How fast do you press backspace?
+                pause:      1000, // Time between intervals while using loop.
+
+                // Return whether or not it's time to make a mystake
+                mystaking: function () {
+                    return rand(0,3) === 0;
+                },
+
+                // Return a random char
+                randomChar: function () {
+                    var chars = [
+                        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+                        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+                        ",", ";", ":", "?", "=", "%", "@"
+                    ];
+
+                    return chars[rand(0, chars.length-1)];
+                }
+            },
+
+            // Going to loop though the list of keywords and alternate
+            // between erase/type/erase/type/..
+            loop: function () {
+                var self = this;
+
+                self.next(function () {
+                    self._timeout = setTimeout(function () {
+                        self.loop();
+                    }, self.options.pause);
+                });
+
+                return this;
+            },
+
+            // Erase the current and type the next string
+            next: function (completefn) {
+                var self            = this,
+                    currentIndex    = self.list.indexOf(self.element.textContent),
+                    nextIndex       = ++currentIndex,
+                    next;
+
+                // If the next exceed the max, set it to 0
+                if(nextIndex >= self.list.length) {
+                    nextIndex = 0;
+                }
+
+                // Next word, remember it before we erase and so lose the index of the current
+                next = self.list[nextIndex];
+
+                // Erase the current string and then type the next one
+                self.erase(function () {
+                    self.type(next, function (tjs, element) {
+                        if(typeof completefn === "function") {
+                            completefn(tjs, element);
+                        }
+                    });
+                });
+
+                return this;
+            },
+
+            // Type a string
+            type: function (str, completefn) {
+                var self = this;
+
+                self.current = str;
+                self.element.textContent = "";
+
+                addClass(self.element, "typing");
+
+                var addChar = function (i) {
+                    if(self.mystaked) {
+                        self.mystaked = false;
+
+                        // Erase just the last char thanx to erase(fn, true)
+                        self.erase(function () {
+                            addChar(i);
+                        }, true);
+
+                        return;
+                    }
+
+                    // Is it time to make a mystake?
+                    if(self.options.mystaking()) {
+                        self.element.textContent += self.options.randomChar();
+                        self.mystaked = true;
+                    } else {
+                        self.element.textContent += str[i++];
+                    }
+
+                    // If we made a mystake or we're not done typing, continue to type
+                    if( self.mystaked || self.element.textContent.length < str.length ) {
+                        self._timeoutid = setTimeout(function () {
+                            addChar(i);
+                        }, self.options.typeSpeed);
+                    } else {
+                        removeClass(self.element, "typing");
+
+                        if(typeof completefn === "function") {
+                            // Otherwise if the callback fn is defined, call it
+                            self.stop();
+                            self._timeoutid = setTimeout(function () {
+                                completefn(self, self.element);
+                            }, self.options.typeSpeed);
+                        }
+                    }
+                };
+
+                addChar(0);
+
+                return this;
+            },
+
+            // Erase the whole string (unless norecursive = true)
+            erase: function (completefn, norecursive) {
+                var self = this;
+
+                var removeChar = function () {
+                    var text = self.element.textContent,
+                        len = text.length-1;
+
+
+                    self.element.textContent = text.substr(0, len);
+
+                    addClass(self.element, "typing");
+
+
+                    // FIXME: not so DRY there
+                    if(completefn === true || norecursive === true) {
+                        if(typeof completefn === "function") {
+                            self._timeoutid = setTimeout(function () {
+                                self.stop();
+                                completefn(self, self.element);
+                            }, self.options.eraseSpeed);
+                        }
+                    } else {
+                        if(len > 0) {
+                            self._timeoutid = setTimeout(removeChar, self.options.eraseSpeed);
+                        } else {
+                            removeClass(self.element, "typing");
+
+                            if(typeof completefn === "function") {
+                                self._timeoutid = setTimeout(function () {
+                                    self.stop();
+                                    completefn(self, self.element);
+                                }, self.options.eraseSpeed);
+                            }
+                        }
+                    }
+                };
+
+                removeChar();
+
+                return this;
+            },
+
+            // Stop the timeouts
+            stop: function () {
+                clearTimeout(this._timeout);
+                this._timeout = null;
+
+                return this;
+            }
+        };
+    }(document));
+</script>
+
+<script>
+    var tjs = new TypeJS(".typejs");
+    tjs.loop();
+</script>

@@ -1,0 +1,11 @@
+{
+  "name": "zhouzi.github.io",
+  "version": "0.0.1",
+  "description": "Gabin Aureche's personal website.",
+  "author": "Gabin Aureche",
+  "dependencies": {
+    "gulp": "^3.8.9",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-ruby-sass": "^0.7.1"
+  }
+}

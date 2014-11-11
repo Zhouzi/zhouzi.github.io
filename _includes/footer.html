@@ -1,6 +1,5 @@
-<footer class="b-footer clearfix">
-  <div class="columns large-8">
-    <span class="icon-heart"></span> <a href="http://jekyllrb.com/" class="g-link">Jekyll</a>, <a href="http://foundation.zurb.com/" class="g-link">Foundation</a>, <a href="http://sass-lang.com/" class="g-link">SASS</a>, <a href="http://gulpjs.com/" class="g-link">Gulp</a>.
-  </div>
-  <div class="columns large-4">Say <a href="mailto:hello@gabinaureche.com" class="g-link">hello@gabinaureche.com</a>!</div>
+<footer>
+    <p>Say <a href="mailto:{{ site.email }}">{{ site.email }}</a>!</p>
+
+    {% include socials.html %}
 </footer>

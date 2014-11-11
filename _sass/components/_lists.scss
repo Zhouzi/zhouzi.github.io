@@ -1,0 +1,14 @@
+.list-inline li {
+  display: inline-block;
+  margin-right: $relation-siblings;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

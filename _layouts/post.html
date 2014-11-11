@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<section class="hero">
+    <h1 class="hero__heading">{{ page.title }}</h1>
+    <p class="hero__meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} - {% for category in page.categories %}#{{ category }} {% endfor %}{% endif %}</p>
+</section>
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+<section class="article">
+    <article class="article__content">
+        {{ page.excerpt }}
 
-</div>
+        {{ content }}
+    </article>
+</section>

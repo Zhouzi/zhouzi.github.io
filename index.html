@@ -2,19 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+<section class="hero">
+    <h1 class="hero__heading">Bonjour! I'm Gabin Aureche, a front-end developer focused on <strong>user experience</strong>.</h1>
+</section>
 
-  <h1>Posts</h1>
+<section class="block">
+    <h2 class="block__heading">Thought</h2>
 
-  <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+        <article class="post">
+            <div class="post__meta">
+                <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+            </div>
+
+            <div class="post__details">
+                <h2 class="post__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <small class="post__categories">{% for category in post.categories %}#{{ category }} {% endfor %}</small>
+            </div>
+        </article>
     {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="subscribe">Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>.</p>
+</section>
 
-</div>
+
+
+<section class="experiments">
+    {% for experiment in site.data.experiments %}
+        <div class="experiments__item">
+            <article class="experiment" style="border-color: {{ experiment.color }};">
+                <h2 class="experiment__title"><a href="{{ experiment.url }}">{{ experiment.title }}</a></h2>
+                <p class="experiment__description">{{ experiment.description }}</p>
+                <a href="{{ experiment.url }}" class="btn">project page</a>
+            </article>
+        </div>
+    {% endfor %}
+</section>
