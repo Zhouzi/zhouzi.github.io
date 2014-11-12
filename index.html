@@ -16,8 +16,10 @@ layout: default
             </div>
 
             <div class="post__details">
-                <h2 class="post__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-                <small class="post__categories">{% for category in post.categories %}#{{ category }} {% endfor %}</small>
+                <h2 class="post__title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <small class="post__categories">{% for category in post.categories %}#{{ category }} {% endfor %}</small>
+                </h2>
             </div>
         </article>
     {% endfor %}

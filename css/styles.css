@@ -874,7 +874,7 @@ header ul {
   .post__meta {
     text-align: right;
     float: left;
-    margin-top: 7px;
+    margin-top: 3px;
     margin-right: 10px;
     width: 100px; } }
 .post__meta small {
@@ -889,7 +889,11 @@ header ul {
 
 .post__title {
   font-size: 180%;
-  line-height: 1.4; }
+  line-height: 1.2; }
+  .post__title small {
+    font-weight: 400;
+    font-size: 50%;
+    margin: 0 0 0 .2em; }
 
 .subscribe {
   margin: 10px 0 0 0; }

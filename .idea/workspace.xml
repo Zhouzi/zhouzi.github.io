@@ -29,7 +29,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.3340081" vertical-offset="0" max-vertical-offset="494">
+            <state line="19" column="60" selection-start="792" selection-end="792" vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="494">
               <folding />
             </state>
           </provider>
@@ -49,7 +49,6 @@
         <option value="$PROJECT_DIR$/_sass/components/_lists.scss" />
         <option value="$PROJECT_DIR$/_sass/components/_block.scss" />
         <option value="$PROJECT_DIR$/_sass/helpers/_typography.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_sass/components/_buttons.scss" />
         <option value="$PROJECT_DIR$/_sass/helpers/_mixins.scss" />
         <option value="$PROJECT_DIR$/typejs/index.html" />
@@ -57,11 +56,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_posts/2014-11-14-im-back.markdown" />
         <option value="$PROJECT_DIR$/_posts/2014-11-14-new-home.markdown" />
-        <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_sass/base/_base.scss" />
         <option value="$PROJECT_DIR$/_posts/2014-11-14-home-sweet-home.markdown" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_sass/components/_skeleton.scss" />
+        <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_posts/2014-11-14-why-you-should-avoid-custom-controls.markdown" />
       </list>
     </option>
@@ -126,7 +126,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="_sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gabinaureche.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhouzi.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gabinaureche.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhouzi.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gabinaureche.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhouzi.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,11 +293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="63" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.63235295" vertical-offset="267" max-vertical-offset="675" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/helpers/_mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="1" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.92167103" vertical-offset="382" max-vertical-offset="825">
@@ -274,14 +315,11 @@
         <state line="5" column="5" selection-start="56" selection-end="56" vertical-scroll-proportion="0.15120968" vertical-offset="0" max-vertical-offset="496" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="346" selection-end="346" vertical-scroll-proportion="0.31120333" vertical-offset="0" max-vertical-offset="482" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/components/_buttons.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/helpers/_colors.scss">
@@ -310,7 +348,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/components/_skeleton.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="3" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.4131356" vertical-offset="2340" max-vertical-offset="3660">
+        <state line="112" column="17" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.45974576" vertical-offset="1463" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="18" selection-start="804" selection-end="804" vertical-scroll-proportion="0.62575454" vertical-offset="34" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="346" selection-end="346" vertical-scroll-proportion="0.30991736" vertical-offset="0" max-vertical-offset="484">
           <folding />
         </state>
       </provider>
@@ -320,7 +372,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.3340081" vertical-offset="0" max-vertical-offset="494">
+        <state line="19" column="60" selection-start="792" selection-end="792" vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="494">
           <folding />
         </state>
       </provider>

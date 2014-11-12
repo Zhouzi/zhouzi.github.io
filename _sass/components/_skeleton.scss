@@ -110,7 +110,7 @@ header {
   @media #{$md-up} {
     text-align: right;
     float: left;
-    margin-top: 7px;
+    margin-top: 3px;
     margin-right: $relation-close;
     width: 100px;
   }
@@ -136,10 +136,16 @@ header {
 
 .post__title {
   font-size: 180%;
-  line-height: 1.4;
+  line-height: 1.2;
 
   a {
     @extend .link-text;
+  }
+
+  small {
+    font-weight: $font-weight-normal;
+    font-size: 50%;
+    margin: 0 0 0 .2em;
   }
 }
 
