@@ -123,6 +123,10 @@ header {
 
 .post__details {
   overflow: hidden;
+
+  // fix title's link border-bottom
+  // (overflow's hiding a part of the border otherwise)
+  padding-bottom: 2px;
 }
 
 .post__title,

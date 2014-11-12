@@ -4,7 +4,7 @@ layout: default
 
 <section class="hero">
     <h1 class="hero__heading">{{ page.title }}</h1>
-    <p class="hero__meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} - {% for category in page.categories %}#{{ category }} {% endfor %}{% endif %}</p>
+    <p class="hero__meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} {% for category in page.categories %}#{{ category }} {% endfor %}{% endif %}</p>
 </section>
 
 <section class="article">

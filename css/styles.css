@@ -881,7 +881,8 @@ header ul {
   font-size: 90%; }
 
 .post__details {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 2px; }
 
 .post__title,
 .post__categories {
