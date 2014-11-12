@@ -72,6 +72,23 @@ a {
 
 
 
+blockquote {
+  font-size: 140%;
+  border-left: 4px solid $gray-light;
+  margin: 0 0 $relation-none 0;
+  padding: 0 $relation-none;
+  font-style: italic;
+  font-weight: $font-weight-bold;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+
+
+
 .highlight  { border: 2px solid $gray-light; padding: $grid-gutter; margin: 0 0 $relation-none 0; }
 pre { margin: 0; line-height: 1.4; }
 small { font-size: 90%; }

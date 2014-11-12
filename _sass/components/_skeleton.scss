@@ -94,6 +94,7 @@ header {
 
 .post {
   text-align: center;
+  margin-bottom: $relation-close;
 
   @media #{$md-up} {
     text-align: left;
@@ -109,7 +110,7 @@ header {
   @media #{$md-up} {
     text-align: right;
     float: left;
-    margin-top: 12px;
+    margin-top: 7px;
     margin-right: $relation-close;
     width: 100px;
   }
