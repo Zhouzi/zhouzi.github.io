@@ -393,8 +393,7 @@ h5, .h5,
 h6, .h6 {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  line-height: 1.4;
-  overflow: visible; }
+  line-height: 1.4; }
 
 h1, .h1 {
   font-size: 200%;
@@ -410,7 +409,6 @@ p {
 a {
   color: #f63958;
   text-decoration: none;
-  padding: 2px 0;
   border-bottom: 2px solid transparent; }
   a:hover, a:focus {
     color: #f10b31;

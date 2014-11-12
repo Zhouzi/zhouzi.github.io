@@ -36,7 +36,6 @@ h6, .h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
-  overflow: visible; // Makes the links' border-bottom appear.
 }
 
 h1, .h1 {
@@ -59,7 +58,7 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
-  padding: 2px 0;
+  //padding: 2px 0; // padding causes overflow issues
   border-bottom: 2px solid transparent;
 
   &:hover,
