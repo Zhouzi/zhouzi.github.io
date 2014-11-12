@@ -1,5 +1,6 @@
 _site/
 _drafts/
-.sass-cache/*
+.sass-cache
 node_modules
-*.DS_Store
+.DS_Store
+.idea

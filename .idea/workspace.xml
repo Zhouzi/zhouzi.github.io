@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_base.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_sass/base/_base.scss">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="61" selection-start="562" selection-end="562" vertical-scroll-proportion="0.4131356" vertical-offset="375" max-vertical-offset="1245">
+            <state line="5" column="5" selection-start="56" selection-end="56" vertical-scroll-proportion="0.15120968" vertical-offset="0" max-vertical-offset="496">
               <folding />
             </state>
           </provider>
@@ -54,6 +54,7 @@
         <option value="$PROJECT_DIR$/_sass/components/_helpers.scss" />
         <option value="$PROJECT_DIR$/_sass/components/_skeleton.scss" />
         <option value="$PROJECT_DIR$/_sass/base/_base.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -290,7 +291,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/base/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="61" selection-start="562" selection-end="562" vertical-scroll-proportion="0.4131356" vertical-offset="375" max-vertical-offset="1245">
+        <state line="31" column="8" selection-start="361" selection-end="361" vertical-scroll-proportion="0.19067797" vertical-offset="375" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="56" selection-end="56" vertical-scroll-proportion="0.15120968" vertical-offset="0" max-vertical-offset="496">
           <folding />
         </state>
       </provider>
