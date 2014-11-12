@@ -36,3 +36,15 @@
     border: $border;
   }
 }
+
+@mixin btn--default {
+  @include btn($color:$btn-default-color, $bg:$btn-default-bg, $border:$btn-default-border);
+}
+
+@mixin btn--primary {
+  @include btn($color:$btn-primary-color, $bg:$btn-primary-bg, $border:$btn-primary-border);
+}
+
+@mixin btn--secondary {
+  @include btn($color: $btn-secondary-color, $bg: $btn-secondary-bg, $border: $btn-secondary-border);
+}

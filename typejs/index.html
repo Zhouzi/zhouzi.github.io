@@ -6,27 +6,35 @@ comments: true
 ---
 
 <section class="block">
-    <p>
-        I built TypeJS so you feel like there's someone typing just in front of you.
-        How? By making mystakes, adjusting speed depending on whether <em>you're</em> typing or just hitting
-        the same key several times.
-    </p>
-
-    <h1>- <span class="typejs" data-typejs="Hello!, How are you doing?"></span></h1>
+    <h1>- <span id="typejs" data-typejs="Luke!, I'm your father..."></span></h1>
 
 {% highlight html %}
 <h1>
     -
     <span
-        class="typejs"
-        data-typejs="Hello!, How are you doing?"></span>
+        id="typejs"
+        data-typejs="Luke!, I'm your father..."></span>
 </h1>
 {% endhighlight %}
 
 {% highlight javascript %}
-var tjs = new TypeJS(".typejs");
+var tjs = new TypeJS("#typejs");
 tjs.loop();
 {% endhighlight %}
+
+    <p>
+        TypeJS is a javascript plugin animating text by reproducing a typing effect.
+        Not like a robot would but like you are used to do it.
+        So what differs from a robot and an human when it comes to typing?
+    </p>
+
+    <ul class="list">
+        <li>We make mistakes.</li>
+        <li>We are conditioned by our physical nature (meaning we might take less time hitting the same key several times than reaching different ones).</li>
+        <li class="text-muted"><em>We might want to hit some key faster than other one (coming soon).</em></li>
+    </ul>
+
+    <p>Feel free to submit your suggestions in the comments.</p>
 
     <div class="notice notice__info">
         Note: TypeJS applies the "typing" class while processing so you can style that state.
@@ -64,9 +72,9 @@ tjs.loop();
         </tr>
 
         <tr>
-            <td>mystaking</td>
+            <td>mistaking</td>
             <td><span class="label-sm label-sm__primary">function</span></td>
-            <td>Return a boolean, determining if it's time to make a mystake or not.</td>
+            <td>Return a boolean, determining if it's time to make a mistake or not.</td>
             <td><em>see code</em></td>
         </tr>
 
@@ -81,13 +89,30 @@ tjs.loop();
     <h2>Example</h2>
 
 {% highlight javascript %}
-var tjs = new TypeJS(".typejs", {
+var tjs = new TypeJS("#typejs", {
     typeSpeed:  200,
     eraseSpeed: 100,
     pause:      1000,
-    mystaking:  function () { ... },
+    mistaking:  function () { ... },
     randomChar: function () { ... }
 });
+{% endhighlight %}
+
+{% highlight javascript %}
+// mistaking is a function returning a boolean.
+// When resulting in true, TypeJS makes a mistake.
+// Example below is the defaut behavior:
+// There is 1 in 4 chance to make a mistake.
+var tjs = new TypeJS("#typejs", {
+    mistaking:  function () {
+        return rand(0, 3) === 0;
+    }
+});
+
+// rand returns a random integer between min and max.
+function rand (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 {% endhighlight %}
 
     <h1>Methods</h1>
@@ -101,8 +126,11 @@ var tjs = new TypeJS(".typejs", {
 
         <tr>
             <td>loop</td>
-            <td><em>no arguments</em></td>
-            <td>Loop through the list of strings by typing/erasing each of them alternatively.</td>
+            <td>list <em>(optional)</em></td>
+            <td>
+                Loop through the list of strings by typing/erasing each of them alternatively
+                (by default the list comes from the element's <code>typejs</code> attribute).
+            </td>
         </tr>
 
         <tr>
@@ -125,7 +153,7 @@ var tjs = new TypeJS(".typejs", {
 
         <tr>
             <td>stop</td>
-            <td><em>no arguments</em></td>
+            <td>/</td>
             <td>Clear timeout.</td>
         </tr>
     </table>
@@ -134,19 +162,20 @@ var tjs = new TypeJS(".typejs", {
 
 {% highlight javascript %}
 // Basic example
-var tjs = new TypeJS(".typejs");
+var tjs = new TypeJS("#typejs");
 tjs.loop();
 {% endhighlight %}
 
 <p class="notice notice__info">
-    Make sure to setup the element's typejs attribute properly (it has to be a list of strings separated by a comma).<br>
-    e.g: <code>typejs="Hello!, How are you doing?"</code>
+    No argument passed to <code>loop</code> so the list of strings comes from the element's <code>typejs</code> attribute.
+    It has to be a list of strings separated by a comma, i.e: <br>
+    <code>&lt;div typejs="Luke!, I'm your father..."&gt;&lt;/div&gt;</code>
 </p>
 
 {% highlight javascript %}
 // Type "Hello!"
 // alert "I'm done typing!" on complete
-var tjs = new TypeJS(".typejs");
+var tjs = new TypeJS("#typejs");
 tjs.type("Hello!", function () {
     alert("I'm done typing!");
 });
@@ -155,11 +184,13 @@ tjs.type("Hello!", function () {
 {% highlight javascript %}
 // Erase element's current text content
 // Type "Hello!" on complete
-var tjs = new TypeJS(".typejs");
+var tjs = new TypeJS("#typejs");
 tjs.erase(function () {
     tjs.type("Hello!");
 });
 {% endhighlight %}
+
+    <h1>Have any questions/suggestions?</h1>
 </section>
 
 <script>
@@ -219,7 +250,7 @@ tjs.erase(function () {
             element:    null,
             current:    null, // The word being typed
             list:       [], // The list of "words"
-            mystaked:   false,
+            mistaken:   false,
 
             options: {
                 typeSpeed:  200, // How fast do you type?
@@ -227,7 +258,7 @@ tjs.erase(function () {
                 pause:      1000, // Time between intervals while using loop.
 
                 // Return whether or not it's time to make a mystake
-                mystaking: function () {
+                mistaking: function () {
                     return rand(0,3) === 0;
                 },
 
@@ -245,8 +276,12 @@ tjs.erase(function () {
 
             // Going to loop though the list of keywords and alternate
             // between erase/type/erase/type/..
-            loop: function () {
+            loop: function (list) {
                 var self = this;
+
+                if(list instanceof Array) {
+                    self.list = list;
+                }
 
                 self.next(function () {
                     self._timeout = setTimeout(function () {
@@ -263,6 +298,9 @@ tjs.erase(function () {
                     currentIndex    = self.list.indexOf(self.element.textContent),
                     nextIndex       = ++currentIndex,
                     next;
+
+                // Note: if index is not found, it'be equal to -1
+                // In this case nextIndex = 0 because ++currentIndex = -1 + 1
 
                 // If the next exceed the max, set it to 0
                 if(nextIndex >= self.list.length) {
@@ -294,8 +332,8 @@ tjs.erase(function () {
                 addClass(self.element, "typing");
 
                 var addChar = function (i) {
-                    if(self.mystaked) {
-                        self.mystaked = false;
+                    if(self.mistaken) {
+                        self.mistaken = false;
 
                         // Erase just the last char thanx to erase(fn, true)
                         self.erase(function () {
@@ -305,16 +343,16 @@ tjs.erase(function () {
                         return;
                     }
 
-                    // Is it time to make a mystake?
-                    if(self.options.mystaking()) {
+                    // Is it time to make a mistake?
+                    if(self.options.mistaking()) {
                         self.element.textContent += self.options.randomChar();
-                        self.mystaked = true;
+                        self.mistaken = true;
                     } else {
                         self.element.textContent += str[i++];
                     }
 
                     // If we made a mystake or we're not done typing, continue to type
-                    if( self.mystaked || self.element.textContent.length < str.length ) {
+                    if( self.mistaken || self.element.textContent.length < str.length ) {
                         self._timeoutid = setTimeout(function () {
                             addChar(i);
                         }, self.options.typeSpeed);
@@ -391,6 +429,6 @@ tjs.erase(function () {
 </script>
 
 <script>
-    var tjs = new TypeJS(".typejs");
+    var tjs = new TypeJS("#typejs");
     tjs.loop();
 </script>

@@ -16,6 +16,7 @@ body {
   font-family: $body-font-family;
   color: $body-color;
   background-color: $gray-lighter;
+  line-height: $base-line-height;
 }
 
 
@@ -34,6 +35,8 @@ h5, .h5,
 h6, .h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  overflow: visible; // Makes the links' border-bottom appear.
 }
 
 h1, .h1 {
@@ -50,18 +53,13 @@ h2, .h2 {
 
 
 p {
-  line-height: $base-line-height;
-}
-
-p {
   margin: 0 0 $relation-none 0;
 }
 
 a {
   color: $link-color;
   text-decoration: none;
-  display: inline-block;
-  padding: 4px 0;
+  padding: 2px 0;
   border-bottom: 2px solid transparent;
 
   &:hover,

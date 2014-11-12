@@ -1,3 +1,12 @@
+.list {
+  padding: 0 $relation-none;
+  margin: 0 0 $relation-none 0;
+
+  li {
+    margin: 0 0 $relation-close 0;
+  }
+}
+
 .list-inline li {
   display: inline-block;
   margin-right: $relation-siblings;

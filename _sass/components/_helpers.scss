@@ -12,20 +12,6 @@
   }
 }
 
-.link-classic {
-  color: $link-color;
-  text-decoration: none;
-  display: inline;
-  padding: 0;
-  border-bottom: none;
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-}
-
 
 
 
