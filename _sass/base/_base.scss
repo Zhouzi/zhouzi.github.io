@@ -92,3 +92,5 @@ blockquote {
 .highlight  { border: 2px solid $gray-light; padding: $grid-gutter; margin: 0 0 $relation-none 0; }
 pre { margin: 0; line-height: 1.4; }
 small { font-size: 90%; }
+
+hr { border: 0; border-bottom: 2px dotted $gray-light; margin: $relation-none 0 $relation-close 0; }

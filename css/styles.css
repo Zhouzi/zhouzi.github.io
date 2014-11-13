@@ -436,6 +436,11 @@ pre {
 small {
   font-size: 90%; }
 
+hr {
+  border: 0;
+  border-bottom: 2px dotted #dadada;
+  margin: 30px 0 10px 0; }
+
 /*--------------------*\
   #COMPONENTS
 \*--------------------*/
@@ -981,7 +986,8 @@ header ul {
     text-transform: uppercase;
     padding-bottom: 10px;
     margin: 0 0 15px 0;
-    border-bottom: 2px solid #eee; }
+    border-bottom: 2px solid #eee;
+    color: #eee; }
   .block h1:first-child, .article h1:first-child {
     margin-top: 0; }
 
