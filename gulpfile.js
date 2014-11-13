@@ -1,6 +1,9 @@
 var gulp = require("gulp"),
     sass = require("gulp-ruby-sass"),
-    autoprefixer = require("gulp-autoprefixer");
+    autoprefixer = require("gulp-autoprefixer"),
+    minifycss = require("gulp-minify-css");
+
+
 
 gulp.task("styles", function () {
     return gulp
@@ -12,22 +15,21 @@ gulp.task("styles", function () {
 });
 
 
-gulp.task( 'watch', function () {
+
+gulp.task( "watch", ["styles"], function () {
     gulp.watch("_sass/**/*.scss", ["styles"]);
 } );
 
 
-gulp.task("default", function () {
-    gulp.run(["styles"]);
-});
+
+gulp.task("default", ["styles"]);
 
 
-gulp.task("build", function () {
+
+gulp.task("build", ["default"], function () {
     gulp
-        .src("_sass/**/*.scss")
-        .pipe(sass({
-            style: "compressed"
-        }))
+        .src("css")
+        .pipe(minifycss())
         .pipe(autoprefixer(
             "last 2 version",
             "safari > 4",
