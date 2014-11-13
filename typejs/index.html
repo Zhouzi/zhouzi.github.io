@@ -43,7 +43,7 @@ tjs.loop();
     <h1>Options</h1>
 
     <table class="table">
-        <tr>
+        <tr class="table__header">
             <th>Name</th>
             <th>Type</th>
             <th>Description</th>
@@ -51,38 +51,38 @@ tjs.loop();
         </tr>
 
         <tr>
-            <td>typeSpeed</td>
-            <td><span class="label-sm label-sm__secondary">integer</span></td>
-            <td>How fast do you type?</td>
-            <td>200</td>
+            <td data-th="Name">typeSpeed</td>
+            <td data-th="Type"><span class="label-sm label-sm__secondary">integer</span></td>
+            <td data-th="Description">How fast do you type?</td>
+            <td data-th="Default">200</td>
         </tr>
 
         <tr>
-            <td>eraseSpeed</td>
-            <td><span class="label-sm label-sm__secondary">integer</span></td>
-            <td>How fast do you hit backspace?</td>
-            <td>100</td>
+            <td data-th="Name">eraseSpeed</td>
+            <td data-th="Type"><span class="label-sm label-sm__secondary">integer</span></td>
+            <td data-th="Description">How fast do you hit backspace?</td>
+            <td data-th="Default">100</td>
         </tr>
 
         <tr>
-            <td>pause</td>
-            <td><span class="label-sm label-sm__secondary">integer</span></td>
-            <td>Break's time between two cycle (a cycle being erase/type). Used by the method <strong>loop</strong>.</td>
-            <td>1000</td>
+            <td data-th="Name">pause</td>
+            <td data-th="Type"><span class="label-sm label-sm__secondary">integer</span></td>
+            <td data-th="Description">Break's time between two cycle (a cycle being erase/type). Used by the method <strong>loop</strong>.</td>
+            <td data-th="Default">1000</td>
         </tr>
 
         <tr>
-            <td>mistaking</td>
-            <td><span class="label-sm label-sm__primary">function</span></td>
-            <td>Return a boolean, determining if it's time to make a mistake or not.</td>
-            <td><em>see code</em></td>
+            <td data-th="Name">mistaking</td>
+            <td data-th="Type"><span class="label-sm label-sm__primary">function</span></td>
+            <td data-th="Description">Return a boolean, determining if it's time to make a mistake or not.</td>
+            <td data-th="Default"><em>see code</em></td>
         </tr>
 
         <tr>
-            <td>randomChar</td>
-            <td><span class="label-sm label-sm__primary">function</span></td>
-            <td>Return a random character.</td>
-            <td><em>see code</em></td>
+            <td data-th="Name">randomChar</td>
+            <td data-th="Type"><span class="label-sm label-sm__primary">function</span></td>
+            <td data-th="Description">Return a random character.</td>
+            <td data-th="Default"><em>see code</em></td>
         </tr>
     </table>
 
@@ -118,43 +118,43 @@ function rand (min, max) {
     <h1>Methods</h1>
 
     <table class="table">
-        <tr>
+        <tr class="table__header">
             <th>Name</th>
             <th>Arguments</th>
             <th>Description</th>
         </tr>
 
         <tr>
-            <td>loop</td>
-            <td>list <em>(optional)</em></td>
-            <td>
+            <td data-th="Name">loop</td>
+            <td data-th="Arguments">list <em>(optional)</em></td>
+            <td data-th="Description">
                 Loop through the list of strings by typing/erasing each of them alternatively
                 (by default the list comes from the element's <code>typejs</code> attribute).
             </td>
         </tr>
 
         <tr>
-            <td>next</td>
-            <td>callback <em>(optional)</em></td>
-            <td>Call erase, then type by passing the next string in the list. Callback is called on complete.</td>
+            <td data-th="Name">next</td>
+            <td data-th="Arguments">callback <em>(optional)</em></td>
+            <td data-th="Description">Call erase, then type by passing the next string in the list. Callback is called on complete.</td>
         </tr>
 
         <tr>
-            <td>type</td>
-            <td>string, callback</td>
-            <td>Type a string, then call callback.</td>
+            <td data-th="Name">type</td>
+            <td data-th="Arguments">string, callback</td>
+            <td data-th="Description">Type a string, then call callback.</td>
         </tr>
 
         <tr>
-            <td>erase</td>
-            <td>callback, norecursive</td>
-            <td>Erase element's current text content, then call callback.</td>
+            <td data-th="Name">erase</td>
+            <td data-th="Arguments">callback, norecursive</td>
+            <td data-th="Description">Erase element's current text content, then call callback.</td>
         </tr>
 
         <tr>
-            <td>stop</td>
-            <td>/</td>
-            <td>Clear timeout.</td>
+            <td data-th="Name">stop</td>
+            <td data-th="Arguments">/</td>
+            <td data-th="Description">Clear timeout.</td>
         </tr>
     </table>
 

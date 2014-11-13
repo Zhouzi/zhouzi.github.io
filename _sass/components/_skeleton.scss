@@ -239,11 +239,49 @@ header {
   }
 
   td, th {
-    padding: 10px;
+    padding: $relation-close;
     border: 2px solid $gray-light;
   }
 
-  tr:nth-child(2n) {
-    background-color: $gray-lighter;
+  tr {
+    &:nth-child(2n) {
+      background-color: $gray-lighter;
+    }
+
+    &:last-child td:last-child {
+      border-bottom-width: 2px;
+    }
+  }
+
+  td {
+    display: block;
+    border-bottom-width: 0;
+    padding: $relation-close;
+
+    @media #{$sm-up} {
+      display: table-cell;
+      border-bottom-width: 2px;
+      padding: $relation-close;
+    }
+
+    &:before {
+      display: block;
+      content: attr(data-th);
+      font-weight: $font-weight-bold;
+
+      @media #{$sm-up} {
+        display: none;
+      }
+    }
+  }
+}
+
+.table__header {
+  position: absolute;
+  top: -9999999999px;
+  left: -9999999999px;
+
+  @media #{$sm-up} {
+    position: static;
   }
 }

@@ -945,6 +945,32 @@ header ul {
   border: 2px solid #dadada; }
 .table tr:nth-child(2n) {
   background-color: #eee; }
+.table tr:last-child td:last-child {
+  border-bottom-width: 2px; }
+.table td {
+  display: block;
+  border-bottom-width: 0;
+  padding: 10px; }
+  @media (min-width: 480px) {
+    .table td {
+      display: table-cell;
+      border-bottom-width: 2px;
+      padding: 10px; } }
+  .table td:before {
+    display: block;
+    content: attr(data-th);
+    font-weight: 700; }
+    @media (min-width: 480px) {
+      .table td:before {
+        display: none; } }
+
+.table__header {
+  position: absolute;
+  top: -9999999999px;
+  left: -9999999999px; }
+  @media (min-width: 480px) {
+    .table__header {
+      position: static; } }
 
 .block, .article {
   background-color: #fff;
