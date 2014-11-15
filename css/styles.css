@@ -1309,18 +1309,20 @@ header ul {
     opacity: 0; }
   50% {
     opacity: 1; } }
-.typejs {
+#typejs {
   position: relative; }
-
-.typejs.typing:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: #000;
-  animation: blink 800ms infinite; }
+  #typejs.typing:after {
+    display: block; }
+  #typejs:after {
+    display: none;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #000;
+    animation: blink 800ms infinite; }
 
 .typejs-heading {
   font-size: 300%;

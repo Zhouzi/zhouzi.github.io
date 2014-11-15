@@ -8,19 +8,25 @@
   }
 }
 
-.typejs {
+#typejs {
   position: relative;
-}
 
-.typejs.typing:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: #000;
-  animation: blink 800ms infinite;
+  &.typing:after {
+    display: block;
+  }
+
+  &:after {
+    display: none;
+
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #000;
+    animation: blink 800ms infinite;
+  }
 }
 
 .typejs-heading {
