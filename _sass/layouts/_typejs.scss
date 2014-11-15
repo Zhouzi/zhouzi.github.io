@@ -22,3 +22,9 @@
   background-color: #000;
   animation: blink 800ms infinite;
 }
+
+.typejs-heading {
+  @extend .panel;
+  font-size: 300%;
+  padding: $relation-none;
+}

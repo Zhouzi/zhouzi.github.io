@@ -929,19 +929,25 @@ header ul {
     .experiment .btn {
       color: #9b9b9b;
       background-color: #eee;
-      border: 2px solid #bbbbbb; }
+      border: 2px solid #bbbbbb;
+      transition: background-color 300ms ease, color 300ms ease; }
       .experiment .btn:hover, .experiment .btn:focus {
         color: #9b9b9b;
         background-color: #d4d4d4;
         border: 2px solid #bbbbbb; }
+      .experiment .btn:active {
+        box-shadow: 0 2px 6px 2px #a2a2a2 inset; }
     .experiment:hover .btn, .experiment:focus .btn {
       color: #fff;
       background-color: #f63958;
-      border: 2px solid #c00927; }
+      border: 2px solid #c00927;
+      transition: background-color 300ms ease, color 300ms ease; }
       .experiment:hover .btn:hover, .experiment:hover .btn:focus, .experiment:focus .btn:hover, .experiment:focus .btn:focus {
         color: #fff;
         background-color: #f10b31;
-        border: 2px solid #c00927; } }
+        border: 2px solid #c00927; }
+      .experiment:hover .btn:active, .experiment:focus .btn:active {
+        box-shadow: 0 2px 6px 2px #8f071d inset; } }
 
 .table th {
   text-align: left; }
@@ -994,35 +1000,46 @@ header ul {
 .btn {
   display: inline-block;
   padding: 10px;
-  border-radius: 4px;
-  transition: all 300ms ease; }
+  border-radius: 4px; }
+  .btn [class*="icon-"] {
+    line-height: 1;
+    vertical-align: middle; }
 
 .btn--default {
   color: #9b9b9b;
   background-color: #eee;
-  border: 2px solid #bbbbbb; }
+  border: 2px solid #bbbbbb;
+  transition: background-color 300ms ease, color 300ms ease; }
   .btn--default:hover, .btn--default:focus {
     color: #9b9b9b;
     background-color: #d4d4d4;
     border: 2px solid #bbbbbb; }
+  .btn--default:active {
+    box-shadow: 0 2px 6px 2px #a2a2a2 inset; }
 
 .btn--primary {
   color: #fff;
   background-color: #f63958;
-  border: 2px solid #c00927; }
+  border: 2px solid #c00927;
+  transition: background-color 300ms ease, color 300ms ease; }
   .btn--primary:hover, .btn--primary:focus {
     color: #fff;
     background-color: #f10b31;
     border: 2px solid #c00927; }
+  .btn--primary:active {
+    box-shadow: 0 2px 6px 2px #8f071d inset; }
 
 .btn--secondary {
   color: #444;
   background-color: #f7d32a;
-  border: 2px solid #b49607; }
+  border: 2px solid #b49607;
+  transition: background-color 300ms ease, color 300ms ease; }
   .btn--secondary:hover, .btn--secondary:focus {
     color: #444;
     background-color: #e5bf09;
     border: 2px solid #b49607; }
+  .btn--secondary:active {
+    box-shadow: 0 2px 6px 2px #836d05 inset; }
 
 .highlight {
   background: #ffffff; }
@@ -1278,6 +1295,12 @@ header ul {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+.panel, .typejs-heading {
+  border-radius: 4px;
+  background-color: #eee;
+  border: 2px solid #dadada;
+  padding: 10px; }
+
 /*--------------------*\
   #LAYOUT
 \*--------------------*/
@@ -1298,5 +1321,9 @@ header ul {
   width: 2px;
   background-color: #000;
   animation: blink 800ms infinite; }
+
+.typejs-heading {
+  font-size: 300%;
+  padding: 30px; }
 
 /*# sourceMappingURL=styles.css.map */
