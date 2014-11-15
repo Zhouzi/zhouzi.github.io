@@ -28,8 +28,7 @@ gulp.task("default", ["styles"]);
 
 gulp.task("build", ["default"], function () {
     gulp
-        .src("css")
-        .pipe(minifycss())
+        .src("css/**/*.css")
         .pipe(autoprefixer(
             "last 2 version",
             "safari > 4",
@@ -38,5 +37,6 @@ gulp.task("build", ["default"], function () {
             "ios > 5",
             "android > 3",
             "Firefox > 20" ))
+        .pipe(minifycss())
         .pipe(gulp.dest("css"));
 });
