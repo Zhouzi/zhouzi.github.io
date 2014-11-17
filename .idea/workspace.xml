@@ -47,7 +47,7 @@
       <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="86" selection-start="1555" selection-end="1571" vertical-scroll-proportion="0.55785125" vertical-offset="90" max-vertical-offset="1380">
+            <state line="34" column="18" selection-start="2280" selection-end="2280" vertical-scroll-proportion="0.6198347" vertical-offset="210" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
@@ -63,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/_sass/components/_lists.scss" />
         <option value="$PROJECT_DIR$/_sass/helpers/_typography.scss" />
         <option value="$PROJECT_DIR$/_sass/components/_helpers.scss" />
@@ -88,6 +87,7 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/_posts/2014-11-18-the-easier-the-better.markdown" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_layouts/default.html" />
       </list>
     </option>
   </component>
@@ -387,7 +387,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="86" selection-start="1555" selection-end="1571" vertical-scroll-proportion="0.55785125" vertical-offset="90" max-vertical-offset="1380">
+        <state line="34" column="18" selection-start="2280" selection-end="2280" vertical-scroll-proportion="0.6198347" vertical-offset="210" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>
