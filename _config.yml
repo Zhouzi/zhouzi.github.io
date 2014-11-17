@@ -6,9 +6,18 @@ twitter_username: "@zh0uzi"
 facebook_url:     "http://facebook.com/gabin.aureche"
 baseurl:          ""
 url:              "http://gabinaureche.com"
+description:      "Bonjour! I'm Gabin Aureche, a front-end developer focused on user experience."
 
-description: Bonjour! I'm Gabin Aureche, a front-end developer focused on user experience.
 
+
+# Build settings
+markdown:   kramdown
+permalink:  pretty
+exclude:    [ "gulpfile.js", "node_modules", "package.json" ]
+
+
+
+# Defaults
 defaults:
   -
     scope:
@@ -18,10 +27,3 @@ defaults:
       layout: "post"
       categories: "thought"
       comments: true
-
-
-
-# Build settings
-markdown:   kramdown
-permalink:  pretty
-exclude:    [ "gulpfile.js", "node_modules", "package.json" ]

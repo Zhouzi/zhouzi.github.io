@@ -3,40 +3,30 @@ title: "The easier, the better."
 date: 2014-11-18 14:00:00
 ---
 
-Do your best to make things easy and you'll get better at what you do.
-At least, as long as you keep pushing your limits and stay curious.
+When things are complicated, we tend to focus on the **hows**.
+We have to figure out **how** to reach the expected results from a *"technical"* perspective.
+Doing so we lose sight and often stop asking ourselves the right question: **why?**
 
-The fact is that when things are complicated, we tend to focus on the **how** instead of the **why**.
-We have to figure out how to reach the results from a *"technical"* perspective.
-Doing so we lose sight and often stop asking ourselves, **why?**
+Whether it's about money, time or whatever, everything has a *price*.
+We have to take action as fast and cheap as possible.
+In this situation there is not much time left to thinking.
 
-Why are we doing it that way? Why should we even do that? What are the goals?
-What are we trying to solve in the end?
+But guess what? Easy tasks doesn't cost much.
+Easiness free your mind so you're willing to think about the **whys**.
+Why are you doing what you do in that way? Why not doing it otherwise?
+What are the goals? What are you trying to solve from the very first place?
 
-It's hard to stay focused since everything as a cost, whether it's about money, time or whatever.
-We have to take action so we can't keep asking **why** for too long.
-When facing complex situations we better start early to get the job done.
-
-Unless things are easy enough to leave some room to think about it.
-The point is, easy things doesn't *cost* much so you're able to **think** more.
+You should make room to think about the **big picture**, the real questions.
 
 ## Making things easy ain't that easy.
 
-Actually there is probably several things you can do right now.
-Think about what you do on a day-to-day basis.
-Can't you improve your workflow by avoiding repetition?
-Maybe you are not using the right tools? The right framework?
+There is probably several things you can do right now to improve your workflow.
+Starting by **using the right tools**, **avoiding repetition**, **getting rid of bad habits**, ...
+But to be honest, I think that making things easy is mostly about **working hard**.
+It's about mastering your skills, killing the barriers to unleash your mind.
 
-Those are little things that are certainly going to help you by leaving time to think about the **why**.
-But to be honest, I think that making things easy is mostly about working hard.
-It's about mastering your skills so you won't have to think too much about the **how**.
-Kill the barriers, unleash your mind to think about the big picture.
+> Don't reinvent the wheel, use whatever makes sense to speed up your process.
 
-## A continuous and endless process.
-
-It's a continuous process in that we should always do our best to make things easier.
-Never stop, think about the big picture, think about the why.
-And when you feel like things are easy enough, make them even easier.
-Learn new things, improve your skills, experiment, try.
-
-> Make things easy so you spend less time doing and more thinking.
+If you're asked to build a todo app in a couple of hours, are you going to code the whole thing yourself?
+Are you going to stick with jQuery and build your own framework? Sure you could.
+But by opting for a solution like ember, backbone, knockout or angular you're definitely going to leave more room to think about the big picture.
