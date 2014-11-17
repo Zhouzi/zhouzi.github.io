@@ -25,14 +25,14 @@
         <meta name="twitter:image:src" content="{{ site.url }}/images/meta_large_image.png">
 
         <!-- FACEBOOK OPEN GRAPH -->
-        <meta name="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        <meta name="og:type" content="article">
-        <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-        <meta name="og:image" content="{{ site.url }}/images/meta_large_image.png"/>
-        <meta name="og:description" content="{% if page.excerpt %}{{ page.excerpt|strip_html }}{% else %}{{ site.description }}{% endif %}">
-        <meta name="og:site_name" content="{{ site.author }}">
-        <meta name="article:author" content="{{ site.facebook_url }}">
-        <meta name="article:publisher" content="{{ site.facebook_url }}">
+        <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+        <meta property="og:image" content="{{ site.url }}/images/meta_large_image.png"/>
+        <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt|strip_html }}{% else %}{{ site.description }}{% endif %}">
+        <meta property="og:site_name" content="{{ site.author }}">
+        <meta property="article:author" content="{{ site.facebook_url }}">
+        <meta property="article:publisher" content="{{ site.facebook_url }}">
 
         <!-- GOOGLE+ -->
         <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
