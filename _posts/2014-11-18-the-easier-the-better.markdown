@@ -23,10 +23,10 @@ You should make room to think about the **big picture**, the real questions.
 There is probably several things you can do right now to improve your workflow.
 Starting by **using the right tools**, **avoiding repetition**, **getting rid of bad habits**, ...
 But to be honest, I think that making things easy is mostly about **working hard**.
-It's about mastering your skills, killing the barriers to unleash your mind.
+It's about mastering your skills, killing the barriers to unleash your mind. Oh and...
 
 > Don't reinvent the wheel, use whatever makes sense to speed up your process.
 
 If you're asked to build a todo app in a couple of hours, are you going to code the whole thing yourself?
 Are you going to stick with jQuery and build your own framework? Sure you could.
-But by opting for a solution like ember, backbone, knockout or angular you're definitely going to leave more room to think about the big picture.
+But by opting for a solution like ember, backbone, knockout or angular you're definitely going to leave more room to think about what is going to make your todo app awesome.
