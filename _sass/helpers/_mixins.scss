@@ -25,6 +25,7 @@
 
 
 @mixin btn ($color, $bg, $border, $darken-factor: 10%) {
+  position: relative;
   color: $color;
   background-color: $bg;
   border: $border;
@@ -35,10 +36,11 @@
     color: $color;
     background-color: darken($bg, $darken-factor);
     border: $border;
+    box-shadow: 0 0 0 0 rgba($bg,1);
   }
 
   &:active {
-    box-shadow: 0 2px 6px 2px darken($bg, 30%) inset;
+    top: 2px;
   }
 }
 
