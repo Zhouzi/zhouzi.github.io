@@ -1,8 +1,10 @@
 header,
 footer {
+  $padding-horizontal: $grid-gutter * 2;
+  $padding-vertical: $padding-horizontal + $grid-gutter;
   @extend .clearfix;
   background-color: $color-secondary;
-  padding: $grid-gutter * 2;
+  padding: $padding-vertical $padding-horizontal;
 
   ul {
     @extend .list-unstyled, .list-inline;
