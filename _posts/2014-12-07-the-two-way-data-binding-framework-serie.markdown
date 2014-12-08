@@ -1,10 +1,10 @@
 ---
-title: "The \"two way data binding\" framework serie."
+title: "The \"two-way data binding\" framework serie."
 date: 2014-12-07 14:00:00
 categories: javascript framework
 ---
 
-There are tons of JavaScript frameworks that work toward "[two way data binding](http://stackoverflow.com/questions/13504906/what-is-two-way-binding)" nowadays.
+There are tons of JavaScript frameworks that work toward "[two-way data binding](http://stackoverflow.com/questions/13504906/what-is-two-way-binding)" nowadays.
 There are the unavoidable, largely used and production-ready:
 
 * [AngularJS](https://angularjs.org/)
@@ -35,7 +35,7 @@ The best way to determine which one fits best a project and its requirements is 
 This is exactly what this serie is all about.
 I am going to build a simple and basic app with different technologies.
 
-_Note: The purpose of this serie is more about discovering and giving a try to those frameworks than evaluating their two way data binding capabilities.
+_Note: The purpose of this serie is more about discovering and giving a try to those frameworks than evaluating their two-way data binding capabilities.
 Some of them might not achieve it "natively"._
 
 # The "App"
