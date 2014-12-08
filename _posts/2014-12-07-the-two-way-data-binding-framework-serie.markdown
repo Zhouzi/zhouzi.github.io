@@ -4,7 +4,7 @@ date: 2014-12-07 14:00:00
 categories: javascript framework
 ---
 
-There are tons of JavaScript frameworks that works toward "[two way data binding](http://stackoverflow.com/questions/13504906/what-is-two-way-binding)" nowadays.
+There are tons of JavaScript frameworks that work toward "[two way data binding](http://stackoverflow.com/questions/13504906/what-is-two-way-binding)" nowadays.
 There are the unavoidable, largely used and production-ready:
 
 * [AngularJS](https://angularjs.org/)
@@ -32,7 +32,7 @@ They all have their pros and cons.
 Some are really powerful with a complex architecture while others focus on simplicity and flexibility.
 But it's hard to have an opinion simply based on the specs and what you can read about it.
 The best way to determine which one fits best a project and its requirements is probably to actually try them out.
-This is exactly what this serie is about.
+This is exactly what this serie is all about.
 I am going to build a simple and basic app with different technologies.
 
 _Note: The purpose of this serie is more about discovering and giving a try to those frameworks than evaluating their two way data binding capabilities.
@@ -47,14 +47,14 @@ I will also use data mockups and won't handle potential ajax errors.
 
 On Trello you have boards that contains lists which contains cards.
 So to create a card you have to select a list from a board.
-An user might have a lots of lists and boards, this is why the app is going to load only what's needed.
-In addition to this, the data will be "cached" to avoid useless requests.
+A user might have a lots of lists and boards, this is why the app is going to load only what's needed.
+Moreover, the data will be "cached" to avoid useless requests.
 
 # A word of caution
 
 I've been building several apps with [AngularJS](https://angularjs.org/) and for now it's my framework of choice.
 This is why the first version will be built with angular so it serves as a reference.
-That been said, I'll do my best to stay as objective as possible.
+That being said, I'll do my best to stay as objective as possible.
 Please, also note that I'm going to discover most of the other frameworks through this serie.
 So let me know if you find anything that could be improved, it would be much appreciated!
 
