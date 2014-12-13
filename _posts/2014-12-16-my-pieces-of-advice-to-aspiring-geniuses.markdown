@@ -1,10 +1,10 @@
 ---
-title: "My pieces of advice to beginners."
+title: "My pieces of advice to aspiring geniuses."
 date: 2014-12-16 12:30:00
 ---
 
 I often find my self looking at my past work.
-It always reminds me how much work and side projects I've been building.
+It always reminds me how much side projects I worked on.
 To be honest, **most of them are just ideas and concepts**.
 Some are in a more advanced state but wow, **I've been doing things so wrong!**
 

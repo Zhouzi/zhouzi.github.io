@@ -93,8 +93,12 @@ header {
 }
 
 .post {
-  margin-bottom: $relation-none;
   text-align: center;
+  margin-bottom: $relation-none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media #{$sm-up} {
     text-align: left;
@@ -102,7 +106,7 @@ header {
 }
 
 .post__title {
-  margin: 0;
+  margin: 0 0 $relation-close 0;
   line-height: 1.2;
 
   a {
@@ -174,6 +178,7 @@ header {
   .experiment__description {
     @extend .text-muted;
     line-height: 1;
+    margin: 0;
   }
 }
 

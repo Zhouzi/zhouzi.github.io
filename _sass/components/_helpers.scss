@@ -118,3 +118,18 @@
   background-color: lighten($color-info, 30%);
   border-color: $color-info;
 }
+
+
+
+
+
+.tag {
+  background-color: $gray-lighter;
+  border: 2px solid $gray-light;
+  padding: 4px;
+  border-radius: $base-radius;
+
+  &:before {
+    content: "#";
+  }
+}

@@ -8,7 +8,7 @@ layout: default
 
 <section class="block">
     <h3 class="block-heading">
-        <span class="block-heading__left">Thought</span>
+        <span class="block-heading__left">Scribbles</span>
         <span class="block-heading__right">Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></span>
     </h3>
 
@@ -19,14 +19,21 @@ layout: default
         </h2>
 
         <div class="post__meta">
-            {% for category in post.categories %}#{{ category }} {% endfor %}
-            - {{ post.date | date: "%b %-d, %Y" }}
+            {% for category in post.categories %}
+            <span class="tag">{{ category }}</span>
+            {% endfor %}
+            {{ post.date | date: "%b %-d, %Y" }}
         </div>
     </article>
     {% endfor %}
 </section>
 
 
+<div class="block">
+    <h3 class="block-heading no-margin">
+        <span class="block-heading__left">Projects</span>
+    </h3>
+</div>
 
 <section class="experiments">
     {% for experiment in site.data.experiments %}

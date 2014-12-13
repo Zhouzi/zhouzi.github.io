@@ -12,6 +12,10 @@
   padding: 0 0 5px 0;
   margin: 0 0 $relation-none 0;
   border-bottom: 2px solid $gray-lighter;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .block-heading__left,
