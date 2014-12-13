@@ -2,18 +2,30 @@
   background-color: #fff;
   padding: $grid-gutter * 2;
   margin: 0 0 6px 0;
+}
 
-  .block__heading {
-    @extend .text-center;
-    font-size: 140%;
-    text-transform: uppercase;
-    padding-bottom: $relation-close;
-    margin: 0 0 $grid-gutter 0;
-    border-bottom: 2px solid $gray-lighter;
-    color: $gray-lighter;
-  }
+.block-heading {
+  display: table;
+  font-size: 100%;
+  width: 100%;
+  color: $gray;
+  padding: 0 0 5px 0;
+  margin: 0 0 $relation-none 0;
+  border-bottom: 2px solid $gray-lighter;
+}
 
-  h1:first-child {
-    margin-top: 0;
-  }
+.block-heading__left,
+.block-heading__right {
+  @extend .ellipsis;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.block-heading__left {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.block-heading__right {
+  font-weight: $font-weight-normal;
 }

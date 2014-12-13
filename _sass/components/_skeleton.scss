@@ -92,77 +92,42 @@ header {
   margin: 0;
 }
 
-
-
 .post {
+  margin-bottom: $relation-none;
   text-align: center;
-  margin-bottom: $relation-close;
 
-  @media #{$md-up} {
+  @media #{$sm-up} {
     text-align: left;
   }
 }
 
-.post__title,
-.post__meta {
-  margin: 0;
-}
-
-.post__meta {
-  @media #{$md-up} {
-    text-align: right;
-    float: left;
-    margin-top: 3px;
-    margin-right: $relation-close;
-    width: 100px;
-  }
-
-  small {
-    @extend .label, .label--secondary;
-    font-size: 90%;
-  }
-}
-
-.post__details {
-  overflow: hidden;
-
-  // fix title's link border-bottom
-  // (overflow's hiding a part of the border otherwise)
-  padding-bottom: 2px;
-}
-
-.post__title,
-.post__categories {
-  display: inline-block;
-}
-
-.post__categories {
-  @extend .text-muted;
-}
-
 .post__title {
-  font-size: 180%;
+  margin: 0;
   line-height: 1.2;
 
   a {
-    @extend .link-text;
-  }
+    color: $text-color;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: $color-secondary;
+    border: none;
 
-  small {
-    font-weight: $font-weight-normal;
-    font-size: 50%;
-    margin: 0 0 0 .2em;
-  }
-}
-
-.subscribe {
-  @extend .text-muted, .text-center;
-  margin: $relation-close 0 0 0;
-
-  @media #{$md-up} {
-    text-align: right;
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
   }
 }
+
+.post__meta {
+  font-size: 90%;
+  color: $gray;
+}
+
+
+
+
 
 .experiments {
   @extend .clearfix;
@@ -209,17 +174,6 @@ header {
   .experiment__description {
     @extend .text-muted;
     line-height: 1;
-  }
-
-  @media #{$md-up} {
-    .btn { @include btn--default; }
-
-    &:hover,
-    &:focus {
-      .btn {
-        @include btn--primary;
-      }
-    }
   }
 }
 

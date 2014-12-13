@@ -7,24 +7,23 @@ layout: default
 </section>
 
 <section class="block">
-    <h2 class="block__heading">Thought</h2>
+    <h3 class="block-heading">
+        <span class="block-heading__left">Thought</span>
+        <span class="block-heading__right">Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></span>
+    </h3>
 
     {% for post in site.posts %}
-        <article class="post">
-            <div class="post__meta">
-                <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-            </div>
+    <article class="post">
+        <h2 class="post__title">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
 
-            <div class="post__details">
-                <h2 class="post__title">
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    <small class="post__categories">{% for category in post.categories %}#{{ category }} {% endfor %}</small>
-                </h2>
-            </div>
-        </article>
+        <div class="post__meta">
+            {% for category in post.categories %}#{{ category }} {% endfor %}
+            - {{ post.date | date: "%b %-d, %Y" }}
+        </div>
+    </article>
     {% endfor %}
-
-    <p class="subscribe">Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>.</p>
 </section>
 
 
@@ -35,7 +34,6 @@ layout: default
             <article class="experiment" style="border-color: {{ experiment.color }};">
                 <h2 class="experiment__title"><a href="{{ experiment.url }}">{{ experiment.title }}</a></h2>
                 <p class="experiment__description">{{ experiment.description }}</p>
-                <a href="{{ experiment.url }}" class="btn btn--primary">project page</a>
             </article>
         </div>
     {% endfor %}
