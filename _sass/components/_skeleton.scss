@@ -116,6 +116,7 @@ header {
     vertical-align: middle;
     background-color: $color-secondary;
     border: none;
+    border-radius: $base-radius;
 
     &:hover,
     &:focus {
