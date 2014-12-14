@@ -4,45 +4,79 @@ date: 2014-12-16 12:30:00
 ---
 
 I often find my self looking at my past work.
-It always reminds me how much side projects I worked on.
+It always reminds me how much side projects I've worked on.
 To be honest, **most of them are just ideas and concepts**.
 Some are in a more advanced state but wow, **I've been doing things so wrong!**
+Sure we all start somewhere but looking backward, **there's things I would have done differently**.
+Here is my take dedicated to _"aspiring geniuses"_[1](#im-not-a-genius).
 
-I feel somewhat nostalgic but mostly happy.
-Being able to recognize that I have been doing things wrong probably means I'm doing better now.
-Looking backward, **there's several things I would have done differently** so here is my take dedicated to _front-end_ beginners.
+# Working hard
 
-# Spend 80% of your time doing, 20% learning
-
-I was in the middle of my second year at ILOI[1] when I really started working hard.
-I understood that I won't get anything without **99% perspiration**[2].
+I was in the middle of my second year at ILOI[2](#iloi) when I really started to work hard.
+I understood that I won't get anything without **99% perspiration**[3](#thomas-edison-quote).
 From that moment I started to build complex and large projects.
 I was spending 100% of my time doing and _learning from my **practical** mistakes_.
 
-The problem is that I was actually rebuilding things, I was **reinventing the wheel**.
-I was a prisoner of my own bubble ignoring what was really happening in my field.
-(...)
-This is why I'd advice front-end beginners to spend 20% of your time:
+I learned a lot by failing and I'm part of those who thinks it's a great way to get better.
+However, learning through failure doesn't mean you should **close your eyes and your mind**.
+I believe that working hard is not enough - or at least **its definition is often unclear**.
+
+Just as I did, you might be tempted to jump in and spend 100% of your time building things.
+Your very own projects, ideas, and products.
+Being enthusiastic is great but hey, slow down a minute.
+**Working hard is not about confining yourself in your own bubble**.
+
+You have cool ideas, I won't doubt that but are you **aware**?
+
+# Geniuses secret sauce
+
+You probably know someone you're envious of.
+You know, the one that seems to be good at whatever he's doing.
+This particular guy that seems to have a natural gift.
+We've all met some of them and so did I.
+Those guys are what we'd define as **geniuses**, always **one lap ahead**.
+
+Actually, I believe that their shared trait is that they are _"aware"_.
+
+What makes them so good is that they are in phase with their field.
+They learned from the past and are looking into the future.
+They are not just productive, they are **up to date**.
+While working hard they spend **80% of their time doing, 20% learning**.
+
+This is why I'd advice _front-end_ beginners to make sure that your "working hard" process contains:
 
 * Reading articles, books about your field of expertise
 * Making sure you are using the right tools/framework
 * Being aware of the trends
 * Experimenting stuff
 
-# The secret sauce of _geniuses_
+This is what I would have done differently.
 
-You probably know someone you're jealous and/or envious of.
-You know, that guy that's seems to be good at whatever he's doing.
-The one that's so great that you wonder why he's still in your classroom.
-Yep, this particular guy that's seems to have a natural gift.
+## What about you? 
 
-I've met lots of them and when I make the comparison, what I get out of it it that they are all **aware**.
-They spend/spent lots of time learning and **they are always one lap ahead**.
-So...
-
-> "Stay hungry, stay foolish." - Steve Jobs
+Looking backward, what do you retain from your own experience?
+What advices would you give to a previous version of yourself?[4](#steal-like-an-artist)
+I'm really interested to learn from your experience so let me know in the comments!
 
 ---
 
-1. ILOI is a school based in Reunion Island.
-2. _"Genius is one percent inspiration, ninety-nine percent perspiration."_ - Thomas Edison
+<ol>
+    <li id="im-not-a-genius">
+        To make it clear: I'm not a genius and nor saying I am.
+        I'm just someone trying to get better at what he does.
+    </li>
+    
+    <li id="iloi">
+        ILOI is a school based in Reunion Island.
+    </li>
+    
+    <li id="thomas-edison-quote">
+        <em>"Genius is one percent inspiration, ninety-nine percent perspiration."</em>
+        - Thomas Edison
+    </li>
+    
+    <li id="steal-like-an-artist">
+        One of <a href="http://austinkleon.com/">Austin Kleon</a>'s theory, 
+        shared in his book "<a href="http://www.amazon.com/Steal-Like-Artist-Things-Creative/dp/0761169253">Steal Like an Artist</a>" is that all advice is autobiographical.
+    </li>
+</ol>

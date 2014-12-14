@@ -191,6 +191,39 @@ header {
   @extend .block;
 }
 
+.article__content {
+  a[href^="#"] {
+    vertical-align: super;
+    font-size: 70%;
+    margin: 0 0 0 .2em;
+
+    &:before {
+      content: "[";
+    }
+
+    &:after {
+      content: "]";
+    }
+  }
+
+  hr:last-of-type {
+    & + p,
+    & + ol,
+    & + ul {
+      font-size: 90%;
+      line-height: 1.4;
+      color: $gray;
+    }
+
+    & + ol,
+    & + ul {
+      li:target {
+        color: $text-color;
+      }
+    }
+  }
+}
+
 
 
 
