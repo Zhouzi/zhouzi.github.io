@@ -75,7 +75,7 @@ header {
 
 .hero__heading {
   @extend .text-center;
-  margin: 0;
+  margin: 0 0 $relation-close 0;
   font-size: 300%;
   font-weight: $font-weight-normal;
   font-style: italic;
