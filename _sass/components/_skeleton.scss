@@ -112,11 +112,15 @@ header {
   a {
     color: $text-color;
     padding: 8px;
-    display: inline-block;
+    display: inline;
+    line-height: 1.5;
     vertical-align: middle;
     background-color: $color-secondary;
     border: none;
     border-radius: $base-radius;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 
     &:hover,
     &:focus {

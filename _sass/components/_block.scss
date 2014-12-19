@@ -2,6 +2,10 @@
   background-color: #fff;
   padding: $grid-gutter * 2;
   margin: 0 0 6px 0;
+
+  h1:first-child {
+    margin-top: 0;
+  }
 }
 
 .block-heading {
