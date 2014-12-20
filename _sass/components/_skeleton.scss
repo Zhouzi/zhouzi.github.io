@@ -138,53 +138,48 @@ header {
 
 
 
-.experiments {
+.projects {
   @extend .clearfix;
+  margin: 0 -3px;
+}
 
-  .experiments__item {
-    @extend .col-md-6;
+.project-wrapper {
+  @extend .col-md-6;
+  padding: 0 3px 6px 3px;
 
-    @media #{$md-up} {
-      .experiment {
-        margin: 0 3px 6px 0;
-      }
-
-      &:nth-child(2n) .experiment {
-        margin: 0 0 6px 3px;
-      }
-    }
+  &.project-wrapper--large {
+    @extend .col-md-12;
   }
 }
 
-.experiment {
+.project {
   @extend .text-center;
   padding: $relation-none;
   background-color: #fff;
-  margin: 0 0 6px 0;
-  border-bottom: 4px solid $gray;
+  border-bottom: 4px solid $color-secondary;
 
   @media #{$md-up} {
     text-align: left;
   }
+}
 
-  .experiment__title,
-  .experiment__description {
-    @extend .ellipsis;
+.project__title,
+.project__description {
+  @extend .ellipsis;
+}
+
+.project__title {
+  margin: 0 0 $relation-siblings 0;
+
+  a {
+    @extend .link-text;
   }
+}
 
-  .experiment__title {
-    margin: 0 0 $relation-siblings 0;
-
-    a {
-      @extend .link-text;
-    }
-  }
-
-  .experiment__description {
-    @extend .text-muted;
-    line-height: 1;
-    margin: 0;
-  }
+.project__description {
+  @extend .text-muted;
+  line-height: 1;
+  margin: 0;
 }
 
 

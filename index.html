@@ -35,12 +35,12 @@ layout: default
     </h3>
 </div>
 
-<section class="experiments">
-    {% for experiment in site.data.experiments %}
-        <div class="experiments__item">
-            <article class="experiment" style="border-color: {{ experiment.color }};">
-                <h2 class="experiment__title"><a href="{{ experiment.url }}">{{ experiment.title }}</a></h2>
-                <p class="experiment__description">{{ experiment.description }}</p>
+<section class="projects">
+    {% for project in site.data.projects %}
+        <div class="project-wrapper{% if project.large == true %} project-wrapper--large{% endif %}">
+            <article class="project" style="border-color: {{ project.color }};">
+                <h2 class="project__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+                <p class="project__description">{{ project.description }}</p>
             </article>
         </div>
     {% endfor %}
