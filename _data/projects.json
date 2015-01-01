@@ -1,10 +1,9 @@
 [
     {
         "color": "#f7d32a",
-        "title": "JavaScript Framework List",
-        "description": "Non exhaustive list of JavaScript technologies.",
-        "url": "/javascript-framework-list",
-        "large": true
+        "title": "JS Framework List",
+        "description": "List of JavaScript technologies.",
+        "url": "/javascript-framework-list"
     },
 
     {

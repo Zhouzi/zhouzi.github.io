@@ -72,3 +72,5 @@ This is exactly what [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) is 
 * [Chaplin](http://chaplinjs.org/), Chaplin is an architecture for JavaScript applications using the Backbone.js library.
 * [Mithril](http://lhorie.github.io/mithril/), Mithril is a (...) tool to organize code in a way that is easy to think about and to maintain.
 * [ExtJS](http://www.sencha.com/products/extjs/), JavaScript Framework for Building Rich Desktop Web Applications.
+* [elm](http://elm-lang.org/), A functional reactive language for interactive applications.
+* [Flight](https://flightjs.github.io/), An event-driven web framework, from Twitter.
