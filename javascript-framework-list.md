@@ -74,3 +74,4 @@ This is exactly what [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) is 
 * [ExtJS](http://www.sencha.com/products/extjs/), JavaScript Framework for Building Rich Desktop Web Applications.
 * [elm](http://elm-lang.org/), A functional reactive language for interactive applications.
 * [Flight](https://flightjs.github.io/), An event-driven web framework, from Twitter.
+* [Thorax](http://thoraxjs.org/) (...) battle-tested Backbone + Handlebars framework to build large scale web applications.
