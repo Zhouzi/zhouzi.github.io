@@ -1,16 +1,23 @@
 [
     {
+        "color": "#222",
+        "title": "TheaterJS",
+        "description": "Create a theater piece.",
+        "url": "http://gabinaureche.com/TheaterJS"
+    },
+
+    {
         "color": "#f7d32a",
         "title": "JS Framework List",
         "description": "List of JavaScript technologies.",
-        "url": "/javascript-framework-list"
+        "url": "http://gabinaureche.com/javascript-framework-list"
     },
 
     {
         "color": "#4fe3b4",
         "title": "TypeJS",
         "description": "Human-like typing effect.",
-        "url": "/typejs"
+        "url": "http://gabinaureche.com/typejs"
     },
 
     {
