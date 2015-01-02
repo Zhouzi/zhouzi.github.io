@@ -4,7 +4,7 @@ title: JavaScript Framework List
 permalink: /javascript-framework-list/
 ---
 
-Front-end frameworks and libraries are so numerous that it's hard to know them all.
+Front-end frameworks and libraries are so numerous that it's hard to keep track of them all.
 The purpose of this page is to list them so you won't miss any.
 Let me know if you have suggestions, I'd be glad to extend this list!
 
@@ -18,7 +18,7 @@ What they have in common is that they helps building **rich and complex web appl
 # AngularJS
 
 Well, introducing [AngularJS](https://angularjs.org/) is a bit awkward as it's probably the most famous framework nowadays.
-One could argue that it's the most powerful as well.
+One could argue that it's the most powerful as well but I won't.
 Actually Angular is large, complex, based on **two-way data binding** and can likely achieve whatever you can dream of.
 It also means that it might not suit simple and basic applications so make sure your choice is appropriate.
 
@@ -29,8 +29,8 @@ It also means that it might not suit simple and basic applications so make sure 
 
 # Knockout
 
-If you want to write pure JS with a simple, lightweight and pretty well supported framework, you best bet could be [Knockout](http://knockoutjs.com/).
-It has no dependencies while implementing two-way data binding, custom bindings and much more.
+If you want to write pure JS with a simple, lightweight and pretty well supported framework, your best bet could be [Knockout](http://knockoutjs.com/).
+It has no dependencies while implementing the core features of a great framework.
 
 * [Official tutorial](http://learn.knockoutjs.com/)
 
