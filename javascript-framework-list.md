@@ -58,20 +58,25 @@ This is exactly what [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) is 
 
 # Watch list
 
-* [Bacon.js](http://baconjs.github.io/), functional reactive programming, javascript, reactive programming.
-* [Kefir.js](http://pozadi.github.io/kefir/), fast and light Reactive Programming library for JavaScript inspired by Bacon.js and RxJS.
-* [Flux](http://facebook.github.io/flux/), Application Architecture for Building User Interfaces.
-* [RxJS](http://reactive-extensions.github.io/RxJS/), Reactive Extensions for JavaScript.
-* [Vue.js](http://vuejs.org/), provides data-reactive components with a simple and flexible API.
 * [Ember.js](http://emberjs.com/), A framework for creating ambitious web applications.
+* [Meteor](https://www.meteor.com/) is a complete open source platform for building web and mobile apps in pure JavaScript.
 * [React](http://facebook.github.io/react/), A JavaScript library for building user interfaces.
 * [Polymer](https://www.polymer-project.org/), Web Components (...) that extend HTML itself.
-* [Knockback.js](http://kmalakoff.github.io/knockback/), brings Knockout.js magic to Backbone.js.
 * [Ampersand.js](http://ampersandjs.com/), A highly modular, loosely coupled, non-frameworky framework for building advanced JavaScript apps.
+* [Vue.js](http://vuejs.org/), provides data-reactive components with a simple and flexible API.
 * [Marionette.js](http://marionettejs.com/), Make your Backbone applications dance!
 * [Chaplin](http://chaplinjs.org/), Chaplin is an architecture for JavaScript applications using the Backbone.js library.
 * [Mithril](http://lhorie.github.io/mithril/), Mithril is a (...) tool to organize code in a way that is easy to think about and to maintain.
 * [ExtJS](http://www.sencha.com/products/extjs/), JavaScript Framework for Building Rich Desktop Web Applications.
+* [Bacon.js](http://baconjs.github.io/), functional reactive programming, javascript, reactive programming.
+* [Kefir.js](http://pozadi.github.io/kefir/), fast and light Reactive Programming library for JavaScript inspired by Bacon.js and RxJS.
+* [Flux](http://facebook.github.io/flux/), Application Architecture for Building User Interfaces.
+* [RxJS](http://reactive-extensions.github.io/RxJS/), Reactive Extensions for JavaScript.
+* [Knockback.js](http://kmalakoff.github.io/knockback/), brings Knockout.js magic to Backbone.js.
 * [elm](http://elm-lang.org/), A functional reactive language for interactive applications.
 * [Flight](https://flightjs.github.io/), An event-driven web framework, from Twitter.
 * [Thorax](http://thoraxjs.org/) (...) battle-tested Backbone + Handlebars framework to build large scale web applications.
+* [Spine](http://spinejs.com/) - Build Awesome JavaScript MVC Applications.
+* [Agility.js](http://agilityjs.com/) is an MVC library for Javascript that lets you write maintainable and reusable browser code.
+* [Canjs](http://canjs.com/) is a JavaScript library that makes developing complex applications simple and fast.
+* [Maria](http://peter.michaux.ca/maria/) MVC framework for javascript applications.
