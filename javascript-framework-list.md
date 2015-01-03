@@ -80,3 +80,5 @@ This is exactly what [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) is 
 * [Agility.js](http://agilityjs.com/) is an MVC library for Javascript that lets you write maintainable and reusable browser code.
 * [Canjs](http://canjs.com/) is a JavaScript library that makes developing complex applications simple and fast.
 * [Maria](http://peter.michaux.ca/maria/) is a MVC framework for javascript applications.
+* [Ractive.js](http://www.ractivejs.org/), The diamond age of web development.
+* [Way.js](http://gwendall.github.io/way/) is a simple, lightweight, persistent, framework-agnostic javascript library.
