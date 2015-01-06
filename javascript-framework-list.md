@@ -18,20 +18,26 @@ What they have in common is that they helps building **rich and complex web appl
 # AngularJS
 
 Well, introducing [AngularJS](https://angularjs.org/) is a bit awkward as it's probably the most famous framework nowadays.
-One could argue that it's the most powerful as well but I won't.
-Actually Angular is large, complex, based on **two-way data binding** and can likely achieve whatever you can dream of.
-It also means that it might not suit simple and basic applications so make sure your choice is appropriate.
+Angular is powerful and has a pretty well pronounced "wow" effect.
+The fact is you'll end up doing cool things early in your learning.
+However, with time going on, you'll figure out that Angular has its cons too.
+One major being its performance issue so make sure you know what you are up to if you plan to use it for a large project.
 
+* [AngularJS](https://angularjs.org/) (official website)
 * [Official tutorial](https://docs.angularjs.org/tutorial/step_00)
-* [Shaping Up With Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js) at [Code School](https://www.codeschool.com/) (free).
+* [Shaping Up With Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js) at [Code School](https://www.codeschool.com/) (free tutorial)
 
 
 
 # Knockout
 
-If you want to write pure JS with a simple, lightweight and pretty well supported framework, your best bet could be [Knockout](http://knockoutjs.com/).
-It has no dependencies while implementing the core features of a great framework.
+[Knockout](http://knockoutjs.com/) is **simple**, lightweight an well supported.
+Meaning it might lack of certain features if you are searching for a "complete" framework.
+It is a good choice if you are working on a small to medium project.
+Otherwise, you will have to mix it with other tools (which is not really a problem).
+Oh and did I mention that writing knockout code is almost like writing pure javascript?
 
+* [Knockout](http://knockoutjs.com/) (official website)
 * [Official tutorial](http://learn.knockoutjs.com/)
 
 
@@ -39,11 +45,14 @@ It has no dependencies while implementing the core features of a great framework
 # Backbone.js
 
 [Backbone](http://backbonejs.org/) is one of the oldest and most famous tool of this list.
-If you discovered it lately you could be disappointed as it has no _"native"_ implementation of two-way data binding.
-However Backbone is pretty simple, provides great structure while leaving the power in your hands.
-This is probably why lots of frameworks are based on it.
+It is well documented, simple, structuring and offers a great support for REST services.
+There is no "magic" with backbone.
+You know what you do and how it will impact the application by keeping full control over everything.
 
+* [Backbone](http://backbonejs.org/) (official website)
 * [Annotated sources](http://backbonejs.org/docs/backbone.html)
+* [Developing Backbone.js Applications](http://addyosmani.github.io/backbone-fundamentals/) (open source book)
+* [Backbone.js Tutorial - Beginners](https://www.youtube.com/watch?v=FZSjvWtUxYk) (video)
 
 
 
