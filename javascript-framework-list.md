@@ -2,6 +2,7 @@
 layout: list
 title: JavaScript Framework List
 permalink: /javascript-framework-list/
+comments: true
 ---
 
 Front-end frameworks and libraries are so numerous that it's hard to keep track of them all.
