@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section class="hero">
+    <h1 class="hero__heading">Archives</h1>
+</section>
+
+<div class="block">
+    <h3 class="block-heading no-margin">
+        <span class="block-heading__left">Archived projects</span>
+    </h3>
+
+    <p>
+        Those projects are getting pretty old and doesn't reflect the state of my work anymore.
+        They are there just for record.
+    </p>
+</div>
+
+<section class="projects">
+    {% for project in site.data.archives %}
+    <div class="project-wrapper{% if project.large == true %} project-wrapper--large{% endif %}">
+        <article class="project" style="border-color: {{ project.color }};">
+            <h2 class="project__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+            <p class="project__description">{{ project.description }}</p>
+        </article>
+    </div>
+    {% endfor %}
+</section>

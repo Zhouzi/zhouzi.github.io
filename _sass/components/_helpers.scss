@@ -45,11 +45,18 @@
   #SOCIALS
 \*--------------------*/
 
-.socials {
-  [class*="icon-"] {
-    margin-right: .2em;
-    vertical-align: middle;
-    font-size: 120%;
+.social-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  text-align: center;
+  font-size: 110%;
+
+  &,
+  & span {
+    vertical-align: baseline;
   }
 }
 

@@ -1,0 +1,29 @@
+[
+  {
+    "color": "#4fe3b4",
+    "title": "TypeJS",
+    "description": "Human-like typing effect.",
+    "url": "typejs"
+  },
+
+  {
+    "color": "#0071bc",
+    "title": "ZooButtons",
+    "description": "Collection of wild HTML/CSS buttons.",
+    "url": "http://zoobuttons.gabinaureche.com"
+  },
+
+  {
+    "color": "#f5ab35",
+    "title": "GameRulesGenerator",
+    "description": "Generates random game concepts.",
+    "url": "http://gamerulesgenerator.gabinaureche.com"
+  },
+
+  {
+    "color": "#f04698",
+    "title": "Namer",
+    "description": "Generates random names.",
+    "url": "http://namer.gabinaureche.com"
+  }
+]
