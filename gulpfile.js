@@ -3,8 +3,6 @@ var gulp = require("gulp"),
     autoprefixer = require("gulp-autoprefixer"),
     minifycss = require("gulp-minify-css");
 
-
-
 gulp.task("styles", function () {
     return gulp
         .src("_sass/**/*.scss")
@@ -13,18 +11,6 @@ gulp.task("styles", function () {
         }))
         .pipe(gulp.dest("css"));
 });
-
-
-
-gulp.task( "watch", ["styles"], function () {
-    gulp.watch("_sass/**/*.scss", ["styles"]);
-} );
-
-
-
-gulp.task("default", ["styles"]);
-
-
 
 gulp.task("build", ["default"], function () {
     gulp
@@ -40,3 +26,6 @@ gulp.task("build", ["default"], function () {
         .pipe(minifycss())
         .pipe(gulp.dest("css"));
 });
+
+gulp.task("watch", ["styles"], function () { gulp.watch("_sass/**/*.scss", ["styles"]); });
+gulp.task("default", ["styles"]);
