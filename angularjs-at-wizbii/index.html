@@ -4,7 +4,7 @@ title: AngularJS @ Wizbii
 excerpt: AngularJS @ Wizbii
 ---
 
-<section>
+<section data-background="army-speech.jpg">
 	<h1>AngularJS</h1>
 	<h3>@Wizbii</h3>
 
@@ -31,16 +31,8 @@ excerpt: AngularJS @ Wizbii
 	</p>
 </section>
 
-<section>
-	<h2>Contexte</h2>
-
-	<ul>
-		<li><strong>Internalisation</strong> des équipes</li>
-		<li>Nouvelle version, <strong>refonte complète</strong></li>
-	</ul>
-</section>
-
-<section>
+<section data-background="team.jpeg">
+	<!--
 	<h2 class="fragment">Managers</h2>
 
 	<ul>
@@ -64,6 +56,16 @@ excerpt: AngularJS @ Wizbii
 
 	<ul>
 		<li class="fragment">Gabin</li>
+	</ul>
+	-->
+</section>
+
+<section>
+	<h2>Contexte</h2>
+
+	<ul>
+		<li><strong>Internalisation</strong> des équipes</li>
+		<li>Nouvelle version, <strong>refonte complète</strong></li>
 	</ul>
 </section>
 
@@ -103,30 +105,71 @@ excerpt: AngularJS @ Wizbii
 
 <section>
 	<h2>Process</h2>
+	<p>Gestionnaire de tâches: <strong>Gulp</strong>.</p>
 
-	<p>
-		Gestionnaire de tâches: <strong>Gulp</strong>.
-	</p>
+<pre><code>
+/...
+/publications
+    /models
+        PublicationModel.js
+        CommentModel.js
+    /services
+        PublicationService.js
+        CommentService.js
+    /controllers
+        SubmitPublicationController.js
+        PublicationsController.js
+    /directives
+        PublicationAttachment.js
+/...
 
-	<h3>Architecture en modules</h3>
-
-	- publications
-	- models
-	PublicationModel.js
-	CommentModel.js
-	- services
-	PublicationService.js
-	CommentService.js
-	- controllers
-	SubmitPublicationController.js
-	PublicationsController.js
-	- directives
-	PublicationAttachment.js
+</code></pre>
 </section>
 
-<section>
-	<h2>Exemple</h2>
-</section>
+<section><pre><code>
+app.controller("PublicationsController", [
+  "$scope",
+  "PublicationModel",
+  function ($scope, PublicationModel) {
+    var sth = null;
+
+    $scope.publications = [];
+
+    (function (publications) {
+      angular.forEach(publications, function (publication) {
+        $scope.publications.push(new PublicationModel(publication));
+      });
+    })(window.data.publications);
+  }
+]);
+
+</code></pre></section>
+
+<section><pre><code>
+app.service("PublicationModel", [
+    "PublicationService",
+    function (PublicationService) {
+        function PublicationModel (attrs) {
+            angular.extend(this, attrs);
+        }
+
+        PublicationModel.prototype.like = function () {
+            PublicationService.like(this.id);
+        };
+
+        return PublicationModel;
+    }
+]);
+
+</code></pre></section>
+
+<section><pre><code>
+<article ng-repeat="publication in publications">
+    {[ publication.content ]}
+    <a ng-click="publication.like()">like</a>
+</article>
+
+</code></pre></section>
 
 <section>
 	<h2>Pour l'avenir...</h2>
@@ -138,7 +181,6 @@ excerpt: AngularJS @ Wizbii
 	</ul>
 </section>
 
-<section>
+<section data-background="cat.jpg">
 	<h2>Merci !</h2>
-	<h3>:)</h3>
 </section>
