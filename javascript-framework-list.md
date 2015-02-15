@@ -92,3 +92,4 @@ This is exactly what [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) is 
 * [Maria](http://peter.michaux.ca/maria/) is a MVC framework for javascript applications.
 * [Ractive.js](http://www.ractivejs.org/), The diamond age of web development.
 * [Way.js](http://gwendall.github.io/way/) is a simple, lightweight, persistent, framework-agnostic javascript library.
+* [Riot](https://muut.com/riotjs/), a React-Like, 2.5kb User Interface Library.

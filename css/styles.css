@@ -505,7 +505,7 @@ footer:after, .projects:after {
   background-color: #f63958; }
 
 .label--secondary {
-  background-color: #f7d32a; }
+  background-color: #f5cb27; }
 
 .label-sm {
   font-size: 90%;
@@ -518,7 +518,7 @@ footer:after, .projects:after {
   background-color: #f63958; }
 
 .label-sm__secondary {
-  background-color: #f7d32a; }
+  background-color: #f5cb27; }
 
 .ellipsis, .project__title,
 .project__description, .block-heading__left,
@@ -840,11 +840,11 @@ footer ul {
   color: #f63958; }
 
 .text-secondary {
-  color: #f7d32a; }
+  color: #f5cb27; }
 
 header,
 footer {
-  background-color: #f7d32a;
+  background-color: #f5cb27;
   padding: 45px 30px; }
 
 footer p {
@@ -909,7 +909,7 @@ header ul {
     display: inline;
     line-height: 1.5;
     vertical-align: middle;
-    background-color: #f7d32a;
+    background-color: #f5cb27;
     border: none;
     border-radius: 4px;
     -webkit-box-decoration-break: clone;
@@ -930,7 +930,7 @@ header ul {
 .project {
   padding: 30px;
   background-color: #fff;
-  border-bottom: 4px solid #f7d32a; }
+  border-bottom: 4px solid #f5cb27; }
   @media (min-width: 768px) {
     .project {
       text-align: left; } }
@@ -1064,14 +1064,14 @@ header ul {
 .btn--secondary {
   position: relative;
   color: #444;
-  background-color: #f7d32a;
-  border: 2px solid #b49607;
+  background-color: #f5cb27;
+  border: 2px solid #ae8c08;
   transition: background-color 300ms ease, color 300ms ease; }
   .btn--secondary:hover, .btn--secondary:focus {
     color: #444;
-    background-color: #e5bf09;
-    border: 2px solid #b49607;
-    box-shadow: 0 0 0 0 #f7d32a; }
+    background-color: #dfb30a;
+    border: 2px solid #ae8c08;
+    box-shadow: 0 0 0 0 #f5cb27; }
   .btn--secondary:active {
     top: 2px; }
 
