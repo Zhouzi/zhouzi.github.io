@@ -4,7 +4,7 @@ title: About Gabin Aureche
 permalink: /about/
 ---
 
-I am Gabin Aureche, a french front-end developer working at [Wizbii]().
+I am Gabin Aureche, a french front-end developer working at [Wizbii](http://wizbii.com/).
 I am a problem solver, passionate about human behavior, design lover and obsessed by user experience.
 
 I build user-centered, responsive client side solutions.
