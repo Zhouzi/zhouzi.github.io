@@ -2,14 +2,14 @@
     {
         "color": "#222",
         "title": "TheaterJS",
-        "description": "Typing effect mimicking human behavior.",
+        "description": "Typing effect mimicking human behavior",
         "url": "http://gabinaureche.com/TheaterJS"
     },
 
     {
         "color": "#f7d32a",
-        "title": "JS Framework List",
-        "description": "List of JavaScript technologies.",
-        "url": "javascript-framework-list"
+        "title": "JavaScript Thingies",
+        "description": "Cool JavaScript resources",
+        "url": "javascript-thingies"
     }
 ]
