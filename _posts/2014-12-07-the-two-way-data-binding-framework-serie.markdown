@@ -39,8 +39,6 @@ I am going to build a simple and basic app with different technologies.
 _Note: The purpose of this serie is more about discovering and giving a try to those frameworks than evaluating their two-way data binding capabilities.
 Some of them might not achieve it "natively"._
 
-**Update:** I am maintaining a list of all javascript *frameworks* I come across [there](http://gabinaureche.com/javascript-framework-list).
-
 # The "App"
 
 The app is supposed to be a browser extension to bookmark a link to [Trello](https://trello.com/).
