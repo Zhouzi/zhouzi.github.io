@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>ui router $stateChangeCancel</title>
+        <script src="https://code.angularjs.org/1.4.0-beta.5/angular.js"></script>
+        <script src="ui-router.js"></script>
+        <script>
+            angular
+                .module('app', ['ui.router'])
+                .config(function ($stateProvider) {
+                    $stateProvider
+                        .state('home', {
+                            url: "/home",
+                            template: "This is the home's template."
+                        })
+                        .state('login', {
+                            url: "/login",
+                            template: "This is the login's template."
+                        });
+                })
+                .run(function ($state, $rootScope) {
+                    $rootScope.$on('$stateChangeStart', function (event, toState) {
+                        alert('$stateChangeStart triggered');
+                        console.log(arguments);
+
+                        if (toState.name === 'login') return event.preventDefault();
+                    });
+
+                    $rootScope.$on('$stateChangeSuccess', function () {
+                        alert('$stateChangeSuccess triggered');
+                        console.log(arguments);
+                    });
+
+                    $rootScope.$on('$stateChangeCancel', function () {
+                        alert('$stateChangeCancel triggered');
+                        console.log(arguments);
+                    });
+                });
+        </script>
+    </head>
+
+    <body>
+        <p>The route change to login page is cancelled.</p>
+
+        <button ui-sref="home">Home page</button>
+        <button ui-sref="login">Login page</button>
+
+        <div ui-view=""></div>
+    </body>
+</html>
