@@ -21,6 +21,7 @@ comments: true
 * [Flux](http://facebook.github.io/flux/) - Client-side application architecture, from Facebook.
 * [elm](http://elm-lang.org/) - Functional reactive language.
 * [Flight](https://flightjs.github.io/) - Event-driven web framework, from Twitter.
+* [Aurelia](http://aurelia.io/) - A next generation framework based on ES6
 
 # Web Components
 
@@ -35,6 +36,22 @@ comments: true
 * [ionic](http://ionicframework.com/) - Nice Front-End SDK made to work with AngularJS.
 * [Hammer.js](http://hammerjs.github.io/) - Add touch gestures.
 
+# Infographics
+
+* [Timesheet.js](https://sbstjn.github.io/timesheet.js/) - Stylable timesheets for web & mobile.
+
+# DOM
+
+* [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) - A Virtual DOM and diffing algorithm.
+* [vissense](https://github.com/vissense/vissense) - Observe visibility changes.
+
+# Text editor
+
+* [grande.js](http://mattduvall.com/grande.js/) - Medium-like editor.
+* [pen](http://sofish.github.io/pen/) - Medium-like with support for markdown.
+* [Medium Editor](http://daviferreira.github.io/medium-editor/) - Medium-like editor.
+* [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
+
 # Utilities
 
 * [underscore](http://underscorejs.org/) - Functional programming helpers.
@@ -44,11 +61,15 @@ comments: true
 * [mailcheck](https://github.com/mailcheck/mailcheck) - Suggests a right domain when mispelling an email address.
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
 
-# DOM
-
-* [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) - A Virtual DOM and diffing algorithm.
-* [vissense](https://github.com/vissense/vissense) - Observe visibility changes.
-
 # Server
 
 * [Sails.js](http://sailsjs.org/) - Realtime MVC framework for Node.js
+
+# AngularJS
+
+* [AngularJS](https://angularjs.org/) - Powerful advanced MVW framework, from Google.
+* [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
+* [ui-router](https://github.com/angular-ui/ui-router) - Powerful router with support for nested views and much more.
+* [ui-utils](http://angular-ui.github.io/ui-utils/) - Lots of useful stuff for Angular apps.
+* [UI Bootstrap](https://angular-ui.github.io/bootstrap/) - Angular version of bootstrap's components.
+* [ngTagsInput](http://mbenford.github.io/ngTagsInput/) - Tags input directive for Angular.
