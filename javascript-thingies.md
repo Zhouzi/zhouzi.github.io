@@ -22,6 +22,7 @@ comments: true
 * [elm](http://elm-lang.org/) - Functional reactive language.
 * [Flight](https://flightjs.github.io/) - Event-driven web framework, from Twitter.
 * [Aurelia](http://aurelia.io/) - A next generation framework based on ES6
+* [React Native](http://facebook.github.io/react-native/) - Build native apps using React.
 
 # Web Components
 
@@ -60,6 +61,7 @@ comments: true
 * [History.js](https://github.com/browserstate/history.js) - Manipulate browser's API history.
 * [mailcheck](https://github.com/mailcheck/mailcheck) - Suggests a right domain when mispelling an email address.
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
+* [dragscroll](http://asvd.github.io/dragscroll/) - Add support for "drag" scroll.
 
 # Server
 
