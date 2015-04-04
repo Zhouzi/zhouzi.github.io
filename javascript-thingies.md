@@ -24,6 +24,15 @@ comments: true
 * [Aurelia](http://aurelia.io/) - A next generation framework based on ES6
 * [React Native](http://facebook.github.io/react-native/) - Build native apps using React.
 
+# AngularJS
+
+* [AngularJS](https://angularjs.org/) - Powerful advanced MVW framework, from Google.
+* [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
+* [ui-router](https://github.com/angular-ui/ui-router) - Powerful router with support for nested views and much more.
+* [ui-utils](http://angular-ui.github.io/ui-utils/) - Lots of useful stuff for Angular apps.
+* [UI Bootstrap](https://angular-ui.github.io/bootstrap/) - Angular version of bootstrap's components.
+* [ngTagsInput](http://mbenford.github.io/ngTagsInput/) - Tags input directive for Angular.
+
 # Web Components
 
 * [Polymer](https://www.polymer-project.org/) - Build Web Components, from Google.
@@ -45,6 +54,7 @@ comments: true
 
 * [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) - A Virtual DOM and diffing algorithm.
 * [vissense](https://github.com/vissense/vissense) - Observe visibility changes.
+* [HTML GL](https://github.com/PixelsCommander/HTML-GL) - Easily render HTML/CSS in WebGL.
 
 # Text editor
 
@@ -52,6 +62,10 @@ comments: true
 * [pen](http://sofish.github.io/pen/) - Medium-like with support for markdown.
 * [Medium Editor](http://daviferreira.github.io/medium-editor/) - Medium-like editor.
 * [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
+
+# Cool stuff
+
+* [Space.js](http://www.slashie.org/space.js/) - Narrative scrolling.
 
 # Utilities
 
@@ -66,12 +80,3 @@ comments: true
 # Server
 
 * [Sails.js](http://sailsjs.org/) - Realtime MVC framework for Node.js
-
-# AngularJS
-
-* [AngularJS](https://angularjs.org/) - Powerful advanced MVW framework, from Google.
-* [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
-* [ui-router](https://github.com/angular-ui/ui-router) - Powerful router with support for nested views and much more.
-* [ui-utils](http://angular-ui.github.io/ui-utils/) - Lots of useful stuff for Angular apps.
-* [UI Bootstrap](https://angular-ui.github.io/bootstrap/) - Angular version of bootstrap's components.
-* [ngTagsInput](http://mbenford.github.io/ngTagsInput/) - Tags input directive for Angular.
