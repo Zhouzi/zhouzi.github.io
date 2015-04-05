@@ -1,15 +1,29 @@
 [
-    {
-        "color": "#222",
-        "title": "TheaterJS",
-        "description": "Typing effect mimicking human behavior",
-        "url": "http://gabinaureche.com/TheaterJS"
-    },
+  {
+    "color": "#23cbbf",
+    "title": "Reactive Design",
+    "description": "Patterns improving perceived speed",
+    "url": "http://gabinaureche.com/reactivedesign/"
+  },
 
-    {
-        "color": "#f7d32a",
-        "title": "JavaScript Thingies",
-        "description": "Cool JavaScript resources",
-        "url": "javascript-thingies"
-    }
+  {
+    "color": "#37b475",
+    "title": "Reactive Demo",
+    "description": "Codepen demo of \"Reactive Design\"",
+    "url": "http://codepen.io/Zhouzi/full/ogdxJj/"
+  },
+
+  {
+    "color": "#222",
+    "title": "TheaterJS",
+    "description": "Typing effect mimicking human behavior",
+    "url": "http://gabinaureche.com/TheaterJS"
+  },
+
+  {
+    "color": "#f7d32a",
+    "title": "JavaScript Thingies",
+    "description": "Cool JavaScript resources",
+    "url": "javascript-thingies"
+  }
 ]

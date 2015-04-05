@@ -939,7 +939,8 @@ header ul {
   margin: 0 0 5px 0; }
 
 .project__description {
-  line-height: 1;
+  font-size: 90%;
+  line-height: 1.2;
   margin: 0; }
 
 .article__content > p:first-child {

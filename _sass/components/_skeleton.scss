@@ -119,6 +119,9 @@ header {
     border: none;
     border-radius: $base-radius;
 
+    // support for box-decoration-break should have been added as of
+    // https://github.com/postcss/autoprefixer/issues/344
+    // but can't get gulp-autoprefixer to update to the latest version
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
@@ -178,7 +181,8 @@ header {
 
 .project__description {
   @extend .text-muted;
-  line-height: 1;
+  font-size: 90%;
+  line-height: 1.2;
   margin: 0;
 }
 
