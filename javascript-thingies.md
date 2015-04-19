@@ -21,7 +21,7 @@ comments: true
 * [Flux](http://facebook.github.io/flux/) - Client-side application architecture, from Facebook.
 * [elm](http://elm-lang.org/) - Functional reactive language.
 * [Flight](https://flightjs.github.io/) - Event-driven web framework, from Twitter.
-* [Aurelia](http://aurelia.io/) - A next generation framework based on ES6
+* [Aurelia](http://aurelia.io/) - A next generation framework based on ES6.
 * [React Native](http://facebook.github.io/react-native/) - Build native apps using React.
 
 # AngularJS
@@ -32,6 +32,8 @@ comments: true
 * [ui-utils](http://angular-ui.github.io/ui-utils/) - Lots of useful stuff for Angular apps.
 * [UI Bootstrap](https://angular-ui.github.io/bootstrap/) - Angular version of bootstrap's components.
 * [ngTagsInput](http://mbenford.github.io/ngTagsInput/) - Tags input directive for Angular.
+* [angular-translate](https://github.com/angular-translate/angular-translate) - i18n module for Angular applications.
+* [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) - Lazy load Angular dependencies (works well with ui-router).
 
 # Web Components
 
@@ -66,6 +68,9 @@ comments: true
 # Cool stuff
 
 * [Space.js](http://www.slashie.org/space.js/) - Narrative scrolling.
+* [snabbt.js](https://github.com/daniel-lundin/snabbt.js) - Fast animations with javascript and CSS.
+* [headroom.js](https://github.com/WickyNilliams/headroom.js) - Show the header when scrolling up.
+* [Sortable](https://github.com/RubaXa/Sortable) - Sort lists with drag-and-drop, mobile friendly.
 
 # Utilities
 
@@ -77,6 +82,12 @@ comments: true
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
 * [dragscroll](http://asvd.github.io/dragscroll/) - Add support for "drag" scroll.
 
+# Workflow (Gulp), Node Modules
+
+* [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins) - Load gulp plugins from the node_modules folder.
+* [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) - Don't worry about vendor prefixes anymore.
+* [browser-sync](https://www.npmjs.com/package/browser-sync) - Serve, watch and auto reload.
+
 # Server
 
-* [Sails.js](http://sailsjs.org/) - Realtime MVC framework for Node.js
+* [Sails.js](http://sailsjs.org/) - Realtime MVC framework for Node.js.
