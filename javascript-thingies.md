@@ -57,6 +57,7 @@ comments: true
 * [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) - A Virtual DOM and diffing algorithm.
 * [vissense](https://github.com/vissense/vissense) - Observe visibility changes.
 * [HTML GL](https://github.com/PixelsCommander/HTML-GL) - Easily render HTML/CSS in WebGL.
+* [Sprint.js](https://github.com/bendc/sprint) - Lightweight and high-performance jQuery alternative for IE10+.
 
 # Text editor
 
