@@ -23,6 +23,7 @@ comments: true
 * [Flight](https://flightjs.github.io/) - Event-driven web framework, from Twitter.
 * [Aurelia](http://aurelia.io/) - A next generation framework based on ES6.
 * [React Native](http://facebook.github.io/react-native/) - Build native apps using React.
+* [jsblocks](http://jsblocks.com/) - MV* framework with support for server-side rendering.
 
 # AngularJS
 
@@ -34,6 +35,7 @@ comments: true
 * [ngTagsInput](http://mbenford.github.io/ngTagsInput/) - Tags input directive for Angular.
 * [angular-translate](https://github.com/angular-translate/angular-translate) - i18n module for Angular applications.
 * [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) - Lazy load Angular dependencies (works well with ui-router).
+* [ngMeditor](https://github.com/icattlecoder/ngMeditor) - Medium-like text editor built in AngularJS.
 
 # Web Components
 
