@@ -1,5 +1,13 @@
 [
   {
+    "color": "#e7438f",
+    "title": "Logical (Or Not)",
+    "description": "A Game About JavaScript Logical Operators",
+    "url": "http://gabinaureche.com/logicalornot/",
+    "large": true
+  },
+
+  {
     "color": "#23cbbf",
     "title": "Reactive Design",
     "description": "Patterns improving perceived speed",
