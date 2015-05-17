@@ -36,6 +36,8 @@ comments: true
 * [angular-translate](https://github.com/angular-translate/angular-translate) - i18n module for Angular applications.
 * [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) - Lazy load Angular dependencies (works well with ui-router).
 * [ngMeditor](https://github.com/icattlecoder/ngMeditor) - Medium-like text editor built in AngularJS.
+* [angular-date-picker](https://github.com/myplanet/angular-date-picker) - Pure css, pure Angular date picker.
+* [angular-color-picker](https://github.com/myplanet/angular-color-picker) - Pure css, pure Angular color picker.
 
 # Web Components
 
@@ -75,7 +77,7 @@ comments: true
 * [headroom.js](https://github.com/WickyNilliams/headroom.js) - Show the header when scrolling up.
 * [Sortable](https://github.com/RubaXa/Sortable) - Sort lists with drag-and-drop, mobile friendly.
 
-# Utilities
+# Other
 
 * [underscore](http://underscorejs.org/) - Functional programming helpers.
 * [lodash](https://lodash.com/) - Utility library.
@@ -84,12 +86,14 @@ comments: true
 * [mailcheck](https://github.com/mailcheck/mailcheck) - Suggests a right domain when mispelling an email address.
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
 * [dragscroll](http://asvd.github.io/dragscroll/) - Add support for "drag" scroll.
+* [es5-shim](https://github.com/es-shims/es5-shim) - ECMAScript 5 compatibility shims for legacy JavaScript engines.
 
 # Workflow (Gulp), Node Modules
 
 * [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins) - Load gulp plugins from the node_modules folder.
 * [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) - Don't worry about vendor prefixes anymore.
 * [browser-sync](https://www.npmjs.com/package/browser-sync) - Serve, watch and auto reload.
+* [kss-node](https://github.com/kss-node/kss-node) - kss front-end style guide generator for node.
 
 # Server
 
