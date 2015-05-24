@@ -87,6 +87,7 @@ comments: true
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
 * [dragscroll](http://asvd.github.io/dragscroll/) - Add support for "drag" scroll.
 * [es5-shim](https://github.com/es-shims/es5-shim) - ECMAScript 5 compatibility shims for legacy JavaScript engines.
+* [dragula](https://github.com/bevacqua/dragula) - Simple drag and drop library.
 
 # Workflow (Gulp), Node Modules
 
