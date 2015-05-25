@@ -51,6 +51,7 @@ comments: true
 * [ngCordova](http://ngcordova.com/) - Use AngularJS with Cordova.
 * [ionic](http://ionicframework.com/) - Nice Front-End SDK made to work with AngularJS.
 * [Hammer.js](http://hammerjs.github.io/) - Add touch gestures.
+* [Swiper](https://github.com/nolimits4web/swiper/) - Create "swipe" interactions.
 
 # Infographics
 
