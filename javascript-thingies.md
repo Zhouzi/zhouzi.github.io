@@ -78,11 +78,15 @@ comments: true
 * [headroom.js](https://github.com/WickyNilliams/headroom.js) - Show the header when scrolling up.
 * [Sortable](https://github.com/RubaXa/Sortable) - Sort lists with drag-and-drop, mobile friendly.
 
-# Other
+# Utilities
 
 * [underscore](http://underscorejs.org/) - Functional programming helpers.
 * [lodash](https://lodash.com/) - Utility library.
 * [is.js](http://arasatasaygin.github.io/is.js/) - Type checking library.
+* [Sugar](https://github.com/andrewplummer/Sugar) - Extends Javascript natives objects.
+
+# Other
+
 * [History.js](https://github.com/browserstate/history.js) - Manipulate browser's API history.
 * [mailcheck](https://github.com/mailcheck/mailcheck) - Suggests a right domain when mispelling an email address.
 * [Moment.js](http://momentjs.com/) - Everything you need to deal with dates.
