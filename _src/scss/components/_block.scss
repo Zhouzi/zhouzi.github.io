@@ -1,39 +1,26 @@
 .block {
+  @extend %container-inner-block;
   background-color: #fff;
-  padding: $grid-gutter * 2;
-  margin: 0 0 6px 0;
-
-  h1:first-child {
-    margin-top: 0;
-  }
+  padding: $spacing-gutter;
+  margin-bottom: $spacing-gutter;
 }
 
-.block-heading {
-  display: table;
-  font-size: 100%;
-  width: 100%;
-  color: $gray;
-  padding: 0 0 5px 0;
-  margin: 0 0 $relation-none 0;
-  border-bottom: 2px solid $gray-lighter;
+.block__heading {
+  @include clearfix;
 
-  &:last-child {
-    margin: 0;
-  }
-}
-
-.block-heading__left,
-.block-heading__right {
-  @extend .ellipsis;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.block-heading__left {
+  color: $gray-darker;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
   text-transform: uppercase;
-  width: 100%;
-}
+  margin: 0 0 $spacing-gutter 0;
+  padding: 0 0 ($spacing-gutter / 2) 0;
+  border-bottom: 2px solid $gray;
 
-.block-heading__right {
-  font-weight: $font-weight-normal;
+  &:first-child:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    float: right;
+  }
 }

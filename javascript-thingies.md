@@ -1,11 +1,11 @@
 ---
-layout: list
+layout: post
 title: JavaScript Thingies
 permalink: /javascript-thingies/
 comments: true
 ---
 
-# Frameworks & Libraries
+## Frameworks & Libraries
 
 * [AngularJS](https://angularjs.org/) - Powerful advanced MVW framework, from Google.
 * [Knockout](http://knockoutjs.com/) - Light-weight & cross-browser MVVM framework.
@@ -25,7 +25,7 @@ comments: true
 * [React Native](http://facebook.github.io/react-native/) - Build native apps using React.
 * [jsblocks](http://jsblocks.com/) - MV* framework with support for server-side rendering.
 
-# AngularJS
+## AngularJS
 
 * [AngularJS](https://angularjs.org/) - Powerful advanced MVW framework, from Google.
 * [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
@@ -39,13 +39,13 @@ comments: true
 * [angular-date-picker](https://github.com/myplanet/angular-date-picker) - Pure css, pure Angular date picker.
 * [angular-color-picker](https://github.com/myplanet/angular-color-picker) - Pure css, pure Angular color picker.
 
-# Web Components
+## Web Components
 
 * [Polymer](https://www.polymer-project.org/) - Build Web Components, from Google.
 * [React](http://facebook.github.io/react/) - Build reactive user interfaces, from Facebook.
 * [Riot](https://muut.com/riotjs/) - Light-weight react-like library.
 
-# Mobile & Touch
+## Mobile & Touch
 
 * [Cordova](https://cordova.apache.org/) - Build mobile apps in HTML, CSS and JavaScript.
 * [ngCordova](http://ngcordova.com/) - Use AngularJS with Cordova.
@@ -53,39 +53,39 @@ comments: true
 * [Hammer.js](http://hammerjs.github.io/) - Add touch gestures.
 * [Swiper](https://github.com/nolimits4web/swiper/) - Create "swipe" interactions.
 
-# Infographics
+## Infographics
 
 * [Timesheet.js](https://sbstjn.github.io/timesheet.js/) - Stylable timesheets for web & mobile.
 
-# DOM
+## DOM
 
 * [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) - A Virtual DOM and diffing algorithm.
 * [vissense](https://github.com/vissense/vissense) - Observe visibility changes.
 * [HTML GL](https://github.com/PixelsCommander/HTML-GL) - Easily render HTML/CSS in WebGL.
 * [Sprint.js](https://github.com/bendc/sprint) - Lightweight and high-performance jQuery alternative for IE10+.
 
-# Text editor
+## Text editor
 
 * [grande.js](http://mattduvall.com/grande.js/) - Medium-like editor.
 * [pen](http://sofish.github.io/pen/) - Medium-like with support for markdown.
 * [Medium Editor](http://daviferreira.github.io/medium-editor/) - Medium-like editor.
 * [textAngular](http://textangular.com/) - Lightweight text editor for Angular.
 
-# Cool stuff
+## Cool stuff
 
 * [Space.js](http://www.slashie.org/space.js/) - Narrative scrolling.
 * [snabbt.js](https://github.com/daniel-lundin/snabbt.js) - Fast animations with javascript and CSS.
 * [headroom.js](https://github.com/WickyNilliams/headroom.js) - Show the header when scrolling up.
 * [Sortable](https://github.com/RubaXa/Sortable) - Sort lists with drag-and-drop, mobile friendly.
 
-# Utilities
+## Utilities
 
 * [underscore](http://underscorejs.org/) - Functional programming helpers.
 * [lodash](https://lodash.com/) - Utility library.
 * [is.js](http://arasatasaygin.github.io/is.js/) - Type checking library.
 * [Sugar](https://github.com/andrewplummer/Sugar) - Extends Javascript natives objects.
 
-# Other
+## Other
 
 * [History.js](https://github.com/browserstate/history.js) - Manipulate browser's API history.
 * [mailcheck](https://github.com/mailcheck/mailcheck) - Suggests a right domain when mispelling an email address.
@@ -94,13 +94,13 @@ comments: true
 * [es5-shim](https://github.com/es-shims/es5-shim) - ECMAScript 5 compatibility shims for legacy JavaScript engines.
 * [dragula](https://github.com/bevacqua/dragula) - Simple drag and drop library.
 
-# Workflow (Gulp), Node Modules
+## Workflow (Gulp), Node Modules
 
 * [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins) - Load gulp plugins from the node_modules folder.
 * [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) - Don't worry about vendor prefixes anymore.
 * [browser-sync](https://www.npmjs.com/package/browser-sync) - Serve, watch and auto reload.
 * [kss-node](https://github.com/kss-node/kss-node) - kss front-end style guide generator for node.
 
-# Server
+## Server
 
 * [Sails.js](http://sailsjs.org/) - Realtime MVC framework for Node.js.

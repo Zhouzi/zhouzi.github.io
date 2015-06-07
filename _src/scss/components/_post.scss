@@ -1,0 +1,36 @@
+.post {
+  margin-bottom: ($spacing-gutter * 2.5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.post__title {
+  display: inline-block;
+  margin: 0 0 $spacing-gutter 0;
+  line-height: $line-height-base;
+
+  a {
+    border-width: 0;
+    color: $text-color;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $yellow-primary;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &:hover,
+    &:focus {
+      color: $red-secondary;
+    }
+  }
+}
+
+.post__meta {
+  color: $gray-darker;
+}
+
+.post__category {
+  @extend .tag;
+}

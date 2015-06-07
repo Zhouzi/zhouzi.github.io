@@ -1,0 +1,19 @@
+.footer {
+  @extend %yellow-block;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px;
+    border: 2px solid $gray;
+    border-radius: 6px;
+  }
+}
+
+.footer__contact {
+  @extend %yellow-block-left;
+}
+
+.footer__socials {
+  @extend %yellow-block-right;
+}

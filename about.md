@@ -1,6 +1,7 @@
 ---
-layout: about
+layout: post
 title: About Gabin Aureche
+hero: "Front-end developer (noun): mid way between a <strong>developer</strong> and a <strong>designer</strong>."
 permalink: /about/
 ---
 

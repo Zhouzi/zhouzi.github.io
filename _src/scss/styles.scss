@@ -1,49 +1,57 @@
-/*--------------------*\
-  #HELPERS
-\*--------------------*/
+/*---------------------------------------------*\
+  reset
+\*---------------------------------------------*/
 
-@import "helpers/functions",
-"helpers/mixins",
-"helpers/colors",
-"helpers/grid",
-"helpers/typography",
-"helpers/components";
+@import
+  "vendors/normalize"
+;
 
 
 
+/*---------------------------------------------*\
+  variables
+\*---------------------------------------------*/
 
-
-/*--------------------*\
-  #BASE
-\*--------------------*/
-
-@import "base/normalize",
-"base/base";
-
-
+@import
+  "variables/colors"
+;
 
 
 
-/*--------------------*\
-  #COMPONENTS
-\*--------------------*/
+/*---------------------------------------------*\
+  framework
+\*---------------------------------------------*/
 
-@import "components/helpers",
-"components/grid",
-"components/lists",
-"components/typography",
-"components/skeleton",
-"components/block",
-"components/buttons",
-"components/highlight",
-"components/panel";
+@import
+  "framework/mixins",
+  "framework/variables",
+  "framework/base"
+;
 
 
 
+/*---------------------------------------------*\
+  base
+\*---------------------------------------------*/
+
+@import
+  "base"
+;
 
 
-/*--------------------*\
-  #LAYOUT
-\*--------------------*/
 
-@import "layouts/typejs";
+/*---------------------------------------------*\
+  components
+\*---------------------------------------------*/
+
+@import
+  "components/header",
+  "components/grid",
+  "components/hero",
+  "components/block",
+  "components/post",
+  "components/project",
+  "components/footer",
+  "components/post-content",
+  "components/tag"
+;

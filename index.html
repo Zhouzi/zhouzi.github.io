@@ -4,49 +4,40 @@ layout: default
 
 <section class="hero">
     <h1 class="hero__heading">
-        Bonjour! I'm Gabin Aureche, a front-end developer focused on <strong>user experience</strong>.
+        Bonjour!<br>
+        I am Gabin Aureche, a <strong>front-end developer</strong> focused on <strong>user experience</strong>.
     </h1>
 </section>
 
-
 <section class="block">
-    <h3 class="block-heading">
-        <span class="block-heading__left">Scribbles</span>
-        <span class="block-heading__right">Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></span>
-    </h3>
+    <h3 class="block__heading">Scribbles</h3>
 
     {% for post in site.posts %}
-    <article class="post">
-        <h2 class="post__title">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <article class="post">
+            <h2 class="post__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 
-        <div class="post__meta">
-            {% for category in post.categories %}
-            <span class="tag">{{ category }}</span>
-            {% endfor %}
-            {{ post.date | date: "%b %-d, %Y" }}
+            <div class="post__meta">
+                {% for category in post.categories %}<span class="post__category">{{ category }}</span>{% endfor %}
+                {{ post.date | date: "%b %-d, %Y" }}
+            </div>
+        </article>
+    {% endfor %}
+</section>
+
+<section class="block">
+    <h3 class="block__heading">
+        Projects
+        <a href="/archives">Archives</a>
+    </h3>
+</section>
+
+{% for project in site.data.projects %}
+    <article class="project">
+        <a href="{{ project.url }}" class="project__link"></a>
+
+        <div class="project__meta">
+            <h2 class="project__title">{{ project.title }}</h2>
+            <p class="project__description">{{ project.description }}</p>
         </div>
     </article>
-    {% endfor %}
-</section>
-
-
-<div class="block">
-    <h3 class="block-heading no-margin">
-        <span class="block-heading__left">Projects</span>
-        <span class="block-heading__right"><a href="archives">Archives</a></span>
-    </h3>
-</div>
-
-
-<section class="projects">
-    {% for project in site.data.projects %}
-        <div class="project-wrapper{% if project.large == true %} project-wrapper--large{% endif %}">
-            <article class="project" style="border-color: {{ project.color }};">
-                <h2 class="project__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
-                <p class="project__description">{{ project.description }}</p>
-            </article>
-        </div>
-    {% endfor %}
-</section>
+{% endfor %}

@@ -3,19 +3,28 @@ layout: default
 ---
 
 <section class="hero">
-    <h1 class="hero__heading">{{ page.title }}</h1>
-    <p class="hero__meta">
-        {% if page.categories %}
-            {% for category in page.categories %}
-                <span class="tag">{{ category }}</span>
-            {% endfor %}
+    <h1 class="hero__heading">
+        {% if page.hero %}
+            {{ page.hero|raw }}
+        {% else %}
+            {{ page.title }}
         {% endif %}
-        - {{ page.date | date: "%b %-d, %Y" }}
-    </p>
+    </h1>
+
+    {% if page.date or page.categories %}
+        <div class="hero__meta">
+            {% if page.categories %}
+                {% for category in page.categories %}
+                    <span class="tag">{{ category }}</span>
+                {% endfor %}
+            {% endif %}
+            - {{ page.date | date: "%b %-d, %Y" }}
+        </div>
+    {% endif %}
 </section>
 
-<section class="article">
-    <article class="article__content">
+<section class="block">
+    <article class="post-content">
         {{ content }}
     </article>
 </section>

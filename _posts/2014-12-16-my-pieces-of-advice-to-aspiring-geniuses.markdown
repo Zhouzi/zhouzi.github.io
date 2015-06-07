@@ -10,7 +10,7 @@ Some are in a more advanced state but wow, **I've been doing things so wrong!**
 Sure we all start somewhere but looking backward, **there's things I would have done differently**.
 Here is my take dedicated to _"aspiring geniuses"_[1](#im-not-a-genius).
 
-# Working hard
+## Working hard
 
 I was in the middle of my second year at ILOI[2](#iloi) when I really started to work hard.
 I understood that I won't get anything without **99% perspiration**[3](#thomas-edison-quote).
@@ -28,7 +28,7 @@ Being enthusiastic is great but hey, slow down a minute.
 
 You have cool ideas, I won't doubt that but are you **aware**?
 
-# Geniuses secret sauce
+## Geniuses secret sauce
 
 You probably know someone you're envious of.
 You know, the one that seems to be good at whatever he's doing.
@@ -52,7 +52,7 @@ This is why I'd advice _front-end_ beginners to make sure that your "working har
 
 This is what I would have done differently.
 
-## What about you? 
+### What about you?
 
 Looking backward, what do you retain from your own experience?
 What advices would you give to a previous version of yourself?[4](#steal-like-an-artist)

@@ -1,5 +1,9 @@
-<footer>
-    <p>Say <a href="mailto:{{ site.email }}">{{ site.email }}</a>!</p>
+<footer class="footer">
+    <p class="footer__contact"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 
-    {% include socials.html %}
+    <ul class="footer__socials">
+        {% for social in site.data.socials %}
+            <li><a href="{{ social.url }}"><span class="icon-{{ social.network }}"></span>@{{social.username}}</a></li>
+        {% endfor %}
+    </ul>
 </footer>

@@ -1,0 +1,37 @@
+body {
+  background-color: $gray;
+}
+
+#{$headings},
+ul,
+ol,
+p {
+  margin: 0 0 $spacing-gutter 0;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: $red-secondary;
+
+  &:hover,
+  &:focus {
+    color: darken($red-secondary, 10%);
+    border-bottom-color: $yellow-primary;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: 2px dotted $gray;
+  margin: ($spacing-gutter * 2) 0 $spacing-gutter 0;
+}
+
+blockquote {
+  font-size: $h4-font-size;
+  border-left: 4px solid $gray;
+  margin: 0 0 $spacing-gutter 0;
+  padding: 0 $spacing-gutter;
+  font-style: italic;
+  font-weight: $font-weight-bold;
+}

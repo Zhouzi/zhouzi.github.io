@@ -1,0 +1,20 @@
+.hero {
+  text-align: center;
+  padding: ($spacing-gutter * 3) 0;
+  margin-bottom: $spacing-gutter;
+}
+
+.hero__heading {
+  font-weight: $font-weight-base;
+  margin: 0;
+
+  strong {
+    @include nice-underline($background-color: $gray, $underline-color: $yellow-primary, $border-width: 6px, $underline-bottom: 2px, $underline-width: 3px);
+    color: $red-secondary;
+  }
+}
+
+.hero__meta {
+  color: $gray-darker;
+  margin-top: $spacing-gutter;
+}

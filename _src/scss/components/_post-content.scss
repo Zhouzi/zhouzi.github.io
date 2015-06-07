@@ -1,0 +1,31 @@
+.post-content {
+  a[href^="#"] {
+    vertical-align: super;
+    font-size: $font-size-small;
+
+    &:before { content: "["; }
+    &:after { content: "]"; }
+  }
+
+  #{$headings} {
+    margin-top: $spacing-gutter * 3;
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  > p:first-child {
+    font-size: $h5-font-size;
+    font-style: italic;
+  }
+
+  hr:last-of-type {
+    + ul,
+    + ol,
+    + p {
+      color: $gray-darker;
+      font-size: $font-size-small;
+    }
+  }
+}
