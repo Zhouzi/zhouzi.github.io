@@ -1,14 +1,23 @@
 .project {
+  @extend %container-inner-block;
   position: relative;
-  margin: 0 ($spacing-gutter * 4) $spacing-gutter ($spacing-gutter * 4);
+  margin-bottom: $spacing-gutter;
   background-color: #fff;
   padding: ($spacing-gutter * 4) $spacing-gutter $spacing-gutter $spacing-gutter;
   transition: all 150ms ease-in;
 
   &:hover {
     background-color: $yellow-primary;
-    margin-right: $spacing-gutter;
-    margin-left: $spacing-gutter;
+
+    @media #{$sm-up} {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @media #{$md-up} {
+      margin-right: $spacing-gutter;
+      margin-left: $spacing-gutter;
+    }
   }
 }
 

@@ -1,4 +1,5 @@
-$font-size-root: 16px;
+$font-size-root-sm: 14px;
+$font-size-root-md: 18px;
 $font-size-base: 1rem;
 
 $font-family-base: 'Lato', sans-serif;
@@ -52,3 +53,35 @@ $headings: #{$h1, $h2, $h3, $h4, $h5, $h6};
 $text-color: #444;
 
 $spacing-gutter: 20px;
+
+
+
+/*---------------------------------------------*\
+  breakpoints
+\*---------------------------------------------*/
+
+$xs: 480px;
+$xs-min: 0;
+
+$sm: 768px;
+$sm-min: $sm;
+
+$md: 992px;
+$md-min: $md;
+
+$lg: 1160px;
+$lg-min: $lg;
+
+$xs-max: ($sm-min - 1);
+$sm-max: ($md-min - 1);
+$md-max: ($lg-min - 1);
+
+$xs-up: 'screen';
+$sm-up: '(min-width: #{$sm-min})';
+$md-up: '(min-width: #{$md-min})';
+$lg-up: '(min-width: #{$lg-min})';
+
+$xs-only: '(max-width: #{$xs-max})';
+$sm-only: '(min-width: #{$sm-min}) and (max-width: #{$sm-max})';
+$md-only: '(min-width: #{$md-min}) and (max-width: #{$md-max})';
+$lg-only: $lg-up;

@@ -6,10 +6,12 @@
 .header__fullname {
   @extend %yellow-block-left;
   font-family: $font-family-base;
+  float: left;
 }
 
 .header__nav ul {
   @extend %yellow-block-right;
+  float: right;
 }
 
 .header__fullname {

@@ -1,11 +1,18 @@
 .container {
-  max-width: 840px;
   margin: auto;
+  max-width: 840px;
 }
 
 %container-inner-block {
-  margin-right: $spacing-gutter * 4;
-  margin-left: $spacing-gutter * 4;
+  @media #{$sm-up} {
+    margin-right: $spacing-gutter * 2;
+    margin-left: $spacing-gutter * 2;
+  }
+
+  @media #{$md-up} {
+    margin-right: $spacing-gutter * 4;
+    margin-left: $spacing-gutter * 4;
+  }
 }
 
 %yellow-block {
@@ -24,12 +31,10 @@
 
 %yellow-block-left {
   margin: 0;
-  float: left;
 }
 
 %yellow-block-right {
   @include list-unstyled;
-  float: right;
 
   li {
     display: inline-block;

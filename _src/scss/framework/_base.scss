@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box;
-  font-size: $font-size-root;
+  font-size: $font-size-root-sm;
+
+  @media #{$sm-up} {
+    font-size: $font-size-root-md;
+  }
 }
 
 *,
