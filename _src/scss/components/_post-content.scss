@@ -8,10 +8,10 @@
   }
 
   #{$headings} {
-    margin-top: $spacing-gutter * 3;
+    margin-top: $spacing-gutter * 4;
   }
 
-  :first-child {
+  > :first-child {
     margin-top: 0;
   }
 

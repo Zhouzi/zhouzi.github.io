@@ -5,8 +5,9 @@ body {
 #{$headings},
 ul,
 ol,
-p {
-  margin: 0 0 $spacing-gutter 0;
+p,
+pre {
+  margin: 0 0 ($spacing-gutter * 2) 0;
 }
 
 a {
@@ -35,3 +36,13 @@ blockquote {
   font-style: italic;
   font-weight: $font-weight-bold;
 }
+
+pre,
+p code {
+    background-color: $gray-light;
+    border: 2px solid $gray;
+    border-radius: 6px;
+}
+
+pre { padding: $spacing-gutter; }
+p code { padding: .1rem .2rem; }

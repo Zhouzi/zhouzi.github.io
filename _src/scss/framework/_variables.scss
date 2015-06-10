@@ -1,5 +1,5 @@
 $font-size-root-sm: 14px;
-$font-size-root-md: 16px;
+$font-size-root-md: 18px;
 $font-size-base: 1rem;
 
 $font-family-base: 'Lato', sans-serif;
@@ -31,7 +31,7 @@ $ms-major-eleventh:   2.667;
 $ms-major-twelfth:    3;
 $ms-double-octave:    4;
 
-$ms-ratio: $ms-minor-third;
+$ms-ratio: 1.15;
 
 $h1-font-size: ms(6, $ms-ratio, $font-size-base);
 $h2-font-size: ms(4, $ms-ratio, $font-size-base);
