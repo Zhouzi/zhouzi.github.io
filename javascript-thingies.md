@@ -93,6 +93,8 @@ comments: true
 * [dragscroll](http://asvd.github.io/dragscroll/) - Add support for "drag" scroll.
 * [es5-shim](https://github.com/es-shims/es5-shim) - ECMAScript 5 compatibility shims for legacy JavaScript engines.
 * [dragula](https://github.com/bevacqua/dragula) - Simple drag and drop library.
+* [Knwl.js](https://github.com/loadfive/Knwl.js) - Parse a string to find dates, places, times and more.
+* [jquery.payment](https://github.com/stripe/jquery.payment) - Detect and get informations simply based on a card number.
 
 ## Workflow (Gulp), Node Modules
 
