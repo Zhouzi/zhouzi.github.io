@@ -1,5 +1,5 @@
 $font-size-root-sm: 14px;
-$font-size-root-md: 18px;
+$font-size-root-md: 16px;
 $font-size-base: 1rem;
 
 $font-family-base: 'Lato', sans-serif;
@@ -13,7 +13,6 @@ $line-height-heading: 1.2;
 $font-weight-heading: $font-weight-bold;
 
 //modular scale ratios
-$ms-golden:           1.618;
 $ms-minor-second:     1.067;
 $ms-major-second:     1.125;
 $ms-minor-third:      1.2;
@@ -22,6 +21,7 @@ $ms-perfect-fourth:   1.333;
 $ms-augmented-fourth: 1.414;
 $ms-perfect-fifth:    1.5;
 $ms-minor-sixth:      1.6;
+$ms-golden:           1.618;
 $ms-major-sixth:      1.667;
 $ms-minor-seventh:    1.778;
 $ms-major-seventh:    1.875;

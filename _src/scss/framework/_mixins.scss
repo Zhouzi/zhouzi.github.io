@@ -20,10 +20,10 @@
 
 @mixin nice-underline ($background-color, $underline-color, $border-width: 1px, $underline-bottom: 2px, $underline-width: 2px) {
   text-shadow:
-          (-$border-width) (-$border-width) 0 $background-color,
-          ($border-width)  (-$border-width) 0 $background-color,
-          (-$border-width) ($border-width)  0 $background-color,
-          ($border-width)  ($border-width)  0 $background-color;
+          (-$border-width/2) ($border-width/2) 0 $background-color,
+          (-$border-width)   ($border-width)   0 $background-color,
+          ($border-width/2)  ($border-width/2) 0 $background-color,
+          ($border-width)    ($border-width)   0 $background-color;
 
   background-image: linear-gradient(to top,
           transparent 0,

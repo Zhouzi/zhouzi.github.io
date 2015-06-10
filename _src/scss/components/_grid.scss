@@ -1,18 +1,12 @@
 .container {
   margin: auto;
-  max-width: 840px;
+  max-width: 1000px;
 }
 
 %container-inner-block {
-  @media #{$sm-up} {
-    margin-right: $spacing-gutter * 2;
-    margin-left: $spacing-gutter * 2;
-  }
-
-  @media #{$md-up} {
-    margin-right: $spacing-gutter * 4;
-    margin-left: $spacing-gutter * 4;
-  }
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 %yellow-block {
