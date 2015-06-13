@@ -39,7 +39,7 @@ I am going to build a simple and basic app with different technologies.
 _Note: The purpose of this serie is more about discovering and giving a try to those frameworks than evaluating their two-way data binding capabilities.
 Some of them might not achieve it "natively"._
 
-# The "App"
+## The "App"
 
 The app is supposed to be a browser extension to bookmark a link to [Trello](https://trello.com/).
 This is a supposition since I will not cover everything needed to build such an app.
@@ -51,7 +51,7 @@ So to create a card you have to select a list from a board.
 A user might have a lots of lists and boards, this is why the app is going to load only what's needed.
 Moreover, the data will be "cached" to avoid useless requests.
 
-# A word of caution
+## A word of caution
 
 I've been building several apps with [AngularJS](https://angularjs.org/) and for now it's my framework of choice.
 This is why the first version will be built with angular so it serves as a reference.
