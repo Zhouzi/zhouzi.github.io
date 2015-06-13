@@ -31,7 +31,7 @@ layout: default
 </section>
 
 {% for project in site.data.projects %}
-    <article class="project">
+    <article class="project project--{{ project.id }}">
         <a href="{{ project.url }}" class="project__link"></a>
 
         <div class="project__meta">

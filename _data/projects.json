@@ -1,34 +1,34 @@
 [
   {
-    "color": "#e7438f",
+    "id": "logicalornot",
     "title": "Logical (Or Not)",
     "description": "A Game About JavaScript Logical Operators.",
     "url": "http://gabinaureche.com/logicalornot/"
   },
 
   {
-    "color": "#23cbbf",
+    "id": "reactivedesign",
     "title": "Reactive Design",
     "description": "Collection of design insights about perceived speed.",
     "url": "http://gabinaureche.com/reactivedesign/"
   },
 
   {
-    "color": "#37b475",
+    "id": "reactivedemo",
     "title": "Reactive Demo",
     "description": "Living demo implementing some perceived speed patterns.",
     "url": "http://codepen.io/Zhouzi/full/ogdxJj/"
   },
 
   {
-    "color": "#222",
+    "id": "theaterjs",
     "title": "TheaterJS",
     "description": "Typing effect mimicking human behavior.",
     "url": "http://gabinaureche.com/TheaterJS"
   },
 
   {
-    "color": "#f7d32a",
+    "id": "javascriptthingies",
     "title": "JavaScript Thingies",
     "description": "List of cool JavaScript resources.",
     "url": "javascript-thingies"

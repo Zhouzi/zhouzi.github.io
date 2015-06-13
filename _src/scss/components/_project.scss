@@ -1,10 +1,20 @@
+/*---------------------------------------------*\
+  project base component
+\*---------------------------------------------*/
+
+.project,
+.project__title,
+.project__description {
+  transition: all 150ms ease-in;
+}
+
 .project {
   @extend %container-inner-block;
   position: relative;
   margin-bottom: $spacing-gutter;
   background-color: #fff;
   padding: ($spacing-gutter * 4) $spacing-gutter $spacing-gutter $spacing-gutter;
-  transition: all 150ms ease-in;
+  border: 2px solid transparent;
 
   &:hover {
     background-color: $yellow-primary;
@@ -39,5 +49,33 @@
   font-size: $font-size-small;
   text-transform: uppercase;
   color: $gray-dark;
-  transition: color 150ms ease-in;
 }
+
+
+
+/*---------------------------------------------*\
+  specific styles
+\*---------------------------------------------*/
+
+@mixin project--variant ($id, $title, $desc, $bg, $border: transparent) {
+  .project--#{$id}:hover {
+    background-color: $bg;
+
+    @if $border != transparent {
+      border-color: $border;
+    }
+
+    .project__title {
+      color: $title;
+    }
+
+    .project__description {
+      color: $desc;
+    }
+  }
+}
+
+@include project--variant($id: 'logicalornot', $title: #ffc302, $desc: #fff, $bg: #7642d0);
+@include project--variant($id: 'reactivedesign', $title: #23cbbf, $desc: #859c9b, $bg: #d9e1e0);
+@include project--variant($id: 'reactivedemo', $title: #37b475, $desc: #8a8a8a, $bg: #fff, $border: #e0e0e0);
+@include project--variant($id: 'theaterjs', $title: #ededed, $desc: #ededed, $bg: #222);
