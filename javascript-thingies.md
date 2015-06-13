@@ -52,6 +52,7 @@ comments: true
 * [ionic](http://ionicframework.com/) - Nice Front-End SDK made to work with AngularJS.
 * [Hammer.js](http://hammerjs.github.io/) - Add touch gestures.
 * [Swiper](https://github.com/nolimits4web/swiper/) - Create "swipe" interactions.
+* [PhotoSwipe](http://photoswipe.com/) - Gallery plugin with support for touch gestures, no dependencies.
 
 ## Infographics
 
