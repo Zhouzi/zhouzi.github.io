@@ -78,6 +78,9 @@ comments: true
 * [snabbt.js](https://github.com/daniel-lundin/snabbt.js) - Fast animations with javascript and CSS.
 * [headroom.js](https://github.com/WickyNilliams/headroom.js) - Show the header when scrolling up.
 * [Sortable](https://github.com/RubaXa/Sortable) - Sort lists with drag-and-drop, mobile friendly.
+* [Essential JavaScript Links](https://github.com/ericelliott/essential-javascript-links) - Cool JS resources.
+* [Material Design Lite](https://github.com/google/material-design-lite) - Light implementation of Material Design.
+* [Breakouts](https://github.com/city41/breakouts) - The same game implemented in several JS engines.
 
 ## Utilities
 
@@ -96,6 +99,9 @@ comments: true
 * [dragula](https://github.com/bevacqua/dragula) - Simple drag and drop library.
 * [Knwl.js](https://github.com/loadfive/Knwl.js) - Parse a string to find dates, places, times and more.
 * [jquery.payment](https://github.com/stripe/jquery.payment) - Detect and get informations simply based on a card number.
+* [RSVP.js](https://github.com/tildeio/rsvp.js) - Provides simple tools for organizing asynchronous code.
+* [basket.js](https://github.com/addyosmani/basket.js) - A resource loader for caching & loading files with localStorage.
+* [slick](https://github.com/kenwheeler/slick) - A carousel that is responsive, accessible, supports dragging and so on.
 
 ## Workflow (Gulp), Node Modules
 
