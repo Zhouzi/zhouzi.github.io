@@ -76,7 +76,8 @@
   }
 }
 
+@include project--variant($id: 'linkhunter', $title: #f03dad, $desc: #fff, $bg: #34D7F4) { box-shadow: 0 2px 0 #fee23d; };
 @include project--variant($id: 'logicalornot', $title: #ffc302, $desc: #fff, $bg: #7642d0);
-@include project--variant($id: 'reactivedesign', $title: #23cbbf, $desc: #859c9b, $bg: #fff) { border-bottom-color: #23cbbf; };
+@include project--variant($id: 'reactivedesign', $title: #23cbbf, $desc: #859c9b, $bg: #fff) { box-shadow: 0 2px 0 #23cbbf; };
 @include project--variant($id: 'reactivedemo', $title: #37b475, $desc: #8a8a8a, $bg: #fff, $border: #e0e0e0);
 @include project--variant($id: 'theaterjs', $title: #ededed, $desc: #ededed, $bg: #222);

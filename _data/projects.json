@@ -1,5 +1,12 @@
 [
   {
+    "id": "linkhunter",
+    "title": "linkhunter",
+    "description": "Detect links that real users actually type.",
+    "url": "http://gabinaureche.com/linkhunter/"
+  },
+
+  {
     "id": "logicalornot",
     "title": "Logical (Or Not)",
     "description": "A Game About JavaScript Logical Operators.",
