@@ -76,6 +76,7 @@
   }
 }
 
+@include project--variant($id: 'gentleform', $title: #002c3c, $desc: #002c3c, $bg: #f4fcff) { box-shadow: 0 2px 0 #31d47d; };
 @include project--variant($id: 'linkhunter', $title: #f03dad, $desc: #fff, $bg: #34D7F4) { box-shadow: 0 2px 0 #fee23d; };
 @include project--variant($id: 'logicalornot', $title: #ffc302, $desc: #fff, $bg: #7642d0);
 @include project--variant($id: 'reactivedesign', $title: #23cbbf, $desc: #859c9b, $bg: #fff) { box-shadow: 0 2px 0 #23cbbf; };

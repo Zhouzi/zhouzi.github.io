@@ -1,5 +1,12 @@
 [
   {
+    "id": "gentleform",
+    "title": "GentleForm",
+    "description": "Validate forms at the right time, using browser's native api.",
+    "url": "http://codepen.io/Zhouzi/full/QbBzZp/"
+  },
+
+  {
     "id": "linkhunter",
     "title": "linkhunter",
     "description": "Detect links that real users actually type.",
