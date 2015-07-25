@@ -45,4 +45,8 @@ p code {
 }
 
 pre { padding: $spacing-gutter; }
-p code { padding: .1rem .2rem; }
+
+p code {
+  font-size: .8em;
+  padding: .1rem .2rem;
+}
