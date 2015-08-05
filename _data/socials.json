@@ -1,13 +1,19 @@
 [
-    {
-        "network": "github",
-        "username": "zhouzi",
-        "url": "https://github.com/zhouzi"
-    },
+  {
+    "network": "twitter",
+    "username": "zh0uzi",
+    "url": "https://twitter.com/zh0uzi"
+  },
 
-    {
-        "network": "codepen",
-        "username": "zhouzi",
-        "url": "http://codepen.io/Zhouzi/"
-    }
+  {
+    "network": "github",
+    "username": "zhouzi",
+    "url": "https://github.com/zhouzi"
+  },
+
+  {
+    "network": "codepen",
+    "username": "zhouzi",
+    "url": "http://codepen.io/Zhouzi/"
+  }
 ]
