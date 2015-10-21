@@ -1,5 +1,12 @@
 [
   {
+    "id": "funkollectio",
+    "title": "funkollect.io",
+    "description": "A funko Pop! collection manager.",
+    "url": "http://funkollect.io/"
+  },
+
+  {
     "id": "gentleform",
     "title": "GentleForm",
     "description": "Accessible and user-friendly HTML5 form validation library.",
