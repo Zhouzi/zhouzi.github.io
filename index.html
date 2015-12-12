@@ -1,42 +1,185 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<section class="hero">
-    <h1 class="hero__heading">
-        I am Gabin Aureche, a <strong>front-end developer</strong> focused on <strong>user experience</strong>.
-    </h1>
-</section>
+    <title>Gabin Aureche</title>
 
-<section class="block">
-    <h3 class="block__heading">Scribbles</h3>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato">
+    <link rel="stylesheet" href="https://file.myfontastic.com/qnEimrXGcTSgPjmX7az4g3/icons.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    {% for post in site.posts %}
-        <article class="post">
-            <h2 class="post__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <meta name="author" content="Gabin Aureche">
+    <meta name="description" content="I am Gabin Aureche, a Front-End Developer Focused on User Experience.">
+    <link rel="canonical" href="http://gabinaureche.com">
 
-            <div class="post__meta">
-                {% for category in post.categories %}<span class="post__category">{{ category }}</span>{% endfor %}
-                {{ post.date | date: "%B %-d, %Y" }}
-            </div>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@zh0uzi">
+    <meta name="twitter:creator" content="Gabin Aureche">
+    <meta name="twitter:image:src" content="images/meta_large_image.png">
+
+    <meta property="og:url" content="http://gabinaureche.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gabin Aureche">
+    <meta property="og:image" content="images/meta_large_image.png">
+    <meta property="og:description" content="I am Gabin Aureche, a Front-End Developer Focused on User Experience.">
+    <meta property="og:site_name" content="Gabin Aureche">
+
+    <meta itemprop="name" content="Gabin Aureche">
+    <meta itemprop="description" content="I am Gabin Aureche, a Front-End Developer Focused on User Experience.">
+    <meta itemprop="image" content="images/meta_large_image.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  </head>
+
+  <body>
+    <section>
+      <header>
+        <h1>I am Gabin Aureche, a <strong>Front-End Developer</strong> focused on <strong>User Experience</strong>.</h1>
+
+        <p>I work at <a href="https://www.wizbii.com">Wizbii</a> the day and build (more or less) funny stuff the night.</p>
+
+        <ul>
+          <li>
+            <a href="https://github.com/zhouzi">
+              <span class="icon-github"></span>
+              github.com/zhouzi
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/Zhouzi">
+              <span class="icon-codepen"></span>
+              codepen.io/Zhouzi
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <main>
+        <article class="project">
+          <a href="http://gabinaureche.com/funkollect.io" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">funkollect.io</span></h2>
+            <p><span class="highlight">A funko Pop! collection manager.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/funkollectio.png" alt="">
+          </div>
         </article>
-    {% endfor %}
-</section>
 
-<section class="block">
-    <h3 class="block__heading">
-        Projects
-        <a href="/archives">Archives</a>
-    </h3>
-</section>
+        <article class="project">
+          <a href="http://codepen.io/Zhouzi/full/QbBzZp" class="project__link"></a>
 
-{% for project in site.data.projects %}
-    <article class="project project--{{ project.id }}">
-        <a href="{{ project.url }}" class="project__link"></a>
+          <div class="project__content">
+            <h2><span class="highlight">GentleForm</span></h2>
+            <p><span class="highlight">Accessible and user-friendly HTML5 form validation library.</span></p>
+          </div>
 
-        <div class="project__meta">
-            <h2 class="project__title">{{ project.title }}</h2>
-            <p class="project__description">{{ project.description }}</p>
-        </div>
-    </article>
-{% endfor %}
+          <div class="project__background">
+            <img src="images/gentleform.png" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="http://gabinaureche.com/linkhunter" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">link hunter</span></h2>
+            <p><span class="highlight">Detect links that real users actually type.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/linkhunter.png" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="http://gabinaureche.com/logicalornot" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">Logical Or Not</span></h2>
+            <p><span class="highlight">A Game About JavaScript Logical Operators.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/logicalornot.png" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="http://gabinaureche.com/reactivedesign" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">Reactive Design</span></h2>
+            <p><span class="highlight">Collection of design insights about perceived speed.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/reactivedesign.png" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="http://codepen.io/Zhouzi/full/ogdxJj" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">Reactive Demo</span></h2>
+            <p><span class="highlight">Perceived Speed Patterns Implementation.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/reactivedemo.png" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="http://gabinaureche.com/TheaterJS" class="project__link"></a>
+
+          <div class="project__content">
+            <h2><span class="highlight">TheaterJS</span></h2>
+            <p><span class="highlight">Typing effect mimicking human behavior.</span></p>
+          </div>
+
+          <div class="project__background">
+            <img src="images/theaterjs.png" alt="">
+          </div>
+        </article>
+      </main>
+
+      <footer>Get in touch and say <a href="mailto:hello@gabinaureche.com">hello@gabinaureche.com</a>!</footer>
+    </section>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-43673873-4', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

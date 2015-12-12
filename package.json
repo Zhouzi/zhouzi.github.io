@@ -1,12 +1,12 @@
 {
-  "name": "zhouzi.github.io",
-  "version": "0.0.1",
-  "description": "Gabin Aureche's personal website.",
-  "author": "Gabin Aureche",
+  "private": true,
+  "scripts": {
+    "styles": "node scripts/styles.js"
+  },
   "devDependencies": {
-    "gulp": "^3.8.9",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-sass": "^2.0.1"
+    "autoprefixer": "6.1.2",
+    "node-sass": "3.4.2",
+    "postcss": "5.0.12",
+    "q": "1.4.1"
   }
 }
