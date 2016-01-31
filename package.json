@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "styles": "node scripts/styles.js"
+    "styles": "node-sass scss/styles.scss --output-style compressed | postcss --use autoprefixer --output css/styles.css"
   },
   "devDependencies": {
     "autoprefixer": "6.1.2",
     "node-sass": "3.4.2",
     "postcss": "5.0.12",
+    "postcss-cli": "2.5.0",
     "q": "1.4.1"
   }
 }
