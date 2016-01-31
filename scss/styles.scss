@@ -58,7 +58,7 @@ body {
 }
 
 section {
-  max-width: 800px;
+  max-width: 840px;
   padding: 0 $gutter;
   margin: ($gutter * 2) auto;
 }
@@ -74,13 +74,13 @@ a {
   font-size: 1.2em;
 }
 
-header {
+header,
+header h1 {
   margin-bottom: ($gutter * 2);
+}
 
-  h1,
-  p {
-    margin-bottom: ($gutter / 2);
-  }
+header p {
+  margin-bottom: ($gutter / 2);
 }
 
 ul {
