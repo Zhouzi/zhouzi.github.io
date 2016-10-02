@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "styles": "node-sass scss/styles.scss --output-style compressed | postcss --use autoprefixer --output css/styles.css"
+    "styles:styles": "node-sass scss/styles.scss --output-style compressed | postcss --use autoprefixer --output css/styles.css",
+    "styles:resume": "node-sass scss/resume.scss --output-style compressed | postcss --use autoprefixer --output css/resume.css",
+    "styles": "npm run styles:styles ; npm run styles:resume"
   },
   "devDependencies": {
     "autoprefixer": "6.1.2",
