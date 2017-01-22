@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato">
     <link rel="stylesheet" href="https://file.myfontastic.com/qnEimrXGcTSgPjmX7az4g3/icons.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <script>
       (function (i, s, o, g, r, a, m) {
@@ -26,32 +26,32 @@
   </head>
 
   <body>
-    <section>
-      <header>
-        <h1>I am Gabin Aureche, a <strong>Front-End Developer</strong> obsessed by <strong>User Experience</strong>.</h1>
+    <header class="header">
+      <h1 class="title">
+        I am Gabin Aureche,
+        a <strong>Front-End Developer</strong> obsessed with <strong>User Experience</strong>.
+      </h1>
 
-        <ul>
+      <nav class="nav">
+        <ul class="nav-links">
           <li>
             <a href="https://github.com/zhouzi">
               <span class="icon-github"></span>
               github.com/zhouzi
             </a>
           </li>
-
           <li>
-            <a href="https://codepen.io/Zhouzi">
-              <span class="icon-codepen"></span>
-              codepen.io/Zhouzi
+            <a href="https://medium.com/@zh0uzi">
+              <span class="icon-medium"></span>
+              medium.com/@zh0uzi
             </a>
           </li>
-
           <li>
             <a href="https://twitter.com/zh0uzi">
               <span class="icon-twitter"></span>
               twitter.com/zh0uzi
             </a>
           </li>
-
           <li>
             <a href="resume.html">
               <span class="icon-document"></span>
@@ -59,131 +59,347 @@
             </a>
           </li>
         </ul>
-      </header>
+      </nav>
+    </header>
 
-      <main>
-        <article class="project">
-          <a href="http://poffer.gabinaureche.com" class="project__link"></a>
+    <main>
+      <section class="section">
+        <h2 class="section-title">
+          Side Projects
+        </h2>
 
-          <div class="project__content">
-            <h2><span class="highlight">Poffer</span></h2>
-            <p><span class="highlight">A tool that makes it easier to share the content you like thanks to Pocket+Buffer.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            Poffer
+          </h3>
+          <p class="side-project__description">
+            A tool that makes it easier to share the content you like thanks to Pocket+Buffer.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Redux</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/Poffer"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://poffer.gabinaureche.com"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/poffer.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/rogneur" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">rogneur</span></h2>
-            <p><span class="highlight">Simple low level and opinionated cropper library.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            rogneur
+          </h3>
+          <p class="side-project__description">
+            Simple low level and opinionated cropper library.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>Vanilla JavaScript</li>
+                <li>Canvas</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/rogneur"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://gabinaureche.com/rogneur"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/rogneur.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://wizbii.github.io/wizipsum" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">wizipsum</span></h2>
-            <p><span class="highlight">We all have funny mates, right?</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            funkollect.io
+          </h3>
+          <p class="side-project__description">
+            A Funko Pop! collection manager.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>JavaScript</li>
+                <li>Mithril</li>
+                <li>Performance</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/funkollect.io"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://gabinaureche.com/funkollect.io"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/wizipsum.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/funkollect.io" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">funkollect.io</span></h2>
-            <p><span class="highlight">A funko Pop! collection manager.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            GentleForm
+          </h3>
+          <p class="side-project__description">
+            Accessible and user-friendly HTML5 form validation library.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>JavaScript</li>
+                <li>Accessibility</li>
+                <li>Standards</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/GentleForm"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://codepen.io/Zhouzi/full/QbBzZp/"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/funkollectio.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://codepen.io/Zhouzi/full/QbBzZp" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">GentleForm</span></h2>
-            <p><span class="highlight">Accessible and user-friendly HTML5 form validation library.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            link hunter
+          </h3>
+          <p class="side-project__description">
+            Detect links that real users actually type.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>Vanilla JavaScript</li>
+                <li>RegExp</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/linkhunter"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://gabinaureche.com/linkhunter/"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/gentleform.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/linkhunter" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">link hunter</span></h2>
-            <p><span class="highlight">Detect links that real users actually type.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            Logical Or Not
+          </h3>
+          <p class="side-project__description">
+            A game about JavaScript logical operators.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>Vanilla JavaScript</li>
+                <li>Game</li>
+                <li>Animation</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/logicalornot"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://gabinaureche.com/logicalornot/"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/linkhunter.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/logicalornot" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">Logical Or Not</span></h2>
-            <p><span class="highlight">A Game About JavaScript Logical Operators.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            Reactive Design
+          </h3>
+          <p class="side-project__description">
+            Collection of design insights about perceived speed.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>User Experience</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/reactivedesign"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://gabinaureche.com/reactivedesign"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/logicalornot.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/reactivedesign" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">Reactive Design</span></h2>
-            <p><span class="highlight">Collection of design insights about perceived speed.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            Reactive Demo
+          </h3>
+          <p class="side-project__description">
+            Perceived speed patterns implementation.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>User Experience</li>
+                <li>Angular</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="http://codepen.io/Zhouzi/full/ogdxJj/"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/reactivedesign.png');"></div>
         </article>
 
-        <article class="project">
-          <a href="http://codepen.io/Zhouzi/full/ogdxJj" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">Reactive Demo</span></h2>
-            <p><span class="highlight">Perceived Speed Patterns Implementation.</span></p>
+        <article class="side-project">
+          <h3 class="side-project__title">
+            TheaterJS
+          </h3>
+          <p class="side-project__description">
+            Typing effect mimicking human behavior.
+          </p>
+          <div class="side-project-footer">
+            <div class="side-project-footer__master">
+              <ul class="side-project__tags">
+                <li>Vanilla JavaScript</li>
+                <li>Animation</li>
+              </ul>
+            </div>
+            <div class="side-project-footer__slave">
+              <ul class="side-project__links">
+                <li>
+                  <a
+                    href="https://github.com/Zhouzi/TheaterJS"
+                    class="button button--secondary"
+                  >
+                    GitHub Repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/Zhouzi/pen/JoRazP"
+                    class="button button--primary"
+                  >
+                    Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="project__background"
-               style="background-image: url('images/reactivedemo.png');"></div>
         </article>
+      </section>
+    </main>
 
-        <article class="project">
-          <a href="http://gabinaureche.com/TheaterJS" class="project__link"></a>
-
-          <div class="project__content">
-            <h2><span class="highlight">TheaterJS</span></h2>
-            <p><span class="highlight">Typing effect mimicking human behavior.</span></p>
-          </div>
-
-          <div class="project__background"
-               style="background-image: url('images/theaterjs.png');"></div>
-        </article>
-      </main>
-
-      <footer>Get in touch and say <a href="mailto:hello@gabinaureche.com">hello@gabinaureche.com</a>!</footer>
-    </section>
+    <footer class="footer">
+      Get in touch and say <a href="mailto:hello@gabinaureche.com">hello@gabinaureche.com</a>!
+    </footer>
   </body>
 </html>
