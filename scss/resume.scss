@@ -1,121 +1,104 @@
-@import 'variables';
+@import
+  './variables',
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+  '../node_modules/normalize.css/normalize.css',
+  './base'
+;
 
 body {
-  font-family: $font-family-base;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: $color-text;
-  background-color: $color-background;
+  padding: 0 1rem;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2 {
   line-height: 1.2;
   margin: 0;
 }
 
 h1 {
-  font-size: 2.2rem;
+  display: inline-block;
   font-family: $font-family-heading;
+  font-size: 2.2rem;
+  color: $color-primary;
+  border-bottom: 2px solid $color-secondary;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
-p {
-  margin: 0 0 1rem 0;
+.header {
+  margin: 1rem auto 2rem auto;
+  max-width: 820px;
 }
 
-a {
-  color: $color-primary;
-  text-decoration: none;
-  border-bottom: 1px dashed;
+.header-details {
+  margin: 1rem 0 0 0;
+  padding: 0 0 0 1.2rem;
+}
 
-  &:focus,
-  &:hover {
-    border-bottom: 1px solid;
+@media (min-width: 600px) {
+  .header {
+    display: table;
+    width: 100%;
+    margin: 2rem auto;
   }
 
-  [class^="icon"] {
+  .header-title,
+  .header-details {
+    display: table-cell;
     vertical-align: middle;
   }
-}
 
-.container {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-}
-
-.details {
-  padding: 0 1rem;
-  margin: 0 0 1rem 0;
-}
-
-.links {
-  padding: 0;
-  margin: 0 0 1rem 0;
-
-  li {
-    display: inline-block;
-    padding-right: 0.5rem;
+  .header-title {
+    width: 100%;
+    padding-right: 2rem;
   }
+
+  .header-details {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0 0 0 1rem;
+  }
+}
+
+.section {
+  max-width: 620px;
+  margin: 0 auto 1rem auto;
+  background-color: #fff;
+  padding: 1rem;
 }
 
 .section-title {
   font-weight: bold;
   text-transform: uppercase;
-  border-top: 2px solid $color-background;
-  padding: 0.5rem 0;
 }
 
-.item-title {
+.experience {
+  padding: 1rem 0;
+
+  p {
+    color: lighten($color-text, 40%);
+  }
+}
+
+.experience:not(:last-child) {
+  border-bottom: 2px solid $color-background;
+}
+
+.experience__title,
+.experience p {
+  margin: 0;
+}
+
+.experience__title {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-@media print {
-  font-size: 12px;
-
-  body,
-  .container {
-    background: transparent;
-  }
-
-  .container {
-    max-width: none;
-    margin: 0;
-    padding: 0.5mm;
-  }
-
-  .item {
-    page-break-inside: avoid;
-  }
-
-  @page {
-    margin: 1cm;
-  }
+.experience ul {
+  padding: 0 0 0 1rem;
+  margin: 0.5rem 0 0 0;
 }
