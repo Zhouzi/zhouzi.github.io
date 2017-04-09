@@ -1,0 +1,16 @@
+.experience {
+  * + & {
+    margin-top: $spacing-close;
+  }
+}
+
+.experience__title {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $bold-font-weight;
+  margin: 0;
+}
+
+.experience__bulletpoints {
+  margin: 0;
+}

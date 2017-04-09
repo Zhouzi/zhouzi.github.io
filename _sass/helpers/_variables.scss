@@ -1,0 +1,42 @@
+$modularscale: (
+  base: 1rem,
+  ratio: $fourth
+);
+
+$base-font-family: Lato, sans-serif;
+$base-font-size:   ms(0);
+$base-font-weight: 400;
+$bold-font-weight: 700;
+$small-font-size:  ms(-1);
+$base-line-height: 1.5;
+$larger-font-size: ms(1);
+
+$spacing-close: ms(0);
+$spacing-very-close: $spacing-close / 2;
+$spacing-large: ms(4);
+
+$stroke-width: 2px;
+
+$heading-font-family: 'Abril Fatface', sans-serif;
+$heading-line-height: $base-line-height * 0.8;
+$h1-font-size:        ms(3);
+$h2-font-size:        ms(2);
+
+// $spacing-unit:     30px;
+
+$text-color:       #3d3d3d;
+$text-muted:       lighten($text-color, 30%);
+$background-color: #eee;
+$brand-color:      #f63958;
+$brand-secondary:  #f5cb27;
+$gray:             darken($background-color, 10%);
+
+//$grey-color:       #828282;
+//$grey-color-light: lighten($grey-color, 40%);
+//$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    620px;
+
+$on-palm:          '(min-width: 600px)';
+//$on-laptop:        800px;

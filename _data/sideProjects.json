@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Cheerladders",
+    "description": "Get early adopters and friends to support your side project and reach your audience.",
+    "github_url": "https://github.com/Zhouzi/cheerladders",
+    "website_url": "https://cheerladders.xyz/"
+  },
+  {
+    "name": "Poffer",
+    "description": "A tool that makes it easier to share the content you like thanks to Pocket+Buffer.",
+    "github_url": "https://github.com/Zhouzi/Poffer",
+    "website_url": "http://poffer.gabinaureche.com/",
+    "pinned": true
+  },
+  {
+    "name": "rogneur",
+    "description": "Simple low level and opinionated cropper library.",
+    "github_url": "https://github.com/Zhouzi/rogneur",
+    "website_url": "http://gabinaureche.com/rogneur"
+  },
+  {
+    "name": "funkollect.io",
+    "description": "A Funko Pop! collection manager.",
+    "github_url": "https://github.com/Zhouzi/funkollect.io",
+    "website_url": "http://gabinaureche.com/funkollect.io"
+  },
+  {
+    "name": "GentleForm",
+    "description": "Accessible and user-friendly HTML5 form validation library.",
+    "github_url": "https://github.com/Zhouzi/GentleForm",
+    "demo_url": "http://codepen.io/Zhouzi/full/QbBzZp/"
+  },
+  {
+    "name": "link hunter",
+    "description": "Detect links that real users actually type.",
+    "github_url": "https://github.com/Zhouzi/linkhunter",
+    "website_url": "http://gabinaureche.com/linkhunter/"
+  },
+  {
+    "name": "Logical Or Not",
+    "description": "A game about JavaScript logical operators.",
+    "github_url": "http://gabinaureche.com/logicalornot/",
+    "website_url": "https://github.com/Zhouzi/logicalornot",
+    "pinned": true
+  },
+  {
+    "name": "Reactive Design",
+    "description": "Collection of design insights about perceived speed.",
+    "github_url": "https://github.com/Zhouzi/reactivedesign",
+    "website_url": "http://gabinaureche.com/reactivedesign"
+  },
+  {
+    "name": "Reactive Demo",
+    "description": "Perceived speed patterns implementation.",
+    "demo_url": "http://codepen.io/Zhouzi/full/ogdxJj/"
+  },
+  {
+    "name": "TheaterJS",
+    "description": "Typing effect mimicking human behavior.",
+    "github_url": "https://github.com/Zhouzi/TheaterJS",
+    "demo_url": "https://codepen.io/Zhouzi/pen/JoRazP",
+    "pinned": true
+  }
+]

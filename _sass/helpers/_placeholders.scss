@@ -1,0 +1,10 @@
+%clearfix::before,
+%clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%vertical-rhytm {
+  margin: 0;
+}

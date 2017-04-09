@@ -1,0 +1,23 @@
+.side-project {
+  padding: $spacing-close;
+  background-color: #fff;
+
+  * + & {
+    margin-top: $spacing-close;
+  }
+}
+
+.side-project__title {
+  color: $brand-color;
+  margin-bottom: $spacing-very-close;
+}
+
+.side-project__description {
+  @include font-normal;
+  display: block;
+  color: $text-color;
+}
+
+.side-project__links {
+  @include list-inline;
+}

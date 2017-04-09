@@ -1,0 +1,13 @@
+.post {
+  * + & {
+    margin-top: $spacing-close;
+  }
+}
+
+.post__title {
+  margin: 0;
+}
+
+.post__meta {
+  text-transform: uppercase;
+}

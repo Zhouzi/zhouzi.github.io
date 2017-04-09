@@ -1,0 +1,67 @@
+.input,
+.button {
+  font: inherit;
+  color: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: $stroke-width solid transparent;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border-color: $gray;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button--primary {
+  color: #fff;
+  background-color: $brand-color;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+    background-color: darken($brand-color, 10%);
+  }
+}
+
+.button--secondary {
+  border-color: $brand-secondary;
+
+  &:focus,
+  &:hover {
+    color: $text-color;
+    background-color: $background-color;
+  }
+}
+
+.input-group {
+  display: table;
+  width: 100%;
+}
+
+.input-group__input,
+.input-group__button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.input-group__input {
+  width: 100%;
+}
+
+.input-group__button {
+  &:first-child {
+    padding-right: $spacing-close;
+  }
+
+  &:last-child {
+    padding-left: $spacing-close;
+  }
+}

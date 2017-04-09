@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<header class="hero">
+  <h1>
+    I am Gabin Aureche, a <strong>Developer</strong> Obsessed with <strong>User Experience</strong>.
+  </h1>
+  <nav>
+    <ul class="list-inline">
+      <li>
+        <a href="/">gabinaureche.com</a>
+      </li>
+      {% if site.github_username %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}">
+          github.com/{{ site.github_username }}
+        </a>
+      </li>
+      {% endif %}
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li>+33 672 16 16 75</li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="section">
+    <div class="section-title">
+      Work Experience
+    </div>
+
+    {% for experience in site.data.workExperience %}
+    <article class="experience">
+      <h2 class="experience__title">
+        {{ experience.title }}
+      </h2>
+      <ul class="experience__bulletpoints">
+        {% for point in experience.bulletpoints %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      Side Projects
+    </div>
+
+    <ul class="margin-top-close">
+      {% for sideProject in site.data.sideProjects %}
+      {% if sideProject.pinned %}
+      <li>
+        <h2 class="font-normal no-margin">
+          {% if sideProject.website_url %}
+          <a href="{{ sideProject.website_url }}"><strong>{{ sideProject.name }}</strong></a>
+          {% else if sideProject.demo_url %}
+          <a href="{{ sideProject.demo_url }}"><strong>{{ sideProject.name }}</strong></a>
+          {% else %}
+          <strong>{{ sideProject.name }}</strong>
+          {% endif %}
+          - {{ sideProject.description }}
+        </h2>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+
+    Many more on <a href="https://www.github.com/{{ site.github_username }}">github.com/{{ site.github_username }}</a>.
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      Education
+    </div>
+
+    {% for experience in site.data.education %}
+    <article class="experience">
+      <h2 class="experience__title">
+        {{ experience.title }}
+      </h2>
+      <ul class="experience__bulletpoints">
+        {% for point in experience.bulletpoints %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</main>

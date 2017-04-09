@@ -1,0 +1,133 @@
+---
+layout: default
+---
+
+<header class="hero">
+  <h1>
+    I am Gabin Aureche, a <strong>Developer</strong> Obsessed with <strong>User Experience</strong>.
+  </h1>
+  <nav>
+    <ul class="list-inline">
+      {% if site.github_username %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}">
+          <span class="icon-github"></span>
+          github.com/{{ site.github_username }}
+        </a>
+      </li>
+      {% endif %}
+      {% if site.medium_username %}
+      <li>
+        <a href="https://medium.com/{{ site.medium_username }}">
+          <span class="icon-medium"></span>
+          medium.com/{{ site.medium_username }}
+        </a>
+      </li>
+      {% endif %}
+      {% if site.twitter_username %}
+      <li>
+        <a href="https://twitter.com/{{ site.twitter_username }}">
+          <span class="icon-twitter"></span>
+          twitter.com/{{ site.twitter_username }}
+        </a>
+      </li>
+      {% endif %}
+      <li>
+        <a href="{{ '/resume.html' | relative }}">
+          <span class="icon-document"></span>
+          Resume
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <p>
+    I believe code is "just" a mean to an end, great user experience being every product's goal.
+    There's no product without users although you can have a product without code.
+  </p>
+
+  <p>
+    My motto: get from A to B in the most straightforward way by creating maximum value.
+  </p>
+
+  <p>
+    I'm constantly jumping from a side project to another, learning and discovering lots of cool stuff along the way.
+    Don't miss out on my personal newsletter where I'm sharing the best of it:
+  </p>
+
+  <form
+    action="https://www.getrevue.co/profile/zhouzi/add_subscriber"
+    method="post"
+    target="_blank"
+  >
+    <div class="input-group">
+      <div class="input-group__input">
+        <input
+          type="email"
+          id="email"
+          name="member[email]"
+          placeholder="Email address (e.g john@doe.com)"
+          aria-label="Email address (e.g john@doe.com)"
+          class="input"
+        />
+      </div>
+
+      <div class="input-group__button">
+        <button
+          type="submit"
+          class="button button--primary"
+        >
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </form>
+
+  {% for sideProject in site.data.sideProjects %}
+  <article class="side-project">
+    <h2 class="side-project__title">
+      {{ sideProject.name }}
+      <span class="side-project__description">{{ sideProject.description }}</span>
+    </h2>
+    <ul class="side-project__links">
+      {% if sideProject.website_url %}
+      <li><a href="{{ sideProject.website_url }}" class="button button--primary">Website</a></li>
+      {% endif %}
+      {% if sideProject.demo_url %}
+      <li><a href="{{ sideProject.demo_url }}" class="button button--primary">Demo</a></li>
+      {% endif %}
+      {% if sideProject.github_url %}
+      <li><a href="{{ sideProject.github_url }}" class="button button--secondary">GitHub Repository</a></li>
+      {% endif %}
+    </ul>
+  </article>
+  {% endfor %}
+
+  <section class="section">
+    <div class="section-title">
+      Posts
+    </div>
+
+    {% for post in site.posts %}
+    <article class="post">
+      <small class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</small>
+      <h2 class="post__title">
+        {% if post.medium_url %}
+        <a href="{{ post.medium_url }}">{{ post.title | escape }}</a>
+        <small class="icon-link-external"></small>
+        {% else %}
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% endif %}
+      </h2>
+    </article>
+    {% endfor %}
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    Say <a href="mailto:{{ site.email }}">{{ site.email }}</a>!
+  </div>
+</footer>
