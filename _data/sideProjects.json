@@ -7,7 +7,7 @@
   },
   {
     "name": "Poffer",
-    "description": "A tool that makes it easier to share the content you like thanks to Pocket+Buffer.",
+    "description": "Automate sharing Pocket links to Twitter through Buffer.",
     "github_url": "https://github.com/Zhouzi/Poffer",
     "website_url": "http://poffer.gabinaureche.com/",
     "pinned": true
@@ -56,7 +56,7 @@
   },
   {
     "name": "TheaterJS",
-    "description": "Typing effect mimicking human behavior.",
+    "description": "Typing animation mimicking human behavior.",
     "github_url": "https://github.com/Zhouzi/TheaterJS",
     "demo_url": "https://codepen.io/Zhouzi/pen/JoRazP",
     "pinned": true
