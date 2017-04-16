@@ -150,8 +150,8 @@ layout: default
     <article class="post">
       <small class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</small>
       <h2 class="post__title">
-        {% if post.medium_url %}
-        <a href="{{ post.medium_url }}">{{ post.title | escape }}</a>
+        {% if post.external %}
+        <a href="{{ post.external.url }}">{{ post.title | escape }}</a>
         <small class="icon-link-external"></small>
         {% else %}
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

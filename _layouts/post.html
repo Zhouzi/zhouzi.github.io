@@ -19,11 +19,11 @@ layout: default
       </p>
     {% endif %}
 
-    {% if page.medium_url %}
+    {% if page.external %}
       <p>
-        This post has been published on <a href="{{ page.medium_url}}">Medium</a>, please go to:
+        This post has been published on <a href="{{ page.external.url }}">{{ page.external.name }}</a>, please go to:
         <br>
-        <a href="{{ page.medium_url}}">{{ page.medium_url}}</a>
+        <a href="{{ page.external.url }}">{{ page.external.url }}</a>
       </p>
     {% else %}
       <div itemtype="articleBody">
@@ -31,7 +31,7 @@ layout: default
       </div>
     {% endif %}
 
-    {% unless page.medium_url %}
+    {% unless page.external %}
       {% include disqus_comments.html %}
     {% endunless %}
   </div>
