@@ -3,8 +3,9 @@ layout: default
 ---
 
 <header class="hero">
-  <h1>
-    I am Gabin Aureche, a <strong>Developer</strong> Obsessed with <strong>User Experience</strong>.
+  <h1 itemscope itemtype="http://schema.org/Person" itemprop="description">
+    I am <span itemprop="givenName">Gabin</span> <span itemprop="familyName">Aureche</span>, a <strong itemprop="jobTitle">Developer</strong> Obsessed with <strong>User Experience</strong>.
+    <meta itemprop="url" content="{{ site.url }}">
   </h1>
   <nav>
     <ul class="list-inline">
@@ -88,20 +89,54 @@ layout: default
   </form>
 
   {% for sideProject in site.data.sideProjects %}
-  <article class="side-project">
+  <article
+    class="side-project"
+    itemscope
+    itemtype="http://schema.org/Movie"
+  >
     <h2 class="side-project__title">
-      {{ sideProject.name }}
-      <span class="side-project__description">{{ sideProject.description }}</span>
+      <span itemprop="name">
+        {{ sideProject.name }}
+      </span>
+      <span
+        class="side-project__description"
+        itemprop="about"
+      >
+        {{ sideProject.description }}
+      </span>
     </h2>
     <ul class="side-project__links">
       {% if sideProject.website_url %}
-      <li><a href="{{ sideProject.website_url }}" class="button button--primary">Website</a></li>
+      <li>
+        <a
+          href="{{ sideProject.website_url }}"
+          class="button button--primary"
+          itemprop="url"
+        >
+          Website
+        </a>
+      </li>
       {% endif %}
       {% if sideProject.demo_url %}
-      <li><a href="{{ sideProject.demo_url }}" class="button button--primary">Demo</a></li>
+      <li>
+        <a
+          href="{{ sideProject.demo_url }}"
+          class="button button--primary"
+          itemprop="url"
+        >
+          Demo
+        </a>
+      </li>
       {% endif %}
       {% if sideProject.github_url %}
-      <li><a href="{{ sideProject.github_url }}" class="button button--secondary">GitHub Repository</a></li>
+      <li>
+        <a
+          href="{{ sideProject.github_url }}"
+          class="button button--secondary"
+        >
+          GitHub Repository
+        </a>
+      </li>
       {% endif %}
     </ul>
   </article>
