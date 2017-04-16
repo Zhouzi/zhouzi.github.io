@@ -19,6 +19,12 @@
     "website_url": "http://gabinaureche.com/rogneur"
   },
   {
+    "name": "wizipsum",
+    "description": "Configurable lorem ipsum generator (chrome extension).",
+    "github_url": "https://github.com/wizbii/wizipsum",
+    "website_url": "https://chrome.google.com/webstore/detail/wizipsum/ncibdpfgnoldfhagojkniefnaokacfhf"
+  },
+  {
     "name": "funkollect.io",
     "description": "A Funko Pop! collection manager.",
     "github_url": "https://github.com/Zhouzi/funkollect.io",
