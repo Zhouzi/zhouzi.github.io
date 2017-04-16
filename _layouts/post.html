@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article itemscope itemtype="http://schema.org/Article">
+  <div class="hero">
+    <h1 itemprop="title">{{ page.title }}</h1>
+  </div>
+
+  <div class="container">
+    {% if page.date %}
+      <p>
+        <time
+          itemprop="datePublished"
+          datetime="{{ page.date|date: '%Y-%m-%d' }}"
+        >
+          {{ page.date|date: '%B %d, %Y' }}
+        </time>
+      </p>
+    {% endif %}
+
+    {% if page.medium_url %}
+      <p>
+        This post has been published on <a href="{{ page.medium_url}}">Medium</a>, please go to:
+        <br>
+        <a href="{{ page.medium_url}}">{{ page.medium_url}}</a>
+      </p>
+    {% else %}
+      <div itemtype="articleBody">
+        {{ content }}
+      </div>
+    {% endif %}
+
+    {% unless page.medium_url %}
+      {% include disqus_comments.html %}
+    {% endunless %}
+  </div>
+</article>

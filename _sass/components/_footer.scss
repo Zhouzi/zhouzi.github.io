@@ -1,3 +1,14 @@
 .footer {
   margin-top: $spacing-close;
 }
+
+.footer__container {
+  padding-top: $spacing-close;
+  border-top: $stroke-width solid $gray;
+}
+
+.footer__right {
+  @media #{$on-palm} {
+    float: right;
+  }
+}

@@ -7,40 +7,39 @@ layout: default
     I am <span itemprop="givenName">Gabin</span> <span itemprop="familyName">Aureche</span>, a <strong itemprop="jobTitle">Developer</strong> Obsessed with <strong>User Experience</strong>.
     <meta itemprop="url" content="{{ site.url }}">
   </h1>
-  <nav>
-    <ul class="list-inline">
-      {% if site.github_username %}
-      <li>
-        <a href="https://github.com/{{ site.github_username }}">
-          <span class="icon-github"></span>
-          github.com/{{ site.github_username }}
-        </a>
-      </li>
-      {% endif %}
-      {% if site.medium_username %}
-      <li>
-        <a href="https://medium.com/{{ site.medium_username }}">
-          <span class="icon-medium"></span>
-          medium.com/{{ site.medium_username }}
-        </a>
-      </li>
-      {% endif %}
-      {% if site.twitter_username %}
-      <li>
-        <a href="https://twitter.com/{{ site.twitter_username }}">
-          <span class="icon-twitter"></span>
-          twitter.com/{{ site.twitter_username }}
-        </a>
-      </li>
-      {% endif %}
-      <li>
-        <a href="{{ '/resume.html' | relative }}">
-          <span class="icon-document"></span>
-          Resume
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <ul class="list-inline">
+    {% if site.github_username %}
+    <li>
+      <a href="https://github.com/{{ site.github_username }}">
+        <span class="icon-github"></span>
+        github.com/{{ site.github_username }}
+      </a>
+    </li>
+    {% endif %}
+    {% if site.medium_username %}
+    <li>
+      <a href="https://medium.com/{{ site.medium_username }}">
+        <span class="icon-medium"></span>
+        medium.com/{{ site.medium_username }}
+      </a>
+    </li>
+    {% endif %}
+    {% if site.twitter_username %}
+    <li>
+      <a href="https://twitter.com/{{ site.twitter_username }}">
+        <span class="icon-twitter"></span>
+        twitter.com/{{ site.twitter_username }}
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{{ '/resume.html' | relative }}">
+        <span class="icon-document"></span>
+        Resume
+      </a>
+    </li>
+  </ul>
+
 </header>
 
 <main class="container">
@@ -162,9 +161,3 @@ layout: default
     {% endfor %}
   </section>
 </main>
-
-<footer class="footer">
-  <div class="container">
-    Say <a href="mailto:{{ site.email }}">{{ site.email }}</a>!
-  </div>
-</footer>
