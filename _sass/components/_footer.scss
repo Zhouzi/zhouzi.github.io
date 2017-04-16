@@ -8,7 +8,7 @@
 }
 
 .footer__right {
-  @media #{$on-palm} {
+  @include media-query($on-palm) {
     float: right;
   }
 }
