@@ -54,13 +54,7 @@ layout: default
       {% if sideProject.pinned %}
       <li>
         <h2 class="font-normal no-margin">
-          {% if sideProject.website_url %}
-          <a href="{{ sideProject.website_url }}"><strong>{{ sideProject.name }}</strong></a>
-          {% else if sideProject.demo_url %}
-          <a href="{{ sideProject.demo_url }}"><strong>{{ sideProject.name }}</strong></a>
-          {% else %}
-          <strong>{{ sideProject.name }}</strong>
-          {% endif %}
+          <a href="{{ sideProject.main_cta.url }}"><strong>{{ sideProject.name }}</strong></a>
           - {{ sideProject.description }}
         </h2>
       </li>

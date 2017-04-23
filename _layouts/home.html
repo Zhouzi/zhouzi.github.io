@@ -83,7 +83,7 @@ layout: default
   <article
     class="side-project"
     itemscope
-    itemtype="http://schema.org/Movie"
+    itemtype="http://schema.org/WebApplication"
   >
     <h2 class="side-project__title">
       <span itemprop="name">
@@ -97,38 +97,26 @@ layout: default
       </span>
     </h2>
     <ul class="side-project__links">
-      {% if sideProject.website_url %}
       <li>
         <a
-          href="{{ sideProject.website_url }}"
+          href="{{ sideProject.main_cta.url }}"
           class="button button--primary"
           itemprop="url"
         >
-          Website
+          {{ sideProject.main_cta.name }}
         </a>
       </li>
-      {% endif %}
-      {% if sideProject.demo_url %}
-      <li>
+      {% for cta in sideProject.secondary_ctas %}
+      <li{% if cta.name == 'GitHub Repository' %} itemscope itemtype="http://schema.org/SoftwareSourceCode"{% endif %}>
         <a
-          href="{{ sideProject.demo_url }}"
-          class="button button--primary"
-          itemprop="url"
-        >
-          Demo
-        </a>
-      </li>
-      {% endif %}
-      {% if sideProject.github_url %}
-      <li>
-        <a
-          href="{{ sideProject.github_url }}"
+          href="{{ cta.url }}"
           class="button button--secondary"
+          {% if cta.name == 'GitHub Repository' %}itemprop="codeRepository"{% endif %}
         >
-          GitHub Repository
+          {{ cta.name }}
         </a>
       </li>
-      {% endif %}
+      {% endfor %}
     </ul>
   </article>
   {% endfor %}
