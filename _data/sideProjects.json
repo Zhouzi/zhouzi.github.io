@@ -107,12 +107,12 @@
     "description": "A game about JavaScript logical operators.",
     "main_cta": {
       "name": "Website",
-      "url": "https://github.com/Zhouzi/logicalornot"
+      "url": "http://gabinaureche.com/logicalornot/"
     },
     "secondary_ctas": [
       {
         "name": "GitHub Repository",
-        "url": "http://gabinaureche.com/logicalornot/"
+        "url": "https://github.com/Zhouzi/logicalornot"
       }
     ],
     "pinned": true
