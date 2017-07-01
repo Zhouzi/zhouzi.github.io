@@ -4,7 +4,7 @@ layout: default
 
 <header class="hero">
   <h1 itemscope itemtype="http://schema.org/Person" itemprop="description">
-    I am <span itemprop="givenName">Gabin</span> <span itemprop="familyName">Aureche</span>, a <strong itemprop="jobTitle">Developer</strong> Obsessed with <strong>Side Projects</strong>.
+    I am <span itemprop="givenName">Gabin</span> <span itemprop="familyName">Aureche</span>, a <strong itemprop="jobTitle">Developer</strong> Obsessed with <strong>User Experience</strong>.
     <meta itemprop="url" content="{{ site.url }}">
   </h1>
   <ul class="list-inline">
@@ -52,7 +52,7 @@ layout: default
   </p>
 
   <form
-    action="https://www.getrevue.co/profile/zhouzi/add_subscriber"
+    action="//gabinaureche.us3.list-manage.com/subscribe/post?u=a936a4d0ba2ae709ca5db0f75&id=315362b204"
     method="post"
     target="_blank"
   >
@@ -60,8 +60,7 @@ layout: default
       <div class="input-group__input">
         <input
           type="email"
-          id="email"
-          name="member[email]"
+          name="EMAIL"
           placeholder="Email address (e.g john@doe.com)"
           aria-label="Email address (e.g john@doe.com)"
           class="input"
@@ -131,7 +130,7 @@ layout: default
       <small class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</small>
       <h2 class="post__title">
         {% if post.external %}
-        <a href="{{ post.external.url }}">{{ post.title | escape }}</a>
+        <a href="{{ post.external.url }}" target="_blank">{{ post.title | escape }}</a>
         <small class="icon-link-external"></small>
         {% else %}
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
