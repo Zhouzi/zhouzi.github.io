@@ -1,5 +1,19 @@
 [
   {
+    "name": "Contrib Awakens",
+    "description": "Play games in GitHub's contribution graph.",
+    "main_cta": {
+      "name": "Chrome Extension",
+      "url": "https://chrome.google.com/webstore/detail/contrib-awakens/ghdkhcgdgpapfcgkbchkdplfmchnglcg"
+    },
+    "secondary_ctas": [
+      {
+        "name": "GitHub Repository",
+        "url": "https://github.com/Zhouzi/contrib-awakens"
+      }
+    ]
+  },
+  {
     "name": "Cheerladders",
     "description": "Get early adopters and friends to support your side project and reach your audience.",
     "main_cta": {
