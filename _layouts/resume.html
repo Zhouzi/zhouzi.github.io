@@ -9,17 +9,31 @@ layout: default
   <nav>
     <ul class="list-inline">
       <li>
-        <a href="/">gabinaureche.com</a>
+        <a href="/">
+          <span class="icon-link"></span>
+          gabinaureche.com
+        </a>
       </li>
       {% if site.github_username %}
       <li>
         <a href="https://github.com/{{ site.github_username }}">
+          <span class="icon-github"></span>
           github.com/{{ site.github_username }}
         </a>
       </li>
       {% endif %}
-      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      <li>+33 672 16 16 75</li>
+      <li>
+        <a href="mailto:{{ site.email }}">
+          <span class="icon-at-sign"></span>
+          {{ site.email }}
+        </a>
+      </li>
+      <li>
+        <a href="tel:+33672161675">
+          <span class="icon-mobile"></span>
+          +33 672 161 675
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
