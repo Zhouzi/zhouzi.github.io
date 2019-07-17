@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=" en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,70 +7,7 @@
         <meta name="robots" content="index,follow">
         <title>Gabin Aureche, Developer Obsessed with User Experience</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:400,700">
-        <link rel="stylesheet" href="https://file.myfontastic.com/qnEimrXGcTSgPjmX7az4g3/icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
-        <style>
-            html {
-                font-size: 16px;
-            }
-
-            body {
-                font-family: Lato, sans-serif;
-                font-size: 1rem;
-                line-height: 1.5;
-                font-weight: 400;
-                color: #3d3d3d;
-                background-color: #eee;
-            }
-
-            h1 {
-                font-family: 'Abril Fatface', sans-serif;
-                line-height: 1.2;
-                font-size: 2.3rem;
-                margin: 0 0 1rem 0;
-            }
-
-            h1 strong {
-                text-shadow: -3px 3px 0 #eee, -6px 6px 0 #eee, 3px 3px 0 #eee, 6px 6px 0 #eee;
-                background-image: linear-gradient(to top, transparent 0, transparent 1px, #f5cb27 1px, #f5cb27 4px, transparent 4px);
-                color: #f63958;
-            }
-
-            main {
-                max-width: 740px;
-                margin: 0 auto;
-                padding: 4rem 1rem;
-            }
-
-            a {
-                color: #f63958;
-                text-decoration: none;
-                display: inline-block;
-                border-bottom: 2px solid #dedede;
-                line-height: 1.2;
-            }
-
-            a:focus,
-            a:hover {
-                color: #e23650;
-                border-bottom-color: #f5cb27;
-            }
-
-            a span {
-                vertical-align: middle;
-            }
-
-            ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            li {
-                display: inline-block;
-                margin: 0 0.4rem 0.4rem 0;
-            }
-        </style>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -79,30 +16,141 @@
             ga('create', 'UA-43673873-4', 'auto');
             ga('send', 'pageview');
         </script>
+        <style>
+            html {
+                font-size: 16px;
+                font-family: Lato, sans-serif;
+            }
+
+            @media (min-width: 800px) {
+                html {
+                    font-size: 18px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                html {
+                    font-size: 20px;
+                }
+            }
+
+            body,
+            .paragraph,
+            .text,
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                font-weight: 400;
+            }
+
+            .text {
+                margin: 0;
+            }
+
+            body {
+                color: #3d3d3d;
+                background-color: #eee;
+                padding: 2rem 3rem;
+            }
+
+            a {
+                color: #f63958;
+                text-decoration: none;
+            }
+            a:focus,
+            a:hover {
+                text-decoration: underline;
+            }
+
+            section {
+                margin-bottom: 4rem;
+            }
+
+            .heading1,
+            .heading2 {
+                font-family: Abril Fatface, sans-serif;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            .container {
+                max-width: 38rem;
+                margin: 0 auto;
+            }
+
+            .heading1 {
+                font-size: 2.5rem;
+                margin: 0 0 2rem 0;
+            }
+
+            .heading2 {
+                font-size: 1.6rem;
+                margin: 0 0 0.5rem 0;
+            }
+
+            .heading2 + p,
+            .heading2 + .paragraph {
+                margin-bottom: 2rem;
+            }
+
+            p,
+            .paragraph {
+                margin: 0 0 1rem 0;
+            }
+
+            ul {
+                margin: 2rem 0;
+            }
+            li {
+                margin-bottom: 1rem;
+            }
+        </style>
     </head>
     <body>
-        <main>
-            <h1>I am Gabin Aureche, a <strong>Product Developer</strong> Obsessed with <strong>User Experience</strong>.</h1>
-            <ul>
-                <li>
-                    <a href="https://github.com/zhouzi/">
-                        <span class="icon-github"></span>&nbsp;
-                        github.com/zhouzi
-                    </a>
-                </li>
-                <li>
-                    <a href="https://medium.com/@zh0uzi">
-                        <span class="icon-medium"></span>&nbsp;
-                        medium.com/@zh0uzi
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/gabinzhouzi/">
-                        <span class="icon-linkedin"></span>&nbsp;
-                        linkedin.com/in/gabinzhouzi
-                    </a>
-                </li>
-            </ul>
+        <main class="container">
+            <section>
+                <p class="heading1">Hey.</p>
+                <h1 class="paragraph">I am Gabin Aureche, a freelance web developer based in France. I help startups build web applications that empower their users.</h1>
+                <h2 class="paragraph">I do web development, with a particular expertise in front-end and an obsession for good user experience.</h2>
+                <p>Previously, I have been working full-time at <a href="https://wizbii.com">Wizbii</a>, and then <a href="https://gitbook.com">GitBook</a>. Learn more about my career on <a href="https://linkedin.com/in/gabinaureche">LinkedIn</a>, read my code on <a href="https://github.com/zhouzi">GitHub</a> and my thoughts on <a href="https://medium.com/@zh0uzi">Medium</a>.</p>
+                <p>Have a question? Send me an email: <a href="mailto:hello@gabinaureche.com">hello@gabinaureche.com</a>.</p>
+            </section>
+
+            <section>
+                <h2 class="heading2">Side Projects</h2>
+                <p>I enjoy hacking ideas, some are useful, others are funny. I learn from them regardless.</p>
+                <ul>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/TheaterJS">TheaterJS</a></h3>
+                        <p class="text">A typing animation library mimicking human behavior.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/logicalornot">Logical (Or Not)</a></h3>
+                        <p class="text">A challenging game about JavaScript's logical operators.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/sentry-buddy">Sentry Buddy</a></h3>
+                        <p class="text">A web application to review Sentry issues one by one, the easy way.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/Poffer">Poffer</a></h3>
+                        <p class="text">A web application to schedule tweets about links saved to Pocket, via Buffer.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/contrib-awakens">Contrib Awakens</a></h3>
+                        <p class="text">A collection of mini-games running in GitHub's contribution graph.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/hide-files-from-bitbucket-pr">Hide Files from Bitbucket's PRs</a></h3>
+                        <p class="text">A browser extension to hide files matching a pattern from Bitbucket's PR preview.</p>
+                    </li>
+                    <li>
+                        <h3 class="text"><a href="https://github.com/Zhouzi/reactivedesign">Reactive Design</a></h3>
+                        <p class="text">A list of articles and videos about perceived speed.</p>
+                    </li>
+                </ul>
+                <p>And much more on <a href="https://github.com/zhouzi">GitHub</a>.</p>
+            </section>
         </main>
     </body>
 </html>
