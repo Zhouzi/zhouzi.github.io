@@ -48,39 +48,12 @@
                 --spaceNormal: 1.2rem;
                 --spaceLarge: 2.4rem;
                 --spaceLarger: 3.4rem;
-            }
 
-            .light {
-                --primaryColor: #f53965;
-                --accentColor: #25debb;
-                --foregroundColor: #061523;
-                --backgroundColor: #ecf1f5;
-            }
-
-            .light .themeSwitcher {
-                background-image: url('assets/IconMoon.svg');
-            }
-
-            .dark {
-                --primaryColor: #25debb;
-                --accentColor: #f53965;
-                --foregroundColor: #ecf1f5;
-                --backgroundColor: #061523;
-            }
-
-            .dark .themeSwitcher {
-                background-image: url('assets/IconSun.svg');
-            }
-
-            .themeSwitcher {
-                position: absolute;
-                top: var(--spaceNormal);
-                right: var(--spaceNormal);
-                cursor: pointer;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 24px;
-                height: 24px;
+                --primaryColor: #08ffc8;
+                --accentColor: #fd34b2;
+                --foregroundColor: #fff7f7;
+                --backgroundColor: #204969;
+                --backgroundLightColor: #315c7d;
             }
 
             body {
@@ -130,7 +103,8 @@
             }
             a:focus,
             a:hover {
-                border-bottom-color: var(--primaryColor);
+                background-color: var(--backgroundLightColor);
+                border-bottom-color: var(--foregroundColor);
             }
 
             h2 {
@@ -151,44 +125,7 @@
             }
         </style>
     </head>
-    <body class="light">
-        <script>
-            /* Thanks Dan :3 https://overreacted.io/ */
-            (function() {
-                window.__onThemeChange = function() {};
-                function setTheme(newTheme) {
-                    window.__theme = newTheme;
-                    preferredTheme = newTheme;
-                    document.body.className = newTheme;
-                    window.__onThemeChange(newTheme);
-                }
-
-                var preferredTheme;
-                try {
-                    preferredTheme = localStorage.getItem('theme');
-                } catch (err) { }
-
-                window.__setPreferredTheme = function(newTheme) {
-                    setTheme(newTheme);
-                    try {
-                        localStorage.setItem('theme', newTheme);
-                    } catch (err) {}
-                };
-
-                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                darkQuery.addListener(function(e) {
-                    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
-                });
-
-                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
-            })();
-        </script>
-        <div
-            role="button"
-            tabindex="0"
-            class="themeSwitcher"
-            onclick="window.__setPreferredTheme(window.__theme === 'light' ? 'dark' : 'light')"
-        ></div>
+    <body>
         <main>
             <section>
                 <h1>I am <strong>Gabin Aureche</strong>, a freelance <strong>web developer</strong> based in France.</h1>
