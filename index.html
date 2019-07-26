@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow">
-        <title>Gabin Aureche, Freelance Web Developer</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat&display=swap">
+        <title>Gabin Aureche, Freelance Web Developer (React, Node.js)</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700|Roboto+Mono:400,700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -33,103 +33,199 @@
                 }
             }
 
+            :root {
+                --fontSizeNormal: 1rem;
+                --lineHeightNormal: 1.6;
+                --lineHeightSmall: 1.3;
+
+                --bodyFontFamily: Roboto Mono, monospace;
+                --bodyFontWeight: 400;
+
+                --headingFontFamily: Poppins, sans-serif;
+                --headingFontWeight: 700;
+
+                --spaceSmall: 0.6rem;
+                --spaceNormal: 1.2rem;
+                --spaceLarge: 2.4rem;
+                --spaceLarger: 3.4rem;
+            }
+
+            .light {
+                --primaryColor: #f53965;
+                --accentColor: #25debb;
+                --foregroundColor: #061523;
+                --backgroundColor: #ecf1f5;
+            }
+
+            .light .themeSwitcher {
+                background-image: url('assets/IconMoon.svg');
+            }
+
+            .dark {
+                --primaryColor: #25debb;
+                --accentColor: #f53965;
+                --foregroundColor: #ecf1f5;
+                --backgroundColor: #061523;
+            }
+
+            .dark .themeSwitcher {
+                background-image: url('assets/IconSun.svg');
+            }
+
+            .themeSwitcher {
+                position: absolute;
+                top: var(--spaceNormal);
+                right: var(--spaceNormal);
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 24px;
+                height: 24px;
+            }
+
             body {
-                font-family: Montserrat, sans-serif;
-                font-size: 1rem;
-                line-height: 1.5;
-                font-weight: 400;
-                color: #292929;
+                color: var(--foregroundColor);
+                background-color: var(--backgroundColor);
+                font-family: var(--bodyFontFamily);
+                font-size: var(--fontSizeNormal);
+                line-height: var(--lineHeightNormal);
+                font-weight: var(--bodyFontWeight);
             }
 
             h1,
             h2,
-            h3,
-            h4,
-            h5,
-            p,
-            ul {
-                margin: 0;
-            }
-
-            h1,
-            a {
-                color: #1b1bef;
+            h3 {
+                font-family: var(--headingFontFamily);
+                line-height: var(--lineHeightSmall);
             }
 
             h1 {
-                font-family: Merriweather, serif;
                 font-size: 2rem;
-                line-height: 1.2;
-                font-weight: 900;
-                margin-bottom: 2rem;
+                margin: 0 0 var(--spaceLarge) 0;
             }
 
-            h2 {
-                font-family: Montserrat, sans-serif;
-                font-size: 1rem;
-                line-height: 1.5;
-                font-weight: 400;
+            h1 strong {
+                color: var(--primaryColor);
             }
 
+            h2,
             p {
-                margin-bottom: 1rem;
+                margin: 0 0 var(--spaceNormal) 0;
             }
 
             main {
                 max-width: 42rem;
                 margin: 0 auto;
-                padding: 4rem 2rem;
-            }
-
-            a {
-                text-decoration: underline;
+                padding: var(--spaceLarger) 0;
             }
 
             section {
-                margin-bottom: 4rem;
+                padding: var(--spaceLarger) var(--spaceNormal);
+            }
+
+            a {
+                color: var(--primaryColor);
+                text-decoration: none;
+                border-bottom: 2px solid var(--accentColor);
+            }
+            a:focus,
+            a:hover {
+                border-bottom-color: var(--primaryColor);
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+                margin: 0 0 var(--spaceSmall) 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 0 var(--spaceNormal);
+            }
+            li {
+                margin: 0 0 var(--spaceNormal) 0;
             }
         </style>
     </head>
-    <body>
+    <body class="light">
+        <script>
+            /* Thanks Dan :3 https://overreacted.io/ */
+            (function() {
+                window.__onThemeChange = function() {};
+                function setTheme(newTheme) {
+                    window.__theme = newTheme;
+                    preferredTheme = newTheme;
+                    document.body.className = newTheme;
+                    window.__onThemeChange(newTheme);
+                }
+
+                var preferredTheme;
+                try {
+                    preferredTheme = localStorage.getItem('theme');
+                } catch (err) { }
+
+                window.__setPreferredTheme = function(newTheme) {
+                    setTheme(newTheme);
+                    try {
+                        localStorage.setItem('theme', newTheme);
+                    } catch (err) {}
+                };
+
+                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                darkQuery.addListener(function(e) {
+                    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                });
+
+                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+            })();
+        </script>
+        <div
+            role="button"
+            tabindex="0"
+            class="themeSwitcher"
+            onclick="window.__setPreferredTheme(window.__theme === 'light' ? 'dark' : 'light')"
+        ></div>
         <main>
             <section>
-                <h1>Hey.</h1>
-                <p>I am Gabin Aureche, a freelance web developer based in France. I help startups build web applications that empower their users.</p>
-                <p>I do web development, with a particular expertise in front-end and an obsession for good user experience.</p>
-                <p>Previously, I have been working full-time at <a href="https://wizbii.com">Wizbii</a>, and then <a href="https://gitbook.com">GitBook</a>. Learn more about my career on <a href="https://linkedin.com/in/gabinaureche">LinkedIn</a>, browse my contributions on <a href="https://github.com/zhouzi">GitHub</a>, and read my thoughts on <a href="https://medium.com/@zh0uzi">Medium</a>.</p>
+                <h1>I am <strong>Gabin Aureche</strong>, a freelance <strong>web developer</strong> based in France.</h1>
+                <p>I help teams architecture their web application's front-end for a better user and developer experience.</p>
+                <p>Previously, I worked full-time at <a href="https://wizbii.com">Wizbii</a>, and then <a href="https://gitbook.com">GitBook</a>. Learn more about my career on <a href="https://linkedin.com/in/gabinaureche">LinkedIn</a>, browse my contributions on <a href="https://github.com/zhouzi">GitHub</a>, and read my thoughts on <a href="https://medium.com/@zh0uzi">Medium</a>.</p>
                 <p>Have a question? Send me an email: <a href="mailto:hello@gabinaureche.com">hello@gabinaureche.com</a>.</p>
             </section>
-
             <section>
-                <h1>Side Projects.</h1>
+                <h2>Side Projects.</h2>
                 <p>I enjoy hacking ideas, some are useful, others are funny. I learn from them regardless.</p>
                 <ul>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/TheaterJS">TheaterJS</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/TheaterJS">TheaterJS</a></h3>
                         <p>A typing animation library mimicking human behavior.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/logicalornot">Logical (Or Not)</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/logicalornot">Logical (Or Not)</a></h3>
                         <p>A challenging game about JavaScript's logical operators.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/sentry-buddy">Sentry Buddy</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/sentry-buddy">Sentry Buddy</a></h3>
                         <p>A web application to review Sentry issues one by one, the easy way.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/Poffer">Poffer</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/Poffer">Poffer</a></h3>
                         <p>A web application to schedule tweets about links saved to Pocket, via Buffer.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/contrib-awakens">Contrib Awakens</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/contrib-awakens">Contrib Awakens</a></h3>
                         <p>A collection of mini-games running in GitHub's contribution graph.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/hide-files-from-bitbucket-pr">Hide Files from Bitbucket's PRs</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/hide-files-from-bitbucket-pr">Hide Files from Bitbucket's PRs</a></h3>
                         <p>A browser extension to hide files matching a pattern from Bitbucket's PR preview.</p>
                     </li>
                     <li>
-                        <h2><a href="https://github.com/Zhouzi/reactivedesign">Reactive Design</a></h2>
+                        <h3><a href="https://github.com/Zhouzi/reactivedesign">Reactive Design</a></h3>
                         <p>A list of articles and videos about perceived speed.</p>
                     </li>
                 </ul>
