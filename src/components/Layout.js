@@ -101,12 +101,20 @@ function Layout({ children }) {
 
   return (
     <ThemeProvider theme={toCSSVariables(theme)}>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap"
-        />
-      </Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: "en",
+        }}
+        titleTemplate="%s - Gabin Aureche"
+        defaultTitle="Gabin Aureche, Freelance Front-End Developer"
+        link={[
+          {
+            rel: "stylesheet",
+            href:
+              "https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap",
+          },
+        ]}
+      />
       <GlobalStyle />
       {children}
     </ThemeProvider>
