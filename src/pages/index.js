@@ -125,16 +125,15 @@ function Home() {
             freelance web designer and developer in 2013.
           </Paragraph>
           <Paragraph>
-            I then join <Link href="https://wizbii.com">Wizbii</Link> as the
+            I then joined <Link href="https://wizbii.com">Wizbii</Link> as the
             core front-end developer in 2014. My appetite for coding goal-driven
             proof of concepts led me to join their growth marketing team in
             early 2017.
           </Paragraph>
           <Paragraph>
             Later in 2017 I decided to move on to a product developer role at{" "}
-            <Link href="https://gitbook.com">GitBook</Link>. I worked on
-            features from A to Z, with a top-notch serverless architecture and a
-            brillant team.
+            <Link href="https://gitbook.com">GitBook</Link>. A role where my
+            experience in design, code and marketing overlapped.
           </Paragraph>
           <Paragraph>
             In 2019, I finally decide to offer my services as a freelance
