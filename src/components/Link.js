@@ -42,8 +42,4 @@ const Link = styled.a`
   }}
 `;
 
-Link.defaultProps = {
-  color: true,
-};
-
 export default Link;
