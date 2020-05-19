@@ -8,11 +8,20 @@ import Paragraph from "../components/Paragraph";
 import Link from "../components/Link";
 
 export default function PageNotFound() {
-  const q = window.location.pathname
-    .split(/[-\/]/)
-    .filter((str) => str.length > 0)
-    .map((str) => encodeURIComponent(str))
-    .join("+");
+  const [searchQuery, setSearchQuery] = React.useState(null);
+
+  React.useEffect(() => {
+    // window.location.pathname is unpredictable so it must be computed at run time,
+    // not in SSR
+    setSearchQuery(
+      window.location.pathname
+        .split(/[-/]/)
+        .filter((str) => str.length > 0)
+        .map((str) => encodeURIComponent(str))
+        .join("+")
+    );
+  }, []);
+
   return (
     <Layout>
       <Section>
@@ -25,11 +34,13 @@ export default function PageNotFound() {
             you can try:
           </Paragraph>
           <ul>
-            <li>
-              <Link href={`https://google.com/search?q=${q}`}>
-                Search for alternative links
-              </Link>
-            </li>
+            {searchQuery && (
+              <li>
+                <Link href={`https://google.com/search?q=${searchQuery}`}>
+                  Search for alternative links
+                </Link>
+              </li>
+            )}
             <li>
               <Link as={RouterLink} to="/">
                 Go to the homepage
