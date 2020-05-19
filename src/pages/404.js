@@ -7,8 +7,8 @@ import Heading1 from "../components/Heading1";
 import Paragraph from "../components/Paragraph";
 import Link from "../components/Link";
 
-export default function PageNotFound({ location }) {
-  const q = location.pathname
+export default function PageNotFound() {
+  const q = window.location.pathname
     .split(/[-\/]/)
     .filter((str) => str.length > 0)
     .map((str) => encodeURIComponent(str))
