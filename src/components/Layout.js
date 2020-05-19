@@ -10,8 +10,8 @@ const theme = {
       main: "#e83862",
     },
     secondary: {
-      dark: "#f7d240",
-      main: "#f5e6aa",
+      dark: "#f9c42b",
+      main: "#ffdc78",
     },
     body: {
       main: "#0b1c3c",
