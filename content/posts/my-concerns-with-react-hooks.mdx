@@ -1,0 +1,186 @@
+---
+title: "My concerns with React hooks"
+path: "https://medium.com/@Zh0uzi/my-concerns-with-react-hooks-6afda0acc672"
+date: "2018-11-27"
+---
+
+Until recently, React had two types of components: functional or class.
+import React from 'react';
+function Foo(props) {
+  return (
+    <div>
+      Hey {props.name}, this is a functional component.
+    </div>
+  );
+}
+class Bar extends React.Component {
+  render() {
+    return (
+      <div>
+        Hey {this.props.name}, this is a class component.
+      </div>
+    );
+  }
+}
+The difference between the two is that functional components are stateless and don’t have access to the component’s lifecycle. On the other hand, classes can execute code when the component is mounted, dismounted, updated, and so on. Also, classes can carry state from a render to another.
+import React from 'react';
+
+class TodoList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: [
+        {
+          done: false,
+          label: 'Do something'
+        }
+      ]
+    };
+  }
+
+  onToggleTodo(index) {
+    this.setState(({ todos }) => ({
+      todos: todos.map((todo, todoIndex) => {
+        if (todoIndex === index) {
+          return {
+            ...todo,
+            done: !todo.done
+          };
+        }
+
+        return todo;
+      })
+    }));
+  }
+
+  render() {
+    return (
+      <ul>
+        {this.state.todos.map((todo, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              onChange={() => this.onToggleTodo(index)}
+              checked={todo.done}
+            />
+            {todo.label}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
+If you have some experience developing web apps, you can probably guess what this code does — whether you’re used to React or not. The reason is that it’s almost pure JavaScript: classes are stateful by design. If the state is updated, one can expect the render method to return a different DOM tree.
+A new type of component: hooks
+The React team recently introduced a new API which fixes a lot of classes’ flaws. It’s now super easy to compose logic relying on a component’s lifecycle without mixing them all together. I love it but I’m a bit concerned at the same time. Before I get to my fears, let’s have a look at what the above class example looks like with hooks:
+import React from 'react';
+
+function TodoList(props) {
+  const [todos, setTodos] = React.useState([
+    {
+      done: false,
+      label: 'Do something'
+    }
+  ]);
+
+  const onToggleTodo = index => {
+    setTodos(currentTodos =>
+      currentTodos.map((todo, todoIndex) => {
+        if (todoIndex === index) {
+          return {
+            ...todo,
+            done: !todo.done
+          };
+        }
+
+        return todo;
+      })
+    );
+  };
+
+  return (
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>
+          <input
+            type="checkbox"
+            onChange={() => onToggleTodo(index)}
+            checked={todo.done}
+          />
+          {todo.label}
+        </li>
+      ))}
+    </ul>
+  );
+}
+Simply put, hooks are stateful functional components. They can have state and have access to the component’s lifecycle. The first time I saw a React hook, I was pretty much like…
+
+Guys, is it me or there’s something weird with those hooks?
+Isn’t the state going to be the same every time the function is called? I mean, I’m defining it right there so how can’t it be? Well, it doesn’t make sense so I guess it’s stored somewhere. But where? And how can the function call be identified? For instance, if the component is used in two different places, how are they not confused together?
+It was really messing with my brain so I’ve read lengthy articles explaining how it’s working under the hood. Basically, React attaches a component’s state in an array and retrieve it from its index. Which leads to the first warning: hooks must have the same order across calls. To be fair, I can’t think of a reason for swapping order so that’s easy to avoid. It also means that you can’t have conditional hooks:
+function Bar(props) {
+  const [todos, setTodos] = React.useState([]);
+
+  if (props.filter) {
+    // This is impossible
+    const [filter, setFilter] = React.useState(null);
+  }
+}
+That example doesn’t make sense as well so that’s fine. But let’s get to a more reasonable use case. Imagine we have designed a hook that fetches a user from a database and caches it. We can use this hook wherever we need a user. So for example, here’s what we might want to do:
+import React from 'react';
+import useUserQuery from './useUserQuery';
+
+function UserProfile(props) {
+  if (props.userID) {
+    return useUserQuery(props.userID, user => (
+      <div>{user.displayName}</div>
+    ));
+  }
+
+  return <div>Anonymous</div>;
+}
+Yeah, but nah. This is a conditional hook. To fix it, we need to split the component:
+import React from 'react';
+import LoggedInUserProfile from './LoggedInUserProfile';
+
+function UserProfile(props) {
+  if (props.userID) {
+    return <LoggedInUserProfile userID={props.userID} />;
+  }
+
+  return <div>Anonymous</div>;
+}
+Hooks or not, the second solution is definitely cleaner — that’s not my point. The issue I have with this kind of rule is that it makes React less “pure JavaScript”. You can’t write such code not because the language makes it impossible but because it goes against React’s internals. Internals that are quite hard to understand. I’m not saying that React has been “pure JavaScript” so far but still, I believe the concepts were fairly easy to grasp. Here’s an illustration:
+import React from 'react';
+class Foo extends React.Component {
+  componentDidMount() {
+    console.log('Foo is mounted');
+  }
+
+  componentDidUpdate() {
+    console.log('Foo is updated');
+  }
+
+  render() {
+    return <div />;
+  }
+}
+This code is pretty self-explanatory: you can run code when the component is mounted and when it’s updated. Note that componentDidUpdate is not called when the component is mounted. Here’s what it looks like with hooks:
+import React from 'react';
+function Bar() {
+  React.useEffect(() => {
+    console.log('Foo is mounted');
+  }, []);
+
+  React.useEffect(() => {
+    console.log('Foo is udpated');
+  });
+
+  return <div />;
+}
+In this example, both messages are logged when the component is mounted. The second one is going to be logged everytime the component is rendered. The only difference between the two is the last argument of useEffect: []. It kind of make sense when you understand that this function is memoized but still, the class example is much more intuitive. It sums up my first concern with React hooks:
+React is becoming less intuitive and declarative, making it harder to understand.
+My second and last concern is about structure. A function is such a tiny place to hold all of a component’s state and logic. The code quickly becomes hard to read with variables, functions, state, and props floating around. I know, I know, if a component is getting too complex it probably means it should be split. Sometimes it’s just not that easy and complexity is not always avoidable.
+But I’m probably wrong
+I love React and I surely became a “fanboy”: I find it better than the alternatives in so many ways. If the React team thinks hooks are the way to go, then they must be right. We just need to get used to it and wait for the community to bring new conventions to help with the structure. It’s just that I want it to welcome new developers as well as before and not to turn into some form of black magic.

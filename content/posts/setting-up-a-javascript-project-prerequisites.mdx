@@ -1,0 +1,57 @@
+---
+title: "Setting up a JavaScript project: Prerequisites"
+path: "https://medium.com/@Zh0uzi/setting-up-a-javascript-project-prerequisites-a0bec81b12df"
+date: "2019-02-05"
+---
+
+Obviously, you need some JavaScript, HTML and CSS knowledge to start a JavaScript project. You also need to install Node on your computer and have a basic understanding of Git, although you can probably skip that last part. But in my experience with fellow programmers starting out with JavaScript and juniors jumping in their first project, the one thing that’s often the source of many misunderstandings is NPM (Node Package Manager).
+When installing Node, there are two commands that come with it: node and npm. The former is used to execute some server-side JavaScript (Node.js) and the latter to install third-party packages. Simply put, NPM is a cloud where developers publish their code so other developers can use it in their own project. For example, JavaScript doesn’t have a function to pick a random item from an Array so you could use the random-item package. Instead of downloading the files manually, you can simply run npm install random-item in your project. This article is mostly about NPM so I’ll expand on that later. For now, let’s start with the beginning.
+Every JavaScript project has a package.json
+The package.json is the file that describes the project, lists its dependencies (i.e random-item in our previous example) and commands. It can contain much more than that though, feel free to have a look at the full list of properties if you are curious. To create this file, you can run the command npm init at the root of your project. It will guide you through a few questions and create the package.json file at the end of the process.
+
+Example of a package.json with the default options.
+Most of the information contained by the package.json is useful when publishing your code to the “NPM cloud”. For example, the name, description, keywords, and author is what appears on the dedicated NPM page. You can ignore them if you do not plan to publish a package, they won’t have any effect. At this point, there are only three properties that you need to know: devDependencies, dependencies, and scripts.
+Tracking development and production dependencies
+Unless you want to do it like in the good old jQuery days, tooling has become almost unavoidable in a JavaScript project. For example, the language’s latest features are not supported by all browsers so it’s pretty common to compile the code to something that can be executed by anyone’s browser. For that, you would need to install Babel. But then, if you want to split your code into separate files and use imports you would also need Webpack. CSS you said? That’s something of the past, you should consider styled components, CSS modules or Aphrodite. I could continue like that for a long time but you get the idea: there are a lot of things you might (or might not) want to install. Don’t be afraid though, the whole purpose of this serie is to install as few packages as possible.
+The tooling I mentioned so far is for development. They are tools you need to install on your computer to compile the code. Ultimately, what you will deploy is the compiled code, not the source code so there is no point in installing them on the production server. To take an example, let’s install the package parcel-bundler as a development dependency:
+npm install parcel-bundler --save-dev
+Doing so will update our previous package.json to the following:
+
+The “devDependencies” property was added.
+The parcel-bundler package has been installed and added to the devDependencies, with a specific version range (^1.11.0). What’s great with installing packages this way is that you know precisely what your project depends on and on which version. More importantly, if you were to git clone the project on another computer, you could install all the required dependencies by simply running npm install. This command would lookup your package.json file and install all the dependencies with the correct version.
+That’s for development but some packages are going to be required for your project to run. Let’s say you are building an application that displays a random background color from an Array of possible values. The code could look like this:
+import randomItem from 'random-item';
+
+const colors = [
+  'red',
+  'yellow',
+  'orange',
+  'pink',
+  'green'
+];
+
+window.document.body.style.backgroundColor = randomItem(colors);
+It uses the random-item package mentioned earlier in this article. In production, the random-item package will still be required for the application to work. In this case, random-item is a production dependency and should be installed as follows:
+npm install random-item
+Not telling npm that random-item is a development dependency with the --save-dev flag suggests that it’s a production dependency. This command would update the package.json like so:
+
+The “dependencies” property was added.
+Just like devDependencies, dependencies are installed when running the npm install command. Note that it’s pretty uncommon to manually edit those properties. Most of the time, they are updated through the npm CLI.
+As you probably guessed, npm install is often the first command to run when cloning a JavaScript project. It will pull in all the dependencies and you should be good to go. The next step is to contribute to the project. You would need to start it and eventually compile the files when you make a change. Starting and compiling a JavaScript application differs from a project to another due to the different tooling and configuration. There is no one command to start a project, although there is a convention I will be sharing in this article. Still, it would be a pain to have to run parcel index.html --port 3000 --log-level 0 --openeverytime you want to start the server.
+Create shortcut commands with npm scripts
+scripts is a package.json’s property that contains shortcut commands. If you wanted to alias the previous command to “start”, you could do the following:
+
+Now, when running npm run start npm will look into the package.json’s scripts and execute the command matching “start”, which is:
+parcel index.html --port 3000 --log-level 0 --open
+If you try to run this command instead of the start script (through npm run start) an error would be thrown, telling you that “parcel” is not a known command. That’s because installing a package in a JavaScript project doesn’t install it on your computer, thankfully. The packages are only installed locally by default, in the “node_modules” folder. If you really wanted to run the command yourself, you would need to update it to:
+./node_modules/.bin/parcel index.html --port 3000 --log-level 0 --open
+The “node_modules” folder contains a “.bin” folder with links to the packages’ executable command (if any). That prefix is automatically added by npm when running scripts so that’s one more reason for using them.
+The conventions
+The NPM CLI comes in with a few conventions. For example, the command to start a project is usually “start” and the one to test is “test”. For these commands, you can omit the “run” part in npm run start so npm start is equivalent. There are other official conventions but they are not as common as these two.
+Wrapping up
+That is enough NPM to get a JavaScript project running. I wanted to dedicate a whole article to NPM because I come too often across missing dependencies in the package.json and an unclear workflow to start and contribute when browsing juniors’ projects. The idea to keep in mind is that it should be simple for you, your future you getting back to the project later and possibly another developer.
+This article is part of a serie:
+Setting up a JavaScript project: Introduction
+Setting up a JavaScript project: Prerequisites
+Setting up a JavaScript project: No-configuration tools
+Setting up a JavaScript project: Deploying

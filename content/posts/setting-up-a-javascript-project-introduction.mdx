@@ -1,0 +1,16 @@
+---
+title: "Setting up a JavaScript project: Introduction"
+path: "https://medium.com/@Zh0uzi/setting-up-a-javascript-project-introduction-c8eca809b133"
+date: "2018-09-27"
+---
+
+The JavaScript language has been evolving at an exponentially fast pace for a few years. With new tools and features came an increasing complexity. The complexity doesn’t come from the language itself but from the myriad of things you need to do before you can actually code. With so many possibilities JavaScript offers, it’s sad to see newcomers being discouraged. The language is supposed to unleash creativity, not to cause headaches.
+But why is all this mess needed in the first place, you might ask. A few years ago, writing JavaScript was as easy as throwing a script tag in an HTML file. Technically, that is still possible but probably not as fun as it was.
+The thing is that JavaScript used to be a web page’s enhancer. It was used to create carousels and the like in a page fully served by a backend. Turning it off wasn’t so bad back then, the page would still be fine. But then we wanted to make things faster and more reactive. That is not possible if clicking a button triggers a whole page load. So we started to use AJAX, doing things asynchronously. And all of a sudden, we were loading a page’s content with JavaScript. Down this path, we started to handle routing in the browser. Navigating from a page to another didn’t need a full page load anymore. That’s when people started to call a web page a “web application”.
+The problem is that browsers are hardly keeping up. Even if they were, every user would have to be on the latest version at any time. Because JavaScript is going faster than its environments, it has to be compiled to a version that’s universally understood. Which means we need tools to compile JavaScript. That’s the tip of the iceberg, though. With JavaScript taking a larger and larger place in a product’s development, it became serious business. It needed testing and code quality tools, dependency management, modules, a real ecosystem, and so on. On the other hand, the community is growing bigger every day and with it appear new ideas. We now write HTML-ish (JSX) and CSS in JavaScript. We can also create mobile and desktop applications, among other things.
+Such diverse use cases have a price which comes in the form of configuration. Tools that work out of the box are pretty rare. Yet, there are some and the good news is that this is all this serie of articles is about! I will show you how to get from A to B without all the hassle. I want you to build that project you have in mind, and deploy it for everyone to see. Here’s how I’m planning this serie:
+Introduction: what is this serie about and why I think it’s needed.
+Prerequisites: things you need to know about JavaScript projects in general.
+No-configuration tools: tools that involve just a few commands to compile your code.
+Deploying: giving birth to your project.
+This serie is for people that don’t know where to start when setting up a JavaScript project. It won’t go too far into the details but focus on the mandatory. The main goal is to get things done, not necessarily to learn how build tools work in-depth.
