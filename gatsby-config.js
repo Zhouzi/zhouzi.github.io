@@ -13,5 +13,11 @@ module.exports = {
         ignore: ["**/.*"], // ignore files starting with a dot
       },
     },
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://gabinaureche.com",
+      },
+    },
   ],
 };
