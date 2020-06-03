@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { IntlProvider } from "react-intl";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import "modern-normalize";
 
@@ -81,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-function Layout({ children }) {
+function Layout({ locale, messages, children }) {
   React.useEffect(() => {
     if (process.env.NODE_ENV === "development") {
       return;
@@ -100,24 +101,26 @@ function Layout({ children }) {
   }, []);
 
   return (
-    <ThemeProvider theme={toCSSVariables(theme)}>
-      <Helmet
-        htmlAttributes={{
-          lang: "en",
-        }}
-        titleTemplate="%s - Gabin Aureche"
-        defaultTitle="Gabin Aureche, Freelance Front-End Developer"
-        link={[
-          {
-            rel: "stylesheet",
-            href:
-              "https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap",
-          },
-        ]}
-      />
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    <IntlProvider locale={locale} messages={messages}>
+      <ThemeProvider theme={toCSSVariables(theme)}>
+        <Helmet
+          htmlAttributes={{
+            lang: locale,
+          }}
+          titleTemplate="%s - Gabin Aureche"
+          defaultTitle="Gabin Aureche, Freelance Front-End Developer"
+          link={[
+            {
+              rel: "stylesheet",
+              href:
+                "https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap",
+            },
+          ]}
+        />
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </IntlProvider>
   );
 }
 

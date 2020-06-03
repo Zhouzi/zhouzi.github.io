@@ -19,5 +19,14 @@ module.exports = {
         siteUrl: "https://gabinaureche.com",
       },
     },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        langKeyForNull: "en",
+        useLangKeyLayout: true,
+        prefixDefault: false,
+      },
+    },
   ],
 };

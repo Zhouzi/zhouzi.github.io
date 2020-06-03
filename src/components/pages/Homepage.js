@@ -1,6 +1,6 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import {
-  Layout,
   Container,
   Section,
   Heading1,
@@ -44,48 +44,62 @@ const SIDE_PROJECTS = [
   },
 ];
 
-export default function Home({
+export default function Homepage({
   data: {
     allMdx: { edges: posts },
   },
 }) {
   return (
-    <Layout>
+    <>
       <Section>
         <Container large>
           <Heading1>
-            I am <strong>Gabin Aureche</strong>, a{" "}
-            <strong>freelance front-end developer</strong> based in{" "}
-            <strong>France</strong>.
+            <FormattedMessage
+              id="homepage.summary"
+              values={{
+                b: (children) => <strong>{children}</strong>,
+              }}
+            />
           </Heading1>
         </Container>
         <Container>
           <Paragraph>
-            I studied computer arts and web design before testing the water as a
-            freelance web designer and developer in 2013.
+            <FormattedMessage id="homepage.bio.education" />
           </Paragraph>
           <Paragraph>
-            I then joined <Link href="https://wizbii.com">Wizbii</Link> as the
-            core front-end developer in 2014. My appetite for coding goal-driven
-            proof of concepts led me to join their growth marketing team in
-            early 2017.
+            <FormattedMessage
+              id="homepage.bio.wizbii"
+              values={{
+                a: (children) => (
+                  <Link href="https://wizbii.com">{children}</Link>
+                ),
+              }}
+            />
           </Paragraph>
           <Paragraph>
-            Later in 2017 I decided to move on to a product developer role at{" "}
-            <Link href="https://gitbook.com">GitBook</Link>. A role where my
-            experience in design, code and marketing overlapped.
+            <FormattedMessage
+              id="homepage.bio.gitbook"
+              values={{
+                a: (children) => (
+                  <Link href="https://gitbook.com">{children}</Link>
+                ),
+              }}
+            />
           </Paragraph>
           <Paragraph>
-            In 2019, I finally decide to offer my services as a freelance
-            developer to meet and help more people.
+            <FormattedMessage id="homepage.bio.now" />
           </Paragraph>
         </Container>
       </Section>
       <Section>
         <Container large>
           <Heading2>
-            I spend a large part of my spare time building{" "}
-            <strong>side projects</strong>.
+            <FormattedMessage
+              id="homepage.sideProjects"
+              values={{
+                b: (children) => <strong>{children}</strong>,
+              }}
+            />
           </Heading2>
         </Container>
         <Container>
@@ -101,7 +115,12 @@ export default function Home({
       <Section>
         <Container large>
           <Heading2>
-            I also share my <strong>thoughts</strong> from time to time.
+            <FormattedMessage
+              id="homepage.thoughts"
+              values={{
+                b: (children) => <strong>{children}</strong>,
+              }}
+            />
           </Heading2>
         </Container>
         <Container>
@@ -113,25 +132,35 @@ export default function Home({
       <Section>
         <Container large>
           <Heading2>
-            I am always happy to <strong>connect</strong>.
+            <FormattedMessage
+              id="homepage.connect"
+              values={{
+                b: (children) => <strong>{children}</strong>,
+              }}
+            />
           </Heading2>
         </Container>
         <Container>
           <Paragraph>
-            Feel free to send me an email at{" "}
-            <Link href="mailto:hello@gabinaureche.com">
-              hello@gabinaureche.com
-            </Link>
-            . You can also find all my side projects on{" "}
-            <Link href="https://github.com/zhouzi">GitHub</Link> and learn more
-            about my career on{" "}
-            <Link href="https://www.linkedin.com/in/gabinaureche/">
-              LinkedIn
-            </Link>
-            .
+            <FormattedMessage
+              id="homepage.connect.contacts"
+              values={{
+                email: (children) => (
+                  <Link href="mailto:hello@gabinaureche.com">{children}</Link>
+                ),
+                github: (children) => (
+                  <Link href="https://github.com/zhouzi">{children}</Link>
+                ),
+                linkedin: (children) => (
+                  <Link href="https://www.linkedin.com/in/gabinaureche/">
+                    {children}
+                  </Link>
+                ),
+              }}
+            />
           </Paragraph>
         </Container>
       </Section>
-    </Layout>
+    </>
   );
 }
