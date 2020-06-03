@@ -1,11 +1,13 @@
 import * as React from "react";
 import { Link as RouterLink } from "gatsby";
-import Layout from "../components/Layout";
-import Section from "../components/Section";
-import Container from "../components/Container";
-import Heading1 from "../components/Heading1";
-import Paragraph from "../components/Paragraph";
-import Link from "../components/Link";
+import {
+  Layout,
+  Section,
+  Container,
+  Heading1,
+  Paragraph,
+  Link,
+} from "../design";
 
 export default function PageNotFound() {
   const [searchQuery, setSearchQuery] = React.useState(null);
