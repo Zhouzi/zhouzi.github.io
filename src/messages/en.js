@@ -15,4 +15,10 @@ export default {
   "homepage.connect": "I am always happy to <b>connect</b>.",
   "homepage.connect.contacts":
     "Feel free to send me an email at <email>hello@gabinaureche.com</email>. You can also find all my side projects on <github>GitHub</github> and learn more about my career on <linkedin>LinkedIn</linkedin>.",
+  "404.heading": "This page doesn't exist.",
+  "404.tips":
+    "Maybe it's gone, or perhaps it never existed. Here are a few things you can try:",
+  "404.alternatives": "Search for alternative links",
+  "404.homepage": "Go to the homepage",
+  "404.report": "Report it to <a>hello@gabinaureche.com</a>",
 };

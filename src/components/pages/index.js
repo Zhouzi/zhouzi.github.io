@@ -1,3 +1,4 @@
 import Homepage from "./Homepage";
+import PageNotFound from "./PageNotFound";
 
-export { Homepage };
+export { Homepage, PageNotFound };
