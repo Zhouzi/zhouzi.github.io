@@ -50,7 +50,7 @@ export default function Homepage({
   },
 }) {
   return (
-    <>
+    <main>
       <Section>
         <Container large>
           <Heading1>
@@ -161,6 +161,6 @@ export default function Homepage({
           </Paragraph>
         </Container>
       </Section>
-    </>
+    </main>
   );
 }
