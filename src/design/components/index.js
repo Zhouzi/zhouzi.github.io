@@ -11,6 +11,8 @@ import PostLink from "./PostLink";
 import Section from "./Section";
 import SideProject from "./SideProject";
 
+export * from "./InlineList";
+
 export {
   Button,
   Container,

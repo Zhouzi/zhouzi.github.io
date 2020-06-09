@@ -1,6 +1,14 @@
 import styled, { css } from "styled-components";
 
 const Link = styled.a`
+  font: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+  display: inline;
   color: inherit;
   text-decoration: none;
   font-weight: 500;

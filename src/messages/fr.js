@@ -22,4 +22,7 @@ export default {
   "404.alternatives": "Rechercher des liens alternatifs",
   "404.homepage": "Aller à la page d'accueil",
   "404.report": "Signaler à <a>hello@gabinaureche.com</a>",
+  "localeSwitcher.visit": "Souhaitez-vous visiter ce site en français ?",
+  "localeSwitcher.yes": "Visiter en français",
+  "localeSwitcher.no": "Continuer en anglais",
 };

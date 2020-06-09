@@ -20,6 +20,7 @@ const theme = {
     },
     background: {
       main: "#f9f9f9",
+      light: "#e5e8ec",
     },
     button: {
       main: "#e8ebf1",

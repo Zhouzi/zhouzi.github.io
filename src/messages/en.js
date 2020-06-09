@@ -21,4 +21,7 @@ export default {
   "404.alternatives": "Search for alternative links",
   "404.homepage": "Go to the homepage",
   "404.report": "Report it to <a>hello@gabinaureche.com</a>",
+  "localeSwitcher.visit": "Would you like to visit this site in english?",
+  "localeSwitcher.yes": "Visit in english",
+  "localeSwitcher.no": "Continue in french",
 };

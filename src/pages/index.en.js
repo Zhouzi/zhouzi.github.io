@@ -1,11 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 import EnglishLayout from "../layouts/en";
-import { Homepage } from "../components";
+import { Homepage, LocaleSwitcher } from "../components";
 
 export default function EnglishHomepage(props) {
   return (
     <EnglishLayout>
+      <LocaleSwitcher />
       <Homepage {...props} />
     </EnglishLayout>
   );
