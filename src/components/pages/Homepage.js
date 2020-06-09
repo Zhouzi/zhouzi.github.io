@@ -23,24 +23,24 @@ const SIDE_PROJECTS = [
     description: "Collection of design insights about perceived speed.",
   },
   {
-    id: "sentry-buddy",
-    name: "Sentry Buddy",
-    description: "Review Sentry issues one by one, the easy way.",
-  },
-  {
     id: "logicalornot",
     name: "Logical (Or Not)",
     description: "A Game About JavaScript Specificities.",
   },
   {
-    id: "GentleForm",
-    name: "GentleForm",
-    description: "Accessible and user-friendly HTML5 form validation library.",
-  },
-  {
     id: "contrib-awakens",
     name: "Contrib Awakens",
     description: "Play games in GitHub's contribution graph.",
+  },
+  {
+    id: "sentry-buddy",
+    name: "Sentry Buddy",
+    description: "Review Sentry issues one by one, the easy way.",
+  },
+  {
+    id: "name-the-gwent-card",
+    name: "Name The Gwent Card",
+    description: "Mini game where you have to name a random Gwent card.",
   },
 ];
 
