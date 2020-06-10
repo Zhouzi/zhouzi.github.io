@@ -2,8 +2,11 @@ import * as React from "react";
 import { IntlProvider, useIntl, FormattedMessage } from "react-intl";
 import { Link as RouterLink } from "gatsby";
 import styled from "styled-components";
+import ls from "local-storage";
 import { Paragraph, InlineList, InlineListItem, Link } from "../design";
 import * as locales from "../messages";
+
+const LOCAL_STORAGE_KEY = "preferredLocale";
 
 const LocaleSwitcherContainer = styled.div`
   position: fixed;
@@ -24,6 +27,12 @@ export function LocaleSwitcher() {
   const [suggestedLocale, setSuggestedLocale] = React.useState(null);
 
   React.useEffect(() => {
+    const preferredLocale = ls(LOCAL_STORAGE_KEY);
+
+    if (preferredLocale === intl.locale) {
+      return;
+    }
+
     const supportedLocales = Object.keys(locales);
     const suggestedLocale = window.navigator.languages
       .map((language) =>
@@ -61,7 +70,10 @@ export function LocaleSwitcher() {
             <Link
               as="button"
               type="button"
-              onClick={() => setSuggestedLocale(null)}
+              onClick={() => {
+                ls(LOCAL_STORAGE_KEY, intl.locale);
+                setSuggestedLocale(null);
+              }}
             >
               <FormattedMessage id="localeSwitcher.no" />
             </Link>
