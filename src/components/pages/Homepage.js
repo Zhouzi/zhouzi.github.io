@@ -18,9 +18,9 @@ const SIDE_PROJECTS = [
     description: "Typing animation mimicking human behavior.",
   },
   {
-    id: "reactivedesign",
-    name: "Reactive Design",
-    description: "Collection of design insights about perceived speed.",
+    id: "awesome-perceived-performance",
+    name: "Awesome Perceived Performance",
+    description: "💫 Perceived performance best practices & resources.",
   },
   {
     id: "logicalornot",
