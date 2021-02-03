@@ -1,45 +1,41 @@
 import styled, { css } from "styled-components";
 
-const Link = styled.a`
-  font: inherit;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
+interface LinkProps {
+  variant?: "underline" | "primary";
+}
 
-  cursor: pointer;
-  display: inline;
-  color: inherit;
-  text-decoration: none;
-  font-weight: 500;
-
+export const Link = styled.a<LinkProps>`
   ${(props) => {
     switch (props.variant) {
       case "underline":
         return css`
+          color: inherit;
+          text-decoration: none;
           display: inline;
           background-image: linear-gradient(
             0deg,
-            ${(props) => props.theme.colors.secondary.main},
-            ${(props) => props.theme.colors.secondary.main} 100%
+            ${props.theme.colors.secondary.main},
+            ${props.theme.colors.secondary.main} 100%
           );
           background-size: 100% 30%;
           background-repeat: no-repeat;
-          background-position: 0 90%;
+          background-position: 0px 90%;
 
           &:focus,
           &:hover {
             background-image: linear-gradient(
               0deg,
-              ${(props) => props.theme.colors.secondary.dark},
-              ${(props) => props.theme.colors.secondary.dark} 100%
+              ${props.theme.colors.secondary.dark},
+              ${props.theme.colors.secondary.dark} 100%
             );
           }
         `;
-      case "color":
+      case "primary":
       default:
         return css`
           color: ${(props) => props.theme.colors.primary.main};
+          text-decoration: none;
+          font-weight: 500;
 
           &:focus,
           &:hover {
@@ -49,5 +45,3 @@ const Link = styled.a`
     }
   }}
 `;
-
-export default Link;

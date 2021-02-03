@@ -1,3 +1,5 @@
 # Gabin Aureche
 
-* [gabinaureche.com](http://gabinaureche.com)
+This repository contains the sources for my personal website.
+
+- [gabinaureche.com](https://gabinaureche.com)

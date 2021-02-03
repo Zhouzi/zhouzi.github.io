@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  max-width: ${(props) => (props.large ? "50rem" : "44rem")};
-  margin: 0 auto;
-  padding: 0 1.8rem;
-`;
+interface ContainerProps {
+  large?: boolean;
+}
 
-export default Container;
+export const Container = styled.div<ContainerProps>`
+  max-width: ${(props) => (props.large ? "50rem" : "44rem")};
+  padding: 0 1.8rem;
+  margin: 0 auto;
+`;

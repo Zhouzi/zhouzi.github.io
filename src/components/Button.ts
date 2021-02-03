@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+export const Button = styled.button`
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
@@ -10,12 +10,10 @@ const Button = styled.button`
   border: 0;
   background: ${(props) => props.theme.colors.button.main};
   padding: 0.4rem 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
 
   &:focus,
   &:hover {
     background: ${(props) => props.theme.colors.button.hover};
   }
 `;
-
-export default Button;
