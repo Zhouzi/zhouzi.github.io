@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        token: process.env.GITHUB_ACCESS_TOKEN,
+        token: process.env.GITHUB_TOKEN,
         graphQLQuery: `
           query GetPinnedRepositories {
             user(login: "zhouzi") {

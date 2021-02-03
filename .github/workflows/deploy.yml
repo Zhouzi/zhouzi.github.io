@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm ci
       - run: npm run build
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
